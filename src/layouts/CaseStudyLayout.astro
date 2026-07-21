@@ -1,4 +1,5 @@
 ---
+import Footer from '../components/Footer.astro';
 const { lab } = Astro.props;
 ---
 
@@ -18,11 +19,13 @@ const { lab } = Astro.props;
         <h2>{lab.data.subtitle}</h2>
       </div>
 
-      <img 
-        src="/reallabs-logo.svg" 
-        alt="Passage Reallabs"
-        class="logo"
-      />
+     <a href="/" class="logo-link">
+        <img 
+          src="/reallabs-logo.svg" 
+          alt="Passage Reallabs" 
+          class="logo" 
+        />
+      </a>
     </header>
 
 
@@ -63,8 +66,8 @@ const { lab } = Astro.props;
       <section class="partner">
         <h3>Praxispartner</h3>
         <p>
-          Dieses Reallab wurde gemeinsam mit
-          <strong>{lab.data.partner}</strong>
+          Dieses Reallab wurde gemeinsam mit 
+          <strong> {lab.data.partner} </strong>
           entwickelt.
         </p>
       </section>
@@ -72,11 +75,7 @@ const { lab } = Astro.props;
     </main>
 
 
-    <footer>
-      <p>
-        © Passage Reallabs · Smart City Halle (Saale)
-      </p>
-    </footer>
+    <Footer />
 
 
   </body>
@@ -119,9 +118,17 @@ body {
   font-size: 0.8rem;
 }
 
-
 .logo {
   width: 180px;
+  height: auto;
+}
+.logo-link {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.logo-link img {
+  display: block;
 }
 
 

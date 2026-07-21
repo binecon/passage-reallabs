@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import CaseStudyCard from '../components/CaseStudyCard.astro';
+import Footer from '../components/Footer.astro';
 const labs = await getCollection('reallabs');
 ---
 
@@ -22,11 +23,13 @@ const labs = await getCollection('reallabs');
         </p>
       </div>
 
-      <img 
-        src="/reallabs-logo.svg" 
-        alt="Passage Reallabs" 
-        class="logo" 
-      />
+      <a href="/" class="logo-link">
+        <img 
+          src="/reallabs-logo.svg" 
+          alt="Passage Reallabs" 
+          class="logo" 
+        />
+      </a>
     </header>
 
     <main>
@@ -41,11 +44,7 @@ const labs = await getCollection('reallabs');
       </section>
     </main>
 
-    <footer class="footer">
-      <p>
-        © Passage Reallabs · Smart-City-Bildungszentrum Halle (Saale)
-      </p>
-    </footer>
+    <Footer />
   </body>
 </html>
 
@@ -87,9 +86,13 @@ const labs = await getCollection('reallabs');
 .logo {
   width: 180px;
   height: auto;
+}.logo-link {
+  display: inline-block;
+  cursor: pointer;
 }
 
-.footer{
-  font-size: small;
+.logo-link img {
+  display: block;
 }
+
 </style>
