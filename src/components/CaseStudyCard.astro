@@ -1,0 +1,65 @@
+---
+const { lab } = Astro.props;
+
+const fields: string[] = lab.data.fields;
+---
+
+<article class="card">
+  <a href={`/reallabs/${lab.id}`}>
+
+    <h3>{lab.data.title}</h3>
+
+    <p class="subtitle">
+      {lab.data.subtitle}
+    </p>
+
+    <p>
+      <strong>Partner:</strong><br />
+      {lab.data.partner}
+    </p>
+
+    <div class="fields">
+        {fields.map((field) => (
+            <span>{field}</span>
+        ))}
+    </div>
+
+  </a>
+</article>
+
+
+<style>
+.card {
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.subtitle {
+  opacity: 0.8;
+}
+
+.fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.fields span {
+  border: 1px solid #ccc;
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.85rem;
+}
+</style>

@@ -1,11 +1,95 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import { getCollection } from 'astro:content';
+import CaseStudyCard from '../components/CaseStudyCard.astro';
+const labs = await getCollection('reallabs');
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Passage Reallabs</title>
+  </head>
+
+  <body>
+    <header class="hero">
+      <div class="hero-text">
+        <h1>Passage Reallabs</h1>
+
+        <p>
+          Jugendliche bearbeiten reale Zukunftsfragen gemeinsam mit Unternehmen
+          und Institutionen.
+        </p>
+      </div>
+
+      <img 
+        src="/reallabs-logo.svg" 
+        alt="Passage Reallabs" 
+        class="logo" 
+      />
+    </header>
+
+    <main>
+      <section>
+        <h2>Case Studies</h2>
+
+        <div class="cards">
+         {labs.map((lab) => (
+          <CaseStudyCard lab={lab} />
+        ))}
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        © Passage Reallabs · Smart-City-Bildungszentrum Halle (Saale)
+      </p>
+    </footer>
+  </body>
+</html>
+
+<style>
+  body {
+    font-family: system-ui, sans-serif;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+
+  .card a {
+    text-decoration: none;
+    color: inherit;
+  }
+.hero {
+  min-height: 280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.hero-text {
+  margin-top: 80px;
+}
+
+.logo {
+  width: 180px;
+  height: auto;
+}
+
+.footer{
+  font-size: small;
+}
+</style>

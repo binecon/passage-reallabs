@@ -1,0 +1,170 @@
+---
+const { lab } = Astro.props;
+---
+
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{lab.data.title} · Passage Reallabs</title>
+  </head>
+
+  <body>
+
+    <header class="hero">
+      <div>
+        <p class="label">Passage Reallab</p>
+        <h1>{lab.data.title}</h1>
+        <h2>{lab.data.subtitle}</h2>
+      </div>
+
+      <img 
+        src="/reallabs-logo.svg" 
+        alt="Passage Reallabs"
+        class="logo"
+      />
+    </header>
+
+
+    <main>
+
+      <section class="facts">
+        <h3>Projektsteckbrief</h3>
+
+        <dl>
+          <div>
+            <dt>Partner</dt>
+            <dd>{lab.data.partner}</dd>
+          </div>
+
+          <div>
+            <dt>Datum</dt>
+            <dd>{lab.data.date}</dd>
+          </div>
+
+          <div>
+            <dt>Ort</dt>
+            <dd>{lab.data.location}</dd>
+          </div>
+
+          <div>
+            <dt>Berufsfelder</dt>
+            <dd>{lab.data.fields.join(', ')}</dd>
+          </div>
+        </dl>
+      </section>
+
+
+      <article class="content">
+        <slot />
+      </article>
+
+
+      <section class="partner">
+        <h3>Praxispartner</h3>
+        <p>
+          Dieses Reallab wurde gemeinsam mit
+          <strong>{lab.data.partner}</strong>
+          entwickelt.
+        </p>
+      </section>
+
+    </main>
+
+
+    <footer>
+      <p>
+        © Passage Reallabs · Smart City Halle (Saale)
+      </p>
+    </footer>
+
+
+  </body>
+</html>
+
+
+<style>
+body {
+  font-family: system-ui, sans-serif;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 280px;
+  padding-bottom: 3rem;
+}
+
+
+.hero h1 {
+  font-size: 3rem;
+  margin: 0.5rem 0;
+}
+
+
+.hero h2 {
+  font-weight: normal;
+  max-width: 600px;
+}
+
+
+.label {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.8rem;
+}
+
+
+.logo {
+  width: 180px;
+}
+
+
+.facts {
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+
+.facts dl {
+  display: grid;
+  gap: 1rem;
+}
+
+
+.facts div {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+}
+
+
+dt {
+  font-weight: bold;
+}
+
+
+.content {
+  max-width: 750px;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+}
+
+
+.partner {
+  border-top: 1px solid #ddd;
+  padding-top: 2rem;
+}
+
+
+footer {
+  margin-top: 4rem;
+  opacity: 0.6;
+}
+</style>
