@@ -4,7 +4,10 @@ const { lab } = Astro.props;
 const fields: string[] = lab.data.fields;
 ---
 
-<article class="card">
+<article
+  class="card"
+  style={`--lab-color: ${lab.data.color};`}
+>
 
   <a href={`/reallabs/${lab.id}`}>
 
@@ -42,18 +45,19 @@ const fields: string[] = lab.data.fields;
 
 
       <div class="fields">
-        {fields.map((field) => (
-          <span>{field}</span>
+        {lab.data.fields.map((field: string) => (
+        <span>{field}</span>
         ))}
       </div>
 
     </div>
 
 
-    <div class="cta">
-      Case Study ansehen →
-    </div>
-
+    <div class="cta-container">
+      <a class="cta" href={lab.url}>
+      <span>Case Study ansehen →</span>
+      </a>
+  </div>
 
   </a>
 
@@ -62,75 +66,79 @@ const fields: string[] = lab.data.fields;
 
 <style>
 .card {
-  border: 1px solid #ddd;
-  border-radius: 16px;
+  /* border-top: 6px solid var(--lab-color); */
+  background: var(--lab-color);
+  border: 5px solid var(--lab-color);
+  border-radius: 10px;
   padding: 1.5rem;
 
   display: flex;
   flex-direction: column;
 
   transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+  transform 0.2s ease,
+  box-shadow 0.2s ease;
 }
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-}
-
 .card a {
   text-decoration: none;
   color: inherit;
 }
 
-
-h3 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
+.card:hover {
+  box-shadow: 0 0 20px color-mix(in srgb, var(--lab-color), white 70%);
 }
 
-
+.title {
+  font-size: 2em;
+  font-weight: 700;
+  line-height:1.2;
+  margin:0;
+}
 .subtitle {
-  margin-top: 0;
-  opacity: 0.75;
+  margin-top:.5rem;
+  font-size:1.05rem;
+  font-weight:400;
+  line-height:1.4;
+  color:rgba(0,0,0,.75);
 }
-
-
-.partner {
-  margin-top: 1.5rem;
-}
-
 
 .meta {
-  display: flex;
-  gap: 2rem;
-  margin-top: 1.5rem;
-
-  font-size: 0.9rem;
+  display:flex;
+  gap:1rem;
+  margin-top:1rem;
+  font-size:.9rem;
+  color:rgba(0,0,0,.65);
 }
-
-
 .fields {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 1.5rem;
+  margin-top:1rem;
+  font-size:.85rem;
+  font-weight:500;
+  color:rgba(0,0,0,.65);
 }
-
 
 .fields span {
-  border: 1px solid #ccc;
-  border-radius: 999px;
-
-  padding: 0.25rem 0.75rem;
-
-  font-size: 0.85rem;
+  font-size:.9rem;
 }
 
+.fields span:not(:last-child)::after {
+  content:" · ";
+  margin-left:.4rem;
+}
+.cta-container {
+  margin-top: auto;
+  padding-top: 1.5rem;
+}
 
 .cta {
-  margin-top: 1.5rem;
-  font-weight: 600;
+  border-top: 1px solid rgba(0,0,0,.15);
+  padding-top: 1rem;
+  font-size:1rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cta:hover {
+  letter-spacing:.02em;
 }
 </style>

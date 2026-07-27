@@ -15,6 +15,8 @@ export async function getStaticPaths() {
   }));
 }
 
+
+
 const { lab } = Astro.props;
 const { Content } = await render(lab);
 ---
@@ -22,3 +24,4 @@ const { Content } = await render(lab);
 <CaseStudyLayout lab={lab}>
   <Content />
 </CaseStudyLayout>
+

@@ -2,7 +2,8 @@
 import { getCollection } from 'astro:content';
 import CaseStudyCard from '../components/CaseStudyCard.astro';
 import Footer from '../components/Footer.astro';
-const labs = await getCollection('reallabs');
+const labs = (await getCollection('reallabs'))
+  .sort((a, b) => a.data.order - b.data.order);
 ---
 
 <html lang="de">
@@ -13,24 +14,24 @@ const labs = await getCollection('reallabs');
   </head>
 
   <body>
-    <header class="hero">
-      <div class="hero-text">
-        <h1>Passage Reallabs</h1>
+   <header class="hero">
 
-        <p>
-          Jugendliche bearbeiten reale Zukunftsfragen gemeinsam mit Unternehmen
-          und Institutionen.
-        </p>
-      </div>
+  <div class="hero-text">
+    <h1>Passage Reallabs</h1>
 
-      <a href="/" class="logo-link">
-        <img 
-          src="/reallabs-logo.svg" 
-          alt="Passage Reallabs" 
-          class="logo" 
-        />
-      </a>
-    </header>
+    <p>
+      Jugendliche bearbeiten reale Zukunftsfragen gemeinsam mit Unternehmen
+      und Institutionen – kreativ, praxisnah und auf Augenhöhe.
+    </p>
+  </div>
+
+  <img
+    src="/reallabs-logo.svg"
+    alt="Passage Reallabs"
+    class="logo"
+  />
+
+</header>
 
     <main>
       <section>
@@ -73,20 +74,35 @@ const labs = await getCollection('reallabs');
     color: inherit;
   }
 .hero {
-  min-height: 280px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  padding-top: 4rem;
 }
 
 .hero-text {
-  margin-top: 80px;
+  max-width: 620px;
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 5vw, 1.5rem);
+  line-height: 1.05;
+  margin: 0 0 1.5rem;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #303131;
+  max-width: 520px;
 }
 
 .logo {
   width: 180px;
   height: auto;
-}.logo-link {
+  align-self: flex-start;
+}
+.logo-link {
   display: inline-block;
   cursor: pointer;
 }

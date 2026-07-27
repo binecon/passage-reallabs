@@ -10,23 +10,22 @@ const { lab } = Astro.props;
     <title>{lab.data.title} · Passage Reallabs</title>
   </head>
 
-  <body>
+  <body class="case-study">
+   <header class="hero" style={`--lab-color: ${lab.data.color};`}>
+  <div>
+    <p class="label">Passage Reallab</p>
+    <h1>{lab.data.title}</h1>
+    <h2>{lab.data.subtitle}</h2>
+  </div>
 
-    <header class="hero">
-      <div>
-        <p class="label">Passage Reallab</p>
-        <h1>{lab.data.title}</h1>
-        <h2>{lab.data.subtitle}</h2>
-      </div>
-
-     <a href="/" class="logo-link">
-        <img 
-          src="/reallabs-logo.svg" 
-          alt="Passage Reallabs" 
-          class="logo" 
-        />
-      </a>
-    </header>
+  <a href="/" class="logo-link">
+    <img 
+      src="/reallabs-logo.svg" 
+      alt="Passage Reallabs" 
+      class="logo" 
+    />
+  </a>
+</header>
 
 
     <main>
@@ -90,16 +89,24 @@ body {
   padding: 2rem;
 }
 
-
 .hero {
+  background: color-mix(
+    in srgb,
+    var(--lab-color),
+    white 25%
+  );
+
+  border-radius: 16px;
+
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+
   min-height: 280px;
-  padding-bottom: 3rem;
+  padding: 2rem;
+
+  margin-bottom: 3rem;
 }
-
-
 .hero h1 {
   font-size: 3rem;
   margin: 0.5rem 0;

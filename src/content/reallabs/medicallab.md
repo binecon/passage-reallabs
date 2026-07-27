@@ -5,10 +5,8 @@ partner: "tba"
 date: "November 2026"
 location: "Halle (Saale)"
 fields:
-  - Sensorik
-  - IT
-  - Messtechnik
-  - Medienproduktion
+  - Medizintechnik
+  - Pflegeinnovation
 participants: "tba"
 duration: "9:00–14:00 Uhr"
 mission: "Utersucht..."
@@ -21,6 +19,8 @@ outputs:
   - Dashboard
   - Präsentation
   - Video
+color: "#F5AEFB"
+order: 3
 ---
 
 ## Mission

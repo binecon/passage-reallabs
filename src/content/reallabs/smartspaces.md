@@ -6,9 +6,7 @@ date: "07.10.2026"
 location: "Halle (Saale)"
 fields:
   - Sensorik
-  - IT
-  - Messtechnik
-  - Medienproduktion
+  - Logistik
 participants: "tab"
 duration: "9:00–14:00 Uhr"
 mission: "Entwickelt ein Smart Spaces-Testfest..."
@@ -17,10 +15,9 @@ technologies:
   - Ultraschallsensor, Bewegungssensor
   - Audioplayer
   - Canva
-outputs:
-  - Dashboard
-  - Präsentation
-  - Video
+color: "#8F99FD"
+order: 2
+
 ---
 
 ## Mission

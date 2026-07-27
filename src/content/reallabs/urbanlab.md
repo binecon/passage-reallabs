@@ -5,10 +5,10 @@ partner: "Historisches Technikzentrum / Stadtwerke Halle (Saale)"
 date: "05.05.2026"
 location: "Halle (Saale)"
 fields:
-  - Sensorik
-  - IT
-  - Messtechnik
-  - Medienproduktion
+  - Nachhaltigkeit
+  - Stadtplanung
+color: "#95E5B2"
+order: 1
 ---
 
 ## Mission
