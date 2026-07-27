@@ -3,142 +3,268 @@ const { lab } = Astro.props;
 
 const fields: string[] = lab.data.fields;
 ---
+<article class="card" style={`--lab-color:${lab.data.color}`}>
 
-<article
-  class="card"
-  style={`--lab-color: ${lab.data.color};`}
->
+  <div class="card-content">
 
-  <a href={`/reallabs/${lab.id}`}>
-
-    <div class="card-header">
-      <h3>{lab.data.title}</h3>
-      <p class="subtitle">
-        {lab.data.subtitle}
-      </p>
-    </div>
+    <h3 class="title">
+      {lab.data.title}
+    </h3>
 
 
-    <div class="card-body">
-
-      <p class="partner">
-        <strong>Partner</strong><br />
-        {lab.data.partner}
-      </p>
-
-
-      <div class="meta">
-
-        <div>
-          <strong>Ort</strong>
-          <br />
-          {lab.data.location}
-        </div>
-
-        <div>
-          <strong>Datum</strong>
-          <br />
-          {lab.data.date}
-        </div>
-
-      </div>
-
+    <div class="details">
 
       <div class="fields">
         {lab.data.fields.map((field: string) => (
-        <span>{field}</span>
+          <span>{field}</span>
         ))}
+      </div>
+
+
+      <div class="detail">
+        <span class="label">Datum</span>
+        <span>{lab.data.date}</span>
+      </div>
+
+
+      <div class="detail">
+        <span class="label">Partner</span>
+        <span>{lab.data.partner}</span>
       </div>
 
     </div>
 
-
-    <div class="cta-container">
-      <a class="cta" href={lab.url}>
-      <span>Case Study ansehen →</span>
-      </a>
   </div>
 
-  </a>
+
+  <div class="card-footer">
+
+    <a href={lab.url} class="cta">
+      Case Study ansehen →
+    </a>
+
+  </div>
 
 </article>
 
+<section class="process">
+
+  <div class="section-header">
+    <h2>Ablauf eines Reallabs</h2>
+    <p>
+      Von der ersten Idee bis zur gemeinsamen Reflexion – in vier Schritten.
+    </p>
+  </div>
+
+  <div class="process-grid">
+
+    <article class="step">
+      <div class="step-number">1</div>
+
+      <h3>Herausforderung</h3>
+
+      <p>
+        Unternehmen oder Institutionen bringen eine reale Fragestellung mit.
+      </p>
+    </article>
+
+    <article class="step">
+      <div class="step-number">2</div>
+
+      <h3>Reallab</h3>
+
+      <p>
+        Jugendliche entwickeln gemeinsam Ideen, Konzepte oder Prototypen.
+      </p>
+    </article>
+
+    <article class="step">
+      <div class="step-number">3</div>
+
+      <h3>Präsentation</h3>
+
+      <p>
+        Ergebnisse werden vorgestellt und gemeinsam diskutiert.
+      </p>
+    </article>
+
+    <article class="step">
+      <div class="step-number">4</div>
+
+      <h3>Weiterdenken</h3>
+
+      <p>
+        Erkenntnisse fließen in weitere Projekte oder die Praxis ein.
+      </p>
+    </article>
+
+  </div>
+
+</section>
+
 
 <style>
+
 .card {
-  /* border-top: 6px solid var(--lab-color); */
-  background: var(--lab-color);
-  border: 5px solid var(--lab-color);
-  border-radius: 10px;
-  padding: 1.5rem;
-
-  display: flex;
-  flex-direction: column;
-
-  transition:
-  transform 0.2s ease,
-  box-shadow 0.2s ease;
-}
-.card a {
-  text-decoration: none;
-  color: inherit;
+  border-radius:20px;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  border:1px solid black;
+  background:white;
+  height:380px;
 }
 
-.card:hover {
-  box-shadow: 0 0 20px color-mix(in srgb, var(--lab-color), white 70%);
+/* upper white area */
+
+.card-content {
+  padding: 1.8rem 1.8rem 0.2rem;
+  flex:1;
 }
 
 .title {
-  font-size: 2em;
-  font-weight: 700;
-  line-height:1.2;
-  margin:0;
-}
-.subtitle {
-  margin-top:.5rem;
-  font-size:1.05rem;
-  font-weight:400;
-  line-height:1.4;
-  color:rgba(0,0,0,.75);
+  margin:0 0 1.2rem;
+  color:var(--lab-color);
+  font-size:1.8rem;
+  font-weight:700;
+  line-height:1.1;
 }
 
-.meta {
-  display:flex;
-  gap:1rem;
-  margin-top:1rem;
-  font-size:.9rem;
-  color:rgba(0,0,0,.65);
+
+/* details */
+
+.details {
+  padding:0;
+ 
 }
+
 .fields {
-  margin-top:1rem;
-  font-size:.85rem;
-  font-weight:500;
-  color:rgba(0,0,0,.65);
+  font-size:.8rem;
+  font-style: italic;
+  line-height:1.5;
+  margin-bottom:2.5rem;
+  /* color: red; */
 }
-
-.fields span {
-  font-size:.9rem;
-}
-
 .fields span:not(:last-child)::after {
-  content:" · ";
-  margin-left:.4rem;
+  content:", ";
 }
-.cta-container {
-  margin-top: auto;
-  padding-top: 1.5rem;
+
+.detail {
+  margin-top:1rem;
 }
+
+.label {
+  display:block;
+  font-size:.7rem;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  color:#949695;
+  margin-bottom:.25rem;
+}
+
+.detail span:not(.label) {
+  font-size:0.8rem;
+  font-weight: 500;
+}
+
+
+/* lower coloured CTA area */
+
+.card-footer {
+  min-height: 80px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--lab-color);
+
+  padding: 0;
+}
+
 
 .cta {
-  border-top: 1px solid rgba(0,0,0,.15);
-  padding-top: 1rem;
-  font-size:1rem;
-  font-weight: 700;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background:transparent;
+  border:1px solid black;
+  border-radius:999px;
+  padding:.55rem 1.2rem;
+  color:black;
+  text-decoration:none;
+  font-size:.9rem;
+  font-weight:600;
+  transition:.2s ease;
 }
+
+
 .cta:hover {
-  letter-spacing:.02em;
+  background:black;
+  color:white;
 }
+
+
+/* Ablauf */
+.process {
+  padding: 5rem 0;
+}
+
+.section-header {
+  max-width: 640px;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  margin-bottom: .75rem;
+}
+
+.section-header p {
+  color: #949695;
+  line-height: 1.6;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.step {
+  position: relative;
+  padding-top: 1rem;
+}
+
+.step-number {
+  width: 42px;
+  height: 42px;
+
+  border: 1px solid #303131;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  font-weight: 700;
+}
+
+.step h3 {
+  margin: 0 0 .75rem;
+  font-size: 1.2rem;
+}
+
+.step p {
+  margin: 0;
+  color: #303131;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .process {
+    padding: 4rem 0;
+  }
+
+  .process-grid {
+    gap: 2.5rem;
+  }
+
+}
+
 </style>
