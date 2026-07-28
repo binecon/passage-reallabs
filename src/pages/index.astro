@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import CaseStudyCard from '../components/CaseStudyCard.astro';
 import Footer from '../components/Footer.astro';
+import '../styles/index.css';
 const labs = (await getCollection('reallabs'))
   .sort((a, b) => a.data.order - b.data.order);
 ---
@@ -14,28 +15,29 @@ const labs = (await getCollection('reallabs'))
   </head>
 
   <body>
-   <header class="hero">
 
-  <div class="hero-text">
-    <h1>Passage Reallabs</h1>
+  <!-- I. Hero & II. description -->
+      <header class="hero">
+        <div class="hero-text">
+          <h1>Passage Reallabs</h1>
 
-    <p>
-      Jugendliche bearbeiten reale Zukunftsfragen gemeinsam mit Unternehmen
-      und Institutionen – kreativ, praxisnah und auf Augenhöhe.
-    </p>
-  </div>
+          <p class="hero-text info-text">
+            Jugendliche bearbeiten reale Zukunftsfragen gemeinsam mit Unternehmen
+            und Institutionen – kreativ, praxisnah und auf Augenhöhe.
+          </p>
+        </div>
 
-  <img
-    src="/reallabs-logo.svg"
-    alt="Passage Reallabs"
-    class="logo"
-  />
+          <img
+            src="/reallabs-logo.svg"
+            alt="Passage Reallabs"
+            class="logo"
+          />
+        </header>
 
-</header>
-
-    <main>
-      <section>
-        <h2>Case Studies</h2>
+  <main>
+<!-- III. Case Studies -->
+  <section class="section">
+  <p class="section-label">Projekte</p>
 
         <div class="cards">
          {labs.map((lab) => (
@@ -43,72 +45,159 @@ const labs = (await getCollection('reallabs'))
         ))}
         </div>
       </section>
+
+
+ <!-- IV. How it works -->
+  <section class="section process">
+
+    <div class="section-header">
+      <p class="section-label">Ablauf eines Reallabs</p>
+
+      <p class="info-text">
+        Vom Projekttag zur Zusammenarbeit in vier Schritten.
+      </p>
+    </div>
+
+
+    <div class="process-grid">
+
+      <article class="step">
+        <div class="step-number">1</div>
+
+        <h3>Herausforderung</h3>
+
+        <p>
+          Unternehmen oder Institutionen bringen eine reale Fragestellung mit
+        </p>
+      </article>
+
+
+      <article class="step">
+        <div class="step-number">2</div>
+
+        <h3>Reallab</h3>
+
+        <p>
+          Beim Projekttag entwickeln Jugendliche Ideen, Konzepte oder Prototypen
+        </p>
+      </article>
+
+
+      <article class="step">
+        <div class="step-number">3</div>
+
+        <h3>Präsentation</h3>
+
+        <p>
+          Ergebnisse werden vorgestellt und gemeinsam diskutiert
+        </p>
+      </article>
+
+
+      <article class="step">
+        <div class="step-number">4</div>
+
+        <h3>Netzwerken</h3>
+
+        <p>
+          Wenn die Zusammenarbeit überzeugt, entstehen daraus Kontakte, etwa für Praktika oder Ausbildungsplätze
+        </p>
+      </article>
+
+    </div>
+
+  </section>
+
+  <!-- V. CTA -->
+  <p class="section-label">Kooperation</p>
+    <section class="section partner-cta">
+      <h3>
+        Werden Sie Reallabs-Partner
+      </h3>
+
+      <p>
+        Bringen Sie eine authentische Fragestellung aus Ihrem Unternehmen oder Ihrer Institution ein. 
+        Gemeinsam mit Jugendlichen entwickeln Sie neue Perspektiven und lernen potenzielle Nachwuchskräfte kennen.
+      </p>
+
+      <a href="/kontakt" class="button button--cta">
+        Reallab starten →
+      </a>
+    </section>
+
+<!-- VI. Stimmen -->
+ 
+    <section class="section testimonials">
+      <p class="section-label">Stimmen aus der Praxis</p>
+      <div class="testimonial-grid">
+          <article class="testimonial">
+            <p class="quote">
+              Die Zusammenarbeit mit den Jugendlichen hat uns neue Perspektiven
+              auf unsere Fragestellung eröffnet.
+            </p>
+            <p class="author">
+              Name · Funktion<br>
+              Organisation
+            </p>
+          </article>
+          <article class="testimonial">
+            <p class="quote">
+              Das Reallab war eine spannende Möglichkeit, Nachwuchs für unsere
+              Themen zu begeistern.
+            </p>
+            <p class="author">
+              Name · Funktion<br>
+              Organisation
+            </p>
+          </article>
+        </div>
+      </section>
+
+<!-- VII. Einblicke -->
+
+<section class="section insights">
+
+  <div class="insights-content">
+
+    <div class="insights-text">
+
+      <p class="section-label">
+        Einblicke
+      </p>
+
+      <h3>
+        Was Jugendliche aus den Reallabs mitnehmen
+      </h3>
+
+      <p class="info-text">
+        Ideen entwickeln, ausprobieren, mit echten Partnern arbeiten:
+        In den Reallabs entdecken Jugendliche neue Perspektiven auf
+        Zukunftsthemen und Berufsfelder.
+      </p>
+
+      <a href="/jugend" class="button button--insights">
+        Mehr Einblicke →
+      </a>
+
+    </div>
+
+
+    <div class="insights-media">
+
+      <img 
+        src="/images/reallab-preview.jpg"
+        alt="x"
+      />
+
+    </div>
+
+  </div>
+
+</section>
+
     </main>
 
     <Footer />
   </body>
 </html>
-
-<style>
-  body {
-    font-family: system-ui, sans-serif, "Helvetica Neue", "Helvetica", Arial;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 2rem;
-  }
-
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-  }
-
-  .card {
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    padding: 1.5rem;
-  }
-
-  .card a {
-    text-decoration: none;
-    color: inherit;
-  }
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding-top: 4rem;
-}
-
-.hero-text {
-  max-width: 620px;
-}
-
-.hero h1 {
-  font-size: clamp(3rem, 5vw, 1.5rem);
-  line-height: 1.05;
-  margin: 0 0 1.5rem;
-}
-
-.hero p {
-  font-size: 1.15rem;
-  line-height: 1.7;
-  color: #303131;
-  max-width: 520px;
-}
-
-.logo {
-  width: 180px;
-  height: auto;
-  align-self: flex-start;
-}
-.logo-link {
-  display: inline-block;
-  cursor: pointer;
-}
-
-.logo-link img {
-  display: block;
-}
-
-</style>
+ 

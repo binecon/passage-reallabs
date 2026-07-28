@@ -38,8 +38,7 @@ const fields: string[] = lab.data.fields;
 
 
   <div class="card-footer">
-
-    <a href={lab.url} class="cta">
+    <a href={`/reallabs/${lab.id}/`} class="button">
       Case Study ansehen →
     </a>
 
@@ -47,66 +46,12 @@ const fields: string[] = lab.data.fields;
 
 </article>
 
-<section class="process">
-
-  <div class="section-header">
-    <h2>Ablauf eines Reallabs</h2>
-    <p>
-      Von der ersten Idee bis zur gemeinsamen Reflexion – in vier Schritten.
-    </p>
-  </div>
-
-  <div class="process-grid">
-
-    <article class="step">
-      <div class="step-number">1</div>
-
-      <h3>Herausforderung</h3>
-
-      <p>
-        Unternehmen oder Institutionen bringen eine reale Fragestellung mit.
-      </p>
-    </article>
-
-    <article class="step">
-      <div class="step-number">2</div>
-
-      <h3>Reallab</h3>
-
-      <p>
-        Jugendliche entwickeln gemeinsam Ideen, Konzepte oder Prototypen.
-      </p>
-    </article>
-
-    <article class="step">
-      <div class="step-number">3</div>
-
-      <h3>Präsentation</h3>
-
-      <p>
-        Ergebnisse werden vorgestellt und gemeinsam diskutiert.
-      </p>
-    </article>
-
-    <article class="step">
-      <div class="step-number">4</div>
-
-      <h3>Weiterdenken</h3>
-
-      <p>
-        Erkenntnisse fließen in weitere Projekte oder die Praxis ein.
-      </p>
-    </article>
-
-  </div>
-
-</section>
 
 
 <style>
 
 .card {
-  border-radius:20px;
+  border-radius:10px;
   overflow:hidden;
   display:flex;
   flex-direction:column;
@@ -124,10 +69,11 @@ const fields: string[] = lab.data.fields;
 
 .title {
   margin:0 0 1.2rem;
-  color:var(--lab-color);
+  /* color:var(--lab-color); */
   font-size:1.8rem;
   font-weight:700;
   line-height:1.1;
+  color: orange
 }
 
 
@@ -135,15 +81,14 @@ const fields: string[] = lab.data.fields;
 
 .details {
   padding:0;
- 
+  /* color:#949695; */
 }
 
 .fields {
-  font-size:.8rem;
-  font-style: italic;
+  font-size:1rem;
+  /* font-style: italic; */
   line-height:1.5;
-  margin-bottom:2.5rem;
-  /* color: red; */
+  margin-bottom:2rem;
 }
 .fields span:not(:last-child)::after {
   content:", ";
@@ -155,16 +100,16 @@ const fields: string[] = lab.data.fields;
 
 .label {
   display:block;
-  font-size:.7rem;
+  font-size:0.75rem;
   text-transform:uppercase;
   letter-spacing:.08em;
-  color:#949695;
   margin-bottom:.25rem;
+   color:#949695;
 }
 
 .detail span:not(.label) {
-  font-size:0.8rem;
-  font-weight: 500;
+  font-size:1rem;
+  margin-bottom:2rem;
 }
 
 
@@ -172,99 +117,11 @@ const fields: string[] = lab.data.fields;
 
 .card-footer {
   min-height: 80px;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   background: var(--lab-color);
-
   padding: 0;
-}
-
-
-.cta {
-  background:transparent;
-  border:1px solid black;
-  border-radius:999px;
-  padding:.55rem 1.2rem;
-  color:black;
-  text-decoration:none;
-  font-size:.9rem;
-  font-weight:600;
-  transition:.2s ease;
-}
-
-
-.cta:hover {
-  background:black;
-  color:white;
-}
-
-
-/* Ablauf */
-.process {
-  padding: 5rem 0;
-}
-
-.section-header {
-  max-width: 640px;
-  margin-bottom: 3rem;
-}
-
-.section-header h2 {
-  margin-bottom: .75rem;
-}
-
-.section-header p {
-  color: #949695;
-  line-height: 1.6;
-}
-
-.process-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
-}
-
-.step {
-  position: relative;
-  padding-top: 1rem;
-}
-
-.step-number {
-  width: 42px;
-  height: 42px;
-
-  border: 1px solid #303131;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1.25rem;
-  font-weight: 700;
-}
-
-.step h3 {
-  margin: 0 0 .75rem;
-  font-size: 1.2rem;
-}
-
-.step p {
-  margin: 0;
-  color: #303131;
-  line-height: 1.6;
-}
-
-@media (max-width: 768px) {
-  .process {
-    padding: 4rem 0;
-  }
-
-  .process-grid {
-    gap: 2.5rem;
-  }
-
 }
 
 </style>

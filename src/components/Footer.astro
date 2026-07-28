@@ -1,30 +1,30 @@
-<footer>
-  <p>© 2026 Passage Reallabs · Smart-City-Bildungszentrum Halle (Saale)</p>
+---
+import "../styles/footer.css";
+---
+<footer class="footer">
+
+  <div class="footer-main">
+    <p>
+      © 2026 Passage Reallabs · Smart-City-Bildungszentrum Halle (Saale)
+    </p>
+
+    <div class="footer-links">
+      <a href="/kontakt">Kontakt</a>
+      <a href="/impressum">Impressum</a>
+      <a href="/datenschutz">Datenschutz</a>
+    </div>
+  </div>
+
+
+  <div class="footer-funding">
+
+    <span>Gefördert durch</span>
+
+    <div class="footer-logos">
+      <img src="/logos/smart-city.svg" alt="Smart City Halle">
+      <img src="/logos/kfw.svg" alt="KfW">
+    </div>
+
+  </div>
+
 </footer>
-
-<style>
-footer {
-  margin-top: 5rem;
-  padding-top: 2rem;
-  border-top: 1px solid #ddd;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
-
-  font-size: 0.9rem;
-  color: #666;
-}
-
-footer p {
-  margin: 0;
-}
-
-@media (max-width: 700px) {
-  footer {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-</style>
