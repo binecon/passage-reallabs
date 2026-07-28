@@ -2,7 +2,7 @@
 title: "UrbanLab"
 subtitle: "Mini-Sensorentestfeld & Daten-Dashboard"
 partner: "Historisches Technikzentrum / Stadtwerke Halle (Saale)"
-date: "2. Sept. 2026"
+date: "5. Mai 2026 // 2. Sept. 2026"
 location: "Halle (Saale)"
 fields:
   - Nachhaltigkeit

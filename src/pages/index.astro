@@ -17,22 +17,22 @@ const labs = (await getCollection('reallabs'))
   <body>
 
   <!-- I. Hero & II. description -->
-      <header class="hero">
-        <div class="hero-text">
-          <h1>Passage Reallabs</h1>
+     <header class="hero">
 
-          <p class="hero-text info-text">
-            Jugendliche bearbeiten reale Zukunftsfragen gemeinsam mit Unternehmen
-            und Institutionen – kreativ, praxisnah und auf Augenhöhe.
-          </p>
-        </div>
+      <div class="hero-content">
 
-          <img
-            src="/reallabs-logo.svg"
-            alt="Passage Reallabs"
-            class="logo"
-          />
-        </header>
+        <img
+          src="/reallabs-logo.svg"
+          alt="Passage Reallabs"
+          class="logo"
+        />
+
+        <p class="hero-text">
+          Jugendliche bearbeiten reale Zukunftsfragen gemeinsam mit Unternehmen
+          und Institutionen – kreativ, praxisnah und auf Augenhöhe.
+        </p>
+      </div>
+    </header>
 
   <main>
 <!-- III. Case Studies -->
@@ -53,8 +53,8 @@ const labs = (await getCollection('reallabs'))
     <div class="section-header">
       <p class="section-label">Ablauf eines Reallabs</p>
 
-      <p class="info-text">
-        Vom Projekttag zur Zusammenarbeit in vier Schritten.
+      <p class="text subtext">
+        Vom Projekttag zur Zusammenarbeit - in vier Schritten.
       </p>
     </div>
 
@@ -78,7 +78,7 @@ const labs = (await getCollection('reallabs'))
         <h3>Reallab</h3>
 
         <p>
-          Beim Projekttag entwickeln Jugendliche Ideen, Konzepte oder Prototypen
+          Beim Projekttag entwickeln Jugendliche Lösungen, Konzepte oder Prototypen
         </p>
       </article>
 
@@ -100,7 +100,7 @@ const labs = (await getCollection('reallabs'))
         <h3>Netzwerken</h3>
 
         <p>
-          Wenn die Zusammenarbeit überzeugt, entstehen daraus Kontakte, etwa für Praktika oder Ausbildungsplätze
+          Wenn die Zusammenarbeit überzeugt, entstehen daraus Kontakte, z.B. für Praktika oder Ausbildungsplätze
         </p>
       </article>
 
@@ -109,21 +109,25 @@ const labs = (await getCollection('reallabs'))
   </section>
 
   <!-- V. CTA -->
-  <p class="section-label">Kooperation</p>
-    <section class="section partner-cta">
-      <h3>
-        Werden Sie Reallabs-Partner
-      </h3>
-
-      <p>
-        Bringen Sie eine authentische Fragestellung aus Ihrem Unternehmen oder Ihrer Institution ein. 
-        Gemeinsam mit Jugendlichen entwickeln Sie neue Perspektiven und lernen potenzielle Nachwuchskräfte kennen.
-      </p>
-
-      <a href="/kontakt" class="button button--cta">
-        Reallab starten →
-      </a>
-    </section>
+ 
+    
+      <section class="partner-cta">
+       <p class="section-label">Kooperation</p>
+        <div class="cta-text">
+          <h2>
+            Werden Sie Reallabs-Partner
+          </h2>
+          <p class="text">
+             Bringen Sie eine authentische Fragestellung aus Ihrem Unternehmen oder Ihrer Institution ein. 
+            Gemeinsam mit Jugendlichen entwickeln Sie neue Perspektiven und lernen potenzielle Nachwuchskräfte kennen.
+          </p>
+        </div>
+        <div class="cta-action">
+          <a href="/kontakt" class="button button--cta">
+            Partner werden →
+          </a>
+        </div>
+      </section>
 
 <!-- VI. Stimmen -->
  
@@ -156,11 +160,8 @@ const labs = (await getCollection('reallabs'))
 <!-- VII. Einblicke -->
 
 <section class="section insights">
-
   <div class="insights-content">
-
     <div class="insights-text">
-
       <p class="section-label">
         Einblicke
       </p>
@@ -169,7 +170,7 @@ const labs = (await getCollection('reallabs'))
         Was Jugendliche aus den Reallabs mitnehmen
       </h3>
 
-      <p class="info-text">
+      <p class="text">
         Ideen entwickeln, ausprobieren, mit echten Partnern arbeiten:
         In den Reallabs entdecken Jugendliche neue Perspektiven auf
         Zukunftsthemen und Berufsfelder.
@@ -180,19 +181,13 @@ const labs = (await getCollection('reallabs'))
       </a>
 
     </div>
-
-
     <div class="insights-media">
-
       <img 
         src="/images/reallab-preview.jpg"
-        alt="x"
+        alt="Jugendlicher mit Sensorbox beim Reallab Projekttag"
       />
-
     </div>
-
   </div>
-
 </section>
 
     </main>
