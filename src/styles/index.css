@@ -96,30 +96,34 @@ body {
 /* Hero */
 
 .hero {
-  display: flex;
-  padding: 4rem 0 2.5rem 0;
+  display:grid;
+  grid-template-columns: 1fr 520px;
+  gap:4rem;
+  align-items:center;
+  min-height:65vh;
+  padding:4rem 0 5rem;
 }
 
-.hero-content {
-  max-width: 620px;
-}
-
-.title-logo {
-  margin-bottom: 3rem;
+.hero-copy {
+  max-width:520px;
 }
 
 .logo {
-  width: 220px;
-  height: auto;
-  display: block;
+  width:180px;
+  height:auto;
+  margin-bottom:2.5rem;
 }
 
-.hero-text {
-  max-width: 480px; /* wenn ohne Logo, dann Text breiter und stärker, wenn Logo 480px,damit Logo + Text zusammen ruhiger wirken. */
-  font-size: 1rem;
-  line-height: 1.7;
-  color: var(--dark-grey);
-  margin: 0;
+.hero h1 {
+  margin:0 0 1.5rem;
+  font-size:clamp(2.8rem, 5vw, 4rem);
+  line-height:1.05;
+}
+
+.hero-intro {
+  max-width:430px;
+  line-height:1.7;
+  color:var(--grey);
 }
 
 
@@ -298,7 +302,7 @@ body {
 .quote {
   font-size:1.2rem;
   line-height:1.5;
-  margin:0 0 1.5rem;
+  margin:1rem 0 1.5rem;
   font-style: italic;
   color: var(--dark-grey);
 }
