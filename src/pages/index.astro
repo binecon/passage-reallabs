@@ -11,50 +11,63 @@ const labs = (await getCollection('reallabs'))
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/rl-favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <title>Passage Reallabs</title>
   </head>
 
   <body>
 
-  <!-- I. Hero & II. description -->
-    <header class="hero">
+  <!-- Hero & description -->
+<header class="hero">
 
-      <div class="hero-text">
+  <div class="hero-text">
 
-        <p class="title-logo">Logo / Wortmarke</p>
-
-        <h2>Reale Aufgaben. Neue Perspektiven. Potenzielle Fachkräfte.</h2>
-        
-        <p>
-         In unseren eintägigen Reallabs arbeiten Schülerinnen und Schüler gemeinsam 
-         mit Unternehmen an echten Herausforderungen. Wir übernehmen Planung und Durchführung
-        – Sie bringen Ihre Praxisfrage mit.
-        </p>
-
-      </div>
-
-      <!-- <img
+    <div class="title-logo">
+      <img
         src="/reallabs-logo.svg"
         alt="Passage Reallabs"
         class="logo"
-      /> -->
+      />
+    </div>
 
-    </header>
+    <h2>Reale Aufgaben. Neue Perspektiven. Potenzielle Fachkräfte.</h2>
+
+    <p>
+      In unseren eintägigen Reallabs arbeiten Schülerinnen und Schüler gemeinsam 
+      mit Unternehmen an echten Herausforderungen. Wir übernehmen Planung und Durchführung
+      – Sie bringen Ihre Praxisfrage mit.
+    </p>
+
+  </div>
+
+</header>
 
   <main>
-<!-- III. Case Studies -->
-  <section class="section">
+    
+<!-- Projektvorschau -->
+<section class="section">
+
   <p class="section-label">Projekte</p>
 
-        <div class="cards">
-         {labs.map((lab) => (
-          <CaseStudyCard lab={lab} />
-        ))}
-        </div>
-      </section>
+  <div class="cards">
+
+    {labs.slice(0, 2).map((lab) => (
+      <CaseStudyCard lab={lab} />
+    ))}
+
+  </div>
+
+  <div class="all-projects">
+    <a href="/reallabs/" class="button">
+      Alle Projekte →
+    </a>
+  </div>
+
+</section>
 
 
- <!-- IV. How it works -->
+ <!-- How it works -->
   <section class="section process">
 
     <div class="section-header">
@@ -65,62 +78,75 @@ const labs = (await getCollection('reallabs'))
       </p>
     </div>
 
-
     <div class="process-grid">
-
       <article class="step">
         <div class="step-number">1</div>
-
-        <h3>Fragestellung</h3>
-
+        <h3>Praxisfrage</h3>
         <p>
           Sie bringen eine reale Aufgabe oder Fragestellung aus Ihrem Arbeitsalltag mit
         </p>
       </article>
 
-
       <article class="step">
         <div class="step-number">2</div>
-
         <h3>Projekttag</h3>
-
         <p>
           Wir übernehmen Planung, Moderation, Material und die Zusammenarbeit mit der Schulklasse
           <!-- Beim Projekttag entwickeln Jugendliche Lösungen, Konzepte oder Prototypen -->
         </p>
       </article>
 
-
       <article class="step">
         <div class="step-number">3</div>
-
         <h3>Ergebnisse</h3>
-
         <p>
           Ergebnisse werden präsentiert und gemeinsam diskutiert
         </p>
       </article>
 
-
       <article class="step">
         <div class="step-number">4</div>
-
-        <h3>Netzwerken</h3>
-
+        <h3>Kontakte knüpfen</h3>
         <p>
           Wenn die Zusammenarbeit überzeugt, entstehen daraus Kontakte, z.B. für Praktika oder Ausbildungsplätze
         </p>
       </article>
-
     </div>
-
   </section>
 
 
+  <!-- CTA -->
+    <section class="section partner-cta">
 
-<!-- V. Stimmen -->
+  <p class="section-label">Kooperation</p>
+
+  <h2>Bringen Sie Ihre Praxisfrage ein.</h2>
+
+  <p class="text">
+    Wir entwickeln auf Basis Ihrer Praxisanforderungen einen Projekttag und übernehmen
+    Organisation, Moderation und Begleitung. Sie bringen Ihre fachliche
+    Perspektive ein und lernen potenzielle Nachwuchskräfte kennen.
+  </p>
+
+  <a href="/kontakt" class="button button--cta">
+    Reallab starten →
+  </a>
+
+
+  <!-- <div class="cta-benefits">
+    <p>geringer organisatorischer Aufwand</p>
+    <p>Planung und Durchführung durch Passage Reallabs</p>
+    <p>reale Fragestellungen statt Musteraufgaben</p>
+    <p>Kontakte zu potenziellen Nachwuchskräften</p>
+  </div> -->
+
+</section>
+
+
+
+<!-- Stimmen -->
  
-    <section class="section testimonials">
+    <section class="section">
       <p class="section-label">Stimmen aus der Praxis</p>
       <div class="testimonial-grid">
           <article class="testimonial">
@@ -147,34 +173,8 @@ const labs = (await getCollection('reallabs'))
       </section>
 
 
-  <!-- VI. CTA -->
-    <section class="partner-cta">
 
-  <p class="section-label">Kooperation</p>
-
-  <h2>Bringen Sie Ihre Praxisfrage ein.</h2>
-
-  <p class="text">
-    Wir entwickeln gemeinsam mit Ihnen einen Projekttag und übernehmen
-    Organisation, Moderation und Begleitung. Sie bringen Ihre fachliche
-    Perspektive ein und lernen potenzielle Nachwuchskräfte kennen.
-  </p>
-
-  <a href="/kontakt" class="button button--cta">
-    Reallab starten →
-  </a>
-
-
-  <!-- <div class="cta-benefits">
-    <p>geringer organisatorischer Aufwand</p>
-    <p>Planung und Durchführung durch Passage Reallabs</p>
-    <p>reale Fragestellungen statt Musteraufgaben</p>
-    <p>Kontakte zu potenziellen Nachwuchskräften</p>
-  </div> -->
-
-</section>
-
-<!-- VIII. Einblicke -->
+<!-- Einblicke -->
 
 <section class="section insights">
   <div class="insights-content">

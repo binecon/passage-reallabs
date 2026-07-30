@@ -5,8 +5,8 @@ partner: "tba"
 date: "07. Okt. 2026"
 location: "Halle (Saale)"
 fields:
-  - Sensorik
   - Logistik
+  - Sensorik
   - Warenprozesse
 participants: "tab"
 duration: "9:00–14:00 Uhr"

@@ -52,10 +52,28 @@
   gap:2rem;
 }
 
+.footer-label {
+  margin: 0;
+  line-height: 1.4;
+}
 
 .footer-logos img {
   height:55px;
   width:auto;
+
+}
+
+.footer-evaluation {
+  display:flex;
+  align-items:center;
+  gap:2rem;
+  height:20px;
+
+
+  margin-top:3rem;
+
+  font-size:.8rem;
+  color:#949695;
 }
 
 

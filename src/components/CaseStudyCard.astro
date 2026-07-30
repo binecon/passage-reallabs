@@ -1,8 +1,7 @@
 ---
 const { lab } = Astro.props;
-
-const fields: string[] = lab.data.fields;
 ---
+
 <article class="card" style={`--lab-color:${lab.data.color}`}>
 
   <div class="card-content">
@@ -12,40 +11,38 @@ const fields: string[] = lab.data.fields;
     </h3>
 
 
-    <div class="details">
-
-      <div class="fields">
-        {lab.data.fields.map((field: string) => (
-          <span>{field}</span>
-        ))}
-      </div>
+    <div class="fields">
+      {lab.data.fields.map((field: string) => (
+        <span>{field}</span>
+      ))}
+    </div>
 
 
-      <div class="detail">
-        <span class="label">Partner</span>
-        <span>{lab.data.partner}</span>
-      </div>
+    <div class="partner">
 
+      <span class="label">
+        In Zusammenarbeit mit
+      </span>
 
-      <div class="detail">
-        <span class="label">Datum</span>
-        <span>{lab.data.date}</span>
-      </div>
+      <span class="partner-name">
+        {lab.data.partner}
+      </span>
 
     </div>
+
 
   </div>
 
 
   <div class="card-footer">
+
     <a href={`/reallabs/${lab.id}/`} class="button">
-      Case Study ansehen →
+      Projekt ansehen →
     </a>
 
   </div>
 
 </article>
-
 
 
 <style>
@@ -54,91 +51,131 @@ const fields: string[] = lab.data.fields;
   border:1px solid var(--grey);
   border-radius:20px;
   overflow:hidden;
+
   display:flex;
   flex-direction:column;
-  height:380px;
+
+  min-height:360px;
+
+  background:white;
+}
+
+
+/* content */
+
+.card-content {
+  padding:1.75rem;
+
+  flex:1;
 
   background: linear-gradient(
     to bottom,
-    var(--bg) 0%,
-    #FFFFFF 100%
+    var(--bg),
+    white
   );
 }
 
-/* upper white area */
-
-.card-content {
-  display:flex;
-  flex-direction:column;
-  height:100%;
-  padding:1.75rem;
-}
 
 .title {
-  margin:0 0 1rem;
+  position:relative;
+
+  margin:0 0 1.5rem;
+
+  padding-left:.9rem;
+
   color:var(--lab-color);
+
   font-size:1.7rem;
   font-weight:700;
   line-height:1.1;
 }
-.title::before{
-    content:"";
-    position:absolute;
-    left:0;
-    top:.15rem;
-    bottom:.15rem;
-    width:4px;
-    border-radius:2px;
-    background:var(--lab-color);
+
+
+.title::before {
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  top:.1rem;
+  bottom:.1rem;
+
+  width:4px;
+
+  border-radius:2px;
+
+  background:var(--lab-color);
 }
 
-/* details */
 
-.details {
-  padding:0;
-}
+/* project topics */
 
 .fields {
+
+  margin-bottom:2rem;
+
   font-size:.95rem;
-  font-weight: 400;
   line-height:1.5;
-  margin-bottom: 2rem;
-  color: var(--light-grey);
-}
-.fields span:not(:last-child)::after {
-  content:", ";
+
+  color:var(--light-grey);
 }
 
-.detail {
-  margin-top:1.25rem;
+
+.fields span:not(:last-child)::after {
+  content:" · ";
 }
+
+
+/* partner */
+
+.partner {
+  margin-top:auto;
+}
+
 
 .label {
+
   display:block;
-  font-size:.7rem;
+
+  margin-bottom:.6rem;
+
+  font-size:.8rem;
+
   text-transform:uppercase;
-  letter-spacing:.08em;
-  margin-bottom:.25rem;
-  color: var(--light-grey)
-}
 
-.detail span:not(.label) {
-  font-size:.95rem;
-  margin-top:1.25rem;
-  color: var(--dark-grey);
+  letter-spacing:.09em;
+
+  color:var(--light-grey);
 }
 
 
-/* lower coloured CTA area */
+.partner-name {
+
+  font-size:1rem;
+  font-style:oblique;
+
+  /* font-weight:500; */
+
+  color:var(--dark-grey);
+}
+
+
+
+/* footer */
 
 .card-footer {
+
   min-height:64px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size:.9rem;
-  background: var(--lab-color);
-  padding: 0;
+
+  display:flex;
+
+  justify-content:center;
+  align-items:center;
+
+  background:var(--lab-color);
+
 }
+
 
 </style>
