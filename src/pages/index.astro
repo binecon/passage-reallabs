@@ -17,21 +17,28 @@ const labs = (await getCollection('reallabs'))
   <body>
 
   <!-- I. Hero & II. description -->
-     <header class="hero">
+    <header class="hero">
 
-      <div class="hero-content">
+      <div class="hero-text">
 
-        <img
-          src="/reallabs-logo.svg"
-          alt="Passage Reallabs"
-          class="logo"
-        />
+        <p class="title-logo">Logo / Wortmarke</p>
 
-        <p class="hero-text">
-          Jugendliche bearbeiten reale Zukunftsfragen gemeinsam mit Unternehmen
-          und Institutionen – kreativ, praxisnah und auf Augenhöhe.
+        <h2>Reale Aufgaben. Neue Perspektiven. Potenzielle Fachkräfte.</h2>
+        
+        <p>
+         In unseren eintägigen Reallabs arbeiten Schülerinnen und Schüler gemeinsam 
+         mit Unternehmen an echten Herausforderungen. Wir übernehmen Planung und Durchführung
+        – Sie bringen Ihre Praxisfrage mit.
         </p>
+
       </div>
+
+      <!-- <img
+        src="/reallabs-logo.svg"
+        alt="Passage Reallabs"
+        class="logo"
+      /> -->
+
     </header>
 
   <main>
@@ -53,8 +60,8 @@ const labs = (await getCollection('reallabs'))
     <div class="section-header">
       <p class="section-label">Ablauf eines Reallabs</p>
 
-      <p class="text subtext">
-        Vom Projekttag zur Zusammenarbeit - in vier Schritten.
+      <p class="section-intro">
+       Vom Projekttag zur Zusammenarbeit - in vier Schritten.
       </p>
     </div>
 
@@ -64,10 +71,10 @@ const labs = (await getCollection('reallabs'))
       <article class="step">
         <div class="step-number">1</div>
 
-        <h3>Herausforderung</h3>
+        <h3>Fragestellung</h3>
 
         <p>
-          Unternehmen oder Institutionen bringen eine reale Fragestellung mit
+          Sie bringen eine reale Aufgabe oder Fragestellung aus Ihrem Arbeitsalltag mit
         </p>
       </article>
 
@@ -75,10 +82,11 @@ const labs = (await getCollection('reallabs'))
       <article class="step">
         <div class="step-number">2</div>
 
-        <h3>Reallab</h3>
+        <h3>Projekttag</h3>
 
         <p>
-          Beim Projekttag entwickeln Jugendliche Lösungen, Konzepte oder Prototypen
+          Wir übernehmen Planung, Moderation, Material und die Zusammenarbeit mit der Schulklasse
+          <!-- Beim Projekttag entwickeln Jugendliche Lösungen, Konzepte oder Prototypen -->
         </p>
       </article>
 
@@ -86,10 +94,10 @@ const labs = (await getCollection('reallabs'))
       <article class="step">
         <div class="step-number">3</div>
 
-        <h3>Präsentation</h3>
+        <h3>Ergebnisse</h3>
 
         <p>
-          Ergebnisse werden vorgestellt und gemeinsam diskutiert
+          Ergebnisse werden präsentiert und gemeinsam diskutiert
         </p>
       </article>
 
@@ -108,28 +116,9 @@ const labs = (await getCollection('reallabs'))
 
   </section>
 
-  <!-- V. CTA -->
- 
-    
-      <section class="partner-cta">
-       <p class="section-label">Kooperation</p>
-        <div class="cta-text">
-          <h2>
-            Werden Sie Reallabs-Partner
-          </h2>
-          <p class="text">
-             Bringen Sie eine authentische Fragestellung aus Ihrem Unternehmen oder Ihrer Institution ein. 
-            Gemeinsam mit Jugendlichen entwickeln Sie neue Perspektiven und lernen potenzielle Nachwuchskräfte kennen.
-          </p>
-        </div>
-        <div class="cta-action">
-          <a href="/kontakt" class="button button--cta">
-            Partner werden →
-          </a>
-        </div>
-      </section>
 
-<!-- VI. Stimmen -->
+
+<!-- V. Stimmen -->
  
     <section class="section testimonials">
       <p class="section-label">Stimmen aus der Praxis</p>
@@ -157,7 +146,35 @@ const labs = (await getCollection('reallabs'))
         </div>
       </section>
 
-<!-- VII. Einblicke -->
+
+  <!-- VI. CTA -->
+    <section class="partner-cta">
+
+  <p class="section-label">Kooperation</p>
+
+  <h2>Bringen Sie Ihre Praxisfrage ein.</h2>
+
+  <p class="text">
+    Wir entwickeln gemeinsam mit Ihnen einen Projekttag und übernehmen
+    Organisation, Moderation und Begleitung. Sie bringen Ihre fachliche
+    Perspektive ein und lernen potenzielle Nachwuchskräfte kennen.
+  </p>
+
+  <a href="/kontakt" class="button button--cta">
+    Reallab starten →
+  </a>
+
+
+  <!-- <div class="cta-benefits">
+    <p>geringer organisatorischer Aufwand</p>
+    <p>Planung und Durchführung durch Passage Reallabs</p>
+    <p>reale Fragestellungen statt Musteraufgaben</p>
+    <p>Kontakte zu potenziellen Nachwuchskräften</p>
+  </div> -->
+
+</section>
+
+<!-- VIII. Einblicke -->
 
 <section class="section insights">
   <div class="insights-content">

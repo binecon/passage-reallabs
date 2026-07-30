@@ -7,7 +7,7 @@ location: "Halle (Saale)"
 fields:
   - Sensorik
   - Logistik
-  - Versand
+  - Warenprozesse
 participants: "tab"
 duration: "9:00–14:00 Uhr"
 mission: "Entwickelt ein Smart Spaces-Testfest..."
