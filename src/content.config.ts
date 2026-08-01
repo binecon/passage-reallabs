@@ -11,6 +11,7 @@ const reallabs = defineCollection({
     location: z.string(),
     fields: z.array(z.string()),
     color: z.string(),
+    titleColor: z.string().optional(),
     order: z.number(),
   })
 });

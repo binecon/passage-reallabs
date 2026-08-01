@@ -10,6 +10,7 @@ fields:
   - Umweltsensorik
 
 color: "#95E5B2"
+titleColor: "#95E5B2"
 order: 1
 ---
 

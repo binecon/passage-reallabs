@@ -16,7 +16,8 @@ technologies:
   - Ultraschallsensor, Bewegungssensor
   - Audioplayer
   - Canva
-color: "#8F99FD"
+color: "#404ED9"
+titleColor: "#6E7EDC"
 order: 2
 
 ---

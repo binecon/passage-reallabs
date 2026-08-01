@@ -1,10 +1,15 @@
 ---
 const { lab } = Astro.props;
 ---
+<article
+  class="card"
+  style={`
+    --lab-color:${lab.data.color};
+    --lab-title-color:${lab.data.titleColor ?? lab.data.color};
+  `}
+>
 
-<article class="card" style={`--lab-color:${lab.data.color}`}>
-
-  <div class="card-content">
+<div class="card-content">
 
     <h3 class="title">
       {lab.data.title}
@@ -36,7 +41,7 @@ const { lab } = Astro.props;
 
   <div class="card-footer">
 
-    <a href={`/reallabs/${lab.id}/`} class="button">
+    <a href={`/reallabs/${lab.id}/`} class="button button--card">
       Projekt ansehen →
     </a>
 
@@ -83,7 +88,7 @@ const { lab } = Astro.props;
 
   padding-left:.9rem;
 
-  color:var(--lab-color);
+  color:var(--lab-title-color);
 
   font-size:1.7rem;
   font-weight:700;
@@ -105,7 +110,7 @@ const { lab } = Astro.props;
 
   border-radius:2px;
 
-  background:var(--lab-color);
+  background:var(--lab-title-color);
 }
 
 
@@ -173,7 +178,11 @@ const { lab } = Astro.props;
   justify-content:center;
   align-items:center;
 
-  background:var(--lab-color);
+  background: color-mix(
+    in srgb,
+    var(--lab-color) 75%,
+    white
+  );
 
 }
 

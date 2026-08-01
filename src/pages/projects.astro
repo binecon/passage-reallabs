@@ -1,0 +1,92 @@
+---
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+import '../styles/projects.css';
+---
+
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alle Projekte – Passage Reallabs</title>
+  </head>
+
+  <body>
+
+    <main>
+
+      <section class="section projects-overview">
+
+        <p class="section-label">
+          Projekte
+        </p>
+
+        <h1>
+          Alle Projekte
+        </h1>
+
+        <p class="text intro">
+          Wir arbeiten mit Unternehmen und Institutionen aus der Region Halle
+          (Saale) zusammen. Einige Reallabs befinden sich bereits in der
+          Umsetzung, weitere entstehen gemeinsam mit neuen Partnern.
+        </p>
+
+      </section>
+
+
+      <section class="projects-list">
+
+        <article class="project-item">
+          <h2>MedicalLab</h2>
+
+          <div class="meta">
+            <span>Martha-Maria Halle</span>
+            <span>November 2026</span>
+          </div>
+
+          <p>
+            Medizintechnik · Pflegeinnovation
+          </p>
+        </article>
+
+
+        <article class="project-item">
+          <h2>ImmoLab</h2>
+
+          <div class="meta">
+            <span>Bauverein Leuna</span>
+            <span>März 2027</span>
+          </div>
+
+          <p>
+            Gebäudetechnik · Nachhaltiges Bauen · Umweltsicherheit
+          </p>
+        </article>
+
+
+        <article class="project-item project-item--placeholder">
+          <h2>Ihr Reallab?</h2>
+
+          <div class="meta">
+            <span>Partner gesucht</span>
+          </div>
+
+          <p>
+            Gemeinsam entwickeln wir ein Reallab passend zu Ihrem
+            Unternehmen und Ihren Themen.
+          </p>
+
+          <a href="/partner" class="button">
+            Partner werden →
+          </a>
+
+        </article>
+
+      </section>
+
+    </main>
+
+    <Footer />
+
+  </body>
+</html>

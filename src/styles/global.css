@@ -1,0 +1,65 @@
+:root {
+  --bg:#FAFAF8;
+  --dark-grey:#303131;
+  --grey:#5C5754;
+  --light-grey:#949695;
+
+  --green:#95E5B2;
+  --blue:#404ED9;
+  --pink:#E393E9;
+  --yellow:#EED55C;
+  --red:#DC7F5A;
+}
+
+* {
+  box-sizing:border-box;
+}
+
+body {
+  margin:0 auto;
+  max-width:1100px;
+  padding:2rem;
+
+  font-family:system-ui, sans-serif;
+
+  background:var(--bg);
+  color:var(--dark-grey);
+}
+
+img {
+  max-width:100%;
+  display:block;
+}
+
+h1,h2,h3 {
+  color:var(--dark-grey);
+}
+
+.text {
+  color:var(--dark-grey);
+  line-height:1.6;
+}
+
+
+/* button basics */
+
+.button {
+  display: inline-block;
+
+  padding: .55rem 1.2rem;
+
+  border: 1px solid var(--dark-grey);
+  border-radius: 999px;
+
+  color: var(--dark-grey);
+  text-decoration: none;
+
+  font-size: .9rem;
+  font-weight: 500;
+
+  transition:
+    background-color .2s ease,
+    color .2s ease,
+    border-color .2s ease;
+}
+

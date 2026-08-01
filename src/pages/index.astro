@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import CaseStudyCard from '../components/CaseStudyCard.astro';
 import Footer from '../components/Footer.astro';
+import '../styles/global.css';
 import '../styles/index.css';
 const labs = (await getCollection('reallabs'))
   .sort((a, b) => a.data.order - b.data.order);
@@ -11,8 +12,8 @@ const labs = (await getCollection('reallabs'))
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/fav.svg" />
-    <link rel="icon" type="image/png" href="/fav.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- <link rel="icon" type="image/png" href="/favicon.png" /> -->
     <title>Passage Reallabs</title>
   </head>
 
@@ -22,13 +23,11 @@ const labs = (await getCollection('reallabs'))
 <header class="hero">
 
   <div class="hero-copy">
-
-    <!-- <img
-      src="/reallabs-logo.svg"
-      alt="Passage Reallabs"
-      class="logo"
-    /> -->
-
+   
+    <p class="hero-brand">
+      Passage Reallabs
+    </p>
+    <!-- <p><span style="font-style: italic; font-weight: 300;font-size:xx-large"> Passage Reallabs </span></p> -->
     <h1>
       Reale Aufgaben.<br>
       Neue Perspektiven.<br>
@@ -36,27 +35,19 @@ const labs = (await getCollection('reallabs'))
     </h1>
 
     <p class="hero-intro">
-      Jugendliche bearbeiten gemeinsam mit Unternehmen
-      reale Fragestellungen – wir übernehmen Organisation,
+      Jugendliche bearbeiten während eines Projekttags gemeinsam 
+      mit Unternehmen reale Fragestellungen – <br> wir übernehmen Organisation,
       Moderation und Durchführung.
     </p>
 
   </div>
 
-
   <div class="hero-visual">
-
-      <img
-      src="images/Polygon.svg"
-      alt="Passage Reallabs"
-      class="platzhalter"
-    />
-
+      <img src="images/polygon-foto.png" alt="Passage Reallabs" class="platzhalter" />
   </div>
-
 </header>
 
-  <main>
+<main>
     
 <!-- Projektvorschau -->
 <section class="section">
@@ -71,11 +62,11 @@ const labs = (await getCollection('reallabs'))
 
   </div>
 
-  <div class="all-projects">
-    <a href="/reallabs/" class="button">
-      Alle Projekte →
-    </a>
-  </div>
+    <div class="all-projects">
+      <a href="/projects" class="button button--projects">
+        Alle Projekte →
+      </a>
+    </div>
 
 </section>
 
@@ -86,8 +77,10 @@ const labs = (await getCollection('reallabs'))
     <div class="section-header">
       <p class="section-label">Ablauf eines Reallabs</p>
 
-      <p class="section-intro">
-       Vom Projekttag zur Zusammenarbeit - in vier Schritten.
+      <p class="process-intro text">
+        Ein gemeinsamer Prozess mit Mehrwert für beide Seiten: 
+        Jugendliche erleben Arbeitswelt praktisch und authentisch, Unternehmen 
+        entdecken Interessen und Potenziale zukünftiger Nachwuchskräfte.      
       </p>
     </div>
 
@@ -104,7 +97,7 @@ const labs = (await getCollection('reallabs'))
         <div class="step-number">2</div>
         <h3>Projekttag</h3>
         <p>
-          Wir übernehmen Planung, Moderation, Material und die Zusammenarbeit mit der Schulklasse
+          Wir übernehmen Planung, Moderation, Material und die Zusammenarbeit mit den Teilnehmenden bzw. der Schulklasse
           <!-- Beim Projekttag entwickeln Jugendliche Lösungen, Konzepte oder Prototypen -->
         </p>
       </article>
@@ -113,7 +106,7 @@ const labs = (await getCollection('reallabs'))
         <div class="step-number">3</div>
         <h3>Ergebnisse</h3>
         <p>
-          Ergebnisse werden präsentiert und gemeinsam diskutiert
+          Ergebnisse werden von den jungen Teilnehmenden präsentiert und gemeinsam diskutiert
         </p>
       </article>
 
@@ -136,22 +129,16 @@ const labs = (await getCollection('reallabs'))
   <h2>Bringen Sie Ihre Praxisfrage ein.</h2>
 
   <p class="text">
-    Wir entwickeln auf Basis Ihrer Praxisanforderungen einen Projekttag und übernehmen
-    Organisation, Moderation und Begleitung. Sie bringen Ihre fachliche
+    Wir entwickeln auf Basis Ihrer Praxisanforderungen einen maßgeschneiderten Projekttag 
+    und übernehmen Organisation, Moderation und Begleitung. Sie bringen Ihre fachliche
     Perspektive ein und lernen potenzielle Nachwuchskräfte kennen.
   </p>
 
-  <a href="/kontakt" class="button button--cta">
-    Reallab starten →
-  </a>
-
-
-  <!-- <div class="cta-benefits">
-    <p>geringer organisatorischer Aufwand</p>
-    <p>Planung und Durchführung durch Passage Reallabs</p>
-    <p>reale Fragestellungen statt Musteraufgaben</p>
-    <p>Kontakte zu potenziellen Nachwuchskräften</p>
-  </div> -->
+  <div class="cta-action">
+      <a href="/kontakt" class="button button--cta">
+        Reallab starten →
+      </a>
+  </div>
 
 </section>
 
@@ -201,9 +188,9 @@ const labs = (await getCollection('reallabs'))
       </h3>
 
       <p class="text">
-        Ideen entwickeln, ausprobieren, mit echten Partnern arbeiten:
-        In den Reallabs entdecken Jugendliche neue Perspektiven auf
-        Zukunftsthemen und Berufsfelder.
+        Ideen entwickeln, ausprobieren, mit echten Partnern arbeiten:<br>
+        In den <span style="font-style:italic">Reallabs</span> entdecken Jugendliche neue Perspektiven auf
+        Zukunftsthemen und Berufsfelder, die sie wirklich interessieren.
       </p>
 
       <a href="/jugend" class="button button--insights">
