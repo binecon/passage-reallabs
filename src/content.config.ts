@@ -9,10 +9,14 @@ const reallabs = defineCollection({
     partner: z.string(),
     date: z.string(),
     location: z.string(),
+    participants: z.array(z.string()),
     fields: z.array(z.string()),
+    comps: z.array(z.string()),
+    image: z.string().optional(),
     color: z.string(),
     titleColor: z.string().optional(),
     order: z.number(),
+    status: z.string(),
   })
 });
 

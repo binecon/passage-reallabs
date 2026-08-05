@@ -1,44 +1,33 @@
 ---
 title: "MedicalLab"
 subtitle: "Sensorentestfeld für Medizintechnik"
-partner: "tba"
+partner: "KH Martha Maria Halle (Saale)"
 date: "November 2026"
 location: "Halle (Saale)"
+participants: 
+- 18 Schüler:innen
+- Klasse 8
+- Gemeinschaftsschule Kastanienallee Halle (Saale)
 fields:
   - Medizintechnik
   - Pflegeinnovation
-participants: "tba"
-duration: "9:00–14:00 Uhr"
-mission: "Utersucht..."
-technologies:
-  - senseBox
-  - Ultraschallsensor, Bewegungssensor
-  - Audioplayer
-  - Canva
-outputs:
-  - Dashboard
-  - Präsentation
-  - Video
+  - Klinikabläufe
+comps: 
+  - Programmieren mit Blockly
+  - Daten sammeln, vergleichen, auswerten
+  - Präsentieren
+  - Lösungen kreativ entwickeln
+
+titleColor: "black" 
 color: "#F5AEFB"
 order: 3
+status: "planned"
 ---
 
-## Mission
+## Praxisfrage
 
-xxx
+Innovation in Medizin und Pflege
 
-## Herausforderung
-
-Die Jugendlichen übernehmen die Rolle eines Smart-Logistik-Teams und bearbeiten eine reale Aufgabenstellung aus dem Kontext effizienter Logistik.
-
-## Umsetzung
-
-In Teams entwickeln die Teilnehmenden ein Mini-Sensorentestfeld, programmieren Sensoren, erheben Daten und präsentieren ihre Handlungsempfehlungen.
-
-## Ergebnisse
-
-Entstanden sind Messungen, Präsentationen und mediale Dokumentationen aus Sicht der Jugendlichen.
-
-## Wirkung
-
-Das Reallab verbindet Berufsorientierung, technische Kompetenzen und reale Zukunftsfragen.
+---
+_Dieses Reallab befindet sich aktuell in Abstimmung.
+Weitere Einblicke folgen nach der Durchführung._

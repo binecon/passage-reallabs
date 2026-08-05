@@ -1,42 +1,81 @@
 ---
-import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 import '../styles/projects.css';
+import PageHero from "../components/PageHero.astro";
+import BrandMarker from "../components/BrandMarker.astro";
+import Footer from "../components/Footer.astro";
+
+import { getCollection } from "astro:content";
+const labs = await getCollection("reallabs");
 ---
 
 <html lang="de">
+  
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alle Projekte – Passage Reallabs</title>
   </head>
 
   <body>
 
     <main>
+      <section class="page-hero projects-hero">
 
-      <section class="section projects-overview">
+              <BrandMarker />
 
-        <p class="section-label">
-          Projekte
-        </p>
+              <div class="page-hero-content">
 
-        <h1>
-          Alle Projekte
-        </h1>
+                <div class="page-hero-copy page-content">
 
-        <p class="text intro">
-          Wir arbeiten mit Unternehmen und Institutionen aus der Region Halle
-          (Saale) zusammen. Einige Reallabs befinden sich bereits in der
-          Umsetzung, weitere entstehen gemeinsam mit neuen Partnern.
-        </p>
+                  <h1>
+                    Alle Reallabs
+                  </h1>
+
+                  <p class="page-intro">
+                    Wir arbeiten mit Unternehmen und Institutionen aus der Region Halle
+                    (Saale) zusammen. Einige Reallabs befinden sich bereits in der
+                    Umsetzung, weitere entstehen gemeinsam mit neuen Partnern.
+                  </p>
+
+                </div>
+
+              </div>
 
       </section>
-
-
+      
       <section class="projects-list">
 
-        <article class="project-item">
+        <a href="/reallabs/urbanlab/" class="project-item" style="--lab-color:#95E5B2">
+
+          <h2>UrbanLab</h2>
+
+          <div class="meta">
+            <span>HTZ – Stadtwerke Halle (Saale)</span>
+            <span>September 2026</span>
+          </div>
+
+          <p>
+            Sensorik · Klimaadaptive Stadtentwicklung
+          </p>
+
+        </a>
+
+        
+          <a href="/reallabs/smartspaces/" class="project-item" style="--lab-color:#404ED9">
+          <h2>SmartSpaces</h2>
+
+          <div class="meta">
+            <span>DHL Starpark</span>
+            <span>Oktober 2026</span>
+          </div>
+
+          <p>
+            Logistik · Transport
+          </p>
+
+        </a>
+
+           <a href="/reallabs/medicallab/" class="project-item" style="--lab-color:#E393E9">    
           <h2>MedicalLab</h2>
 
           <div class="meta">
@@ -47,10 +86,12 @@ import '../styles/projects.css';
           <p>
             Medizintechnik · Pflegeinnovation
           </p>
-        </article>
+
+        </a>
 
 
-        <article class="project-item">
+        <article class="project-item" style="--lab-color:#EED55C">
+
           <h2>ImmoLab</h2>
 
           <div class="meta">
@@ -61,10 +102,12 @@ import '../styles/projects.css';
           <p>
             Gebäudetechnik · Nachhaltiges Bauen · Umweltsicherheit
           </p>
+
         </article>
 
 
         <article class="project-item project-item--placeholder">
+
           <h2>Ihr Reallab?</h2>
 
           <div class="meta">
@@ -72,18 +115,19 @@ import '../styles/projects.css';
           </div>
 
           <p>
-            Gemeinsam entwickeln wir ein Reallab passend zu Ihrem
-            Unternehmen und Ihren Themen.
+            Gemeinsam entwickeln wir ein <span style="font-style:oblique">Reallab</span>
+            passend zu Ihrem Unternehmen und Ihren Themen.
           </p>
 
-          <a href="/partner" class="button">
-            Partner werden →
+          <a href="/partner" class="partner-link">
+            Reallab entwickeln →
           </a>
 
         </article>
 
-      </section>
 
+      </section>
+   
     </main>
 
     <Footer />

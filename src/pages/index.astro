@@ -4,6 +4,7 @@ import CaseStudyCard from '../components/CaseStudyCard.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 import '../styles/index.css';
+import '../styles/case-study-card.css';
 const labs = (await getCollection('reallabs'))
   .sort((a, b) => a.data.order - b.data.order);
 ---
@@ -23,12 +24,12 @@ const labs = (await getCollection('reallabs'))
 <header class="hero">
 
   <div class="hero-copy">
-   
-    <p class="hero-brand">
-      Passage Reallabs
-    </p>
-    <!-- <p><span style="font-style: italic; font-weight: 300;font-size:xx-large"> Passage Reallabs </span></p> -->
-    <h1>
+
+      <p class="hero-brand">
+        Passage Reallabs
+      </p>
+
+    <h1 class="hero-headline">
       Reale Aufgaben.<br>
       Neue Perspektiven.<br>
       Potenzielle Fachkräfte.
@@ -36,7 +37,7 @@ const labs = (await getCollection('reallabs'))
 
     <p class="hero-intro">
       Jugendliche bearbeiten während eines Projekttags gemeinsam 
-      mit Unternehmen reale Fragestellungen – <br> wir übernehmen Organisation,
+      mit Unternehmen reale Fragestellungen – wir übernehmen Organisation,
       Moderation und Durchführung.
     </p>
 
@@ -56,15 +57,15 @@ const labs = (await getCollection('reallabs'))
 
   <div class="cards">
 
-    {labs.slice(0, 2).map((lab) => (
+    <!-- {labs.slice(0, 2).map((lab) => (
       <CaseStudyCard lab={lab} />
-    ))}
+    ))} -->
 
   </div>
 
     <div class="all-projects">
       <a href="/projects" class="button button--projects">
-        Alle Projekte →
+        Alle Reallabs →
       </a>
     </div>
 
@@ -135,7 +136,7 @@ const labs = (await getCollection('reallabs'))
   </p>
 
   <div class="cta-action">
-      <a href="/kontakt" class="button button--cta">
+      <a href="/partner" class="button button--cta">
         Reallab starten →
       </a>
   </div>

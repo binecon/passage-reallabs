@@ -1,43 +1,34 @@
 ---
 title: "SmartSpaces"
 subtitle: "Sensorentestfeld für Logistikprozesse"
-partner: "tba"
-date: "07. Okt. 2026"
+partner: "Starpark DHL Halle (Saale)"
+date: "In Vorbereitung · Umsetzung geplant Oktober 2026"
 location: "Halle (Saale)"
+participants: 
+- 18 Schüler:innen
+- Klasse 8
+- BVJ BBS3 Halle (Saale)
 fields:
   - Logistik
   - Sensorik
   - Warenprozesse
-participants: "tab"
-duration: "9:00–14:00 Uhr"
-mission: "Entwickelt ein Smart Spaces-Testfest..."
-technologies:
-  - senseBox
-  - Ultraschallsensor, Bewegungssensor
-  - Audioplayer
-  - Canva
+comps: 
+  - Programmieren mit Blockly
+  - Daten sammeln, vergleichen, auswerten
+  - Präsentieren
+  - Lösungen kreativ entwickeln
+
 color: "#404ED9"
 titleColor: "#6E7EDC"
 order: 2
+status: "planned"
+---
+## Praxisfrage
+
+Wie können digitale Technologien Räume nachhaltiger,
+zugänglicher und nutzerorientierter gestalten?
 
 ---
 
-## Mission
-
-xxx
-
-## Herausforderung
-
-Die Jugendlichen übernehmen die Rolle eines Smart-Logistik-Teams und bearbeiten eine reale Aufgabenstellung aus dem Kontext effizienter Logistik.
-
-## Umsetzung
-
-In Teams entwickeln die Teilnehmenden ein Mini-Sensorentestfeld, programmieren Sensoren, erheben Daten und präsentieren ihre Handlungsempfehlungen.
-
-## Ergebnisse
-
-Entstanden sind Messungen, Präsentationen und mediale Dokumentationen aus Sicht der Jugendlichen.
-
-## Wirkung
-
-Das Reallab verbindet Berufsorientierung, technische Kompetenzen und reale Zukunftsfragen.
+_Dieses Reallab befindet sich aktuell in Abstimmung.
+Weitere Einblicke folgen nach der Durchführung._

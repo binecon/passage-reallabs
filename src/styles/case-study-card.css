@@ -1,0 +1,67 @@
+/* preview cards landing page*/
+
+/* cards grid */
+
+.cards {
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:2rem;
+}
+
+
+/* buttons card */
+
+/* .button--card {
+  color: var(--dark-grey);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid var(--dark-grey);
+  transition: .2s ease;
+}
+
+.button--card:hover {
+  background: white;
+  color: black;
+} */
+
+@media(max-width:800px) {
+  .cards {
+    grid-template-columns:1fr;
+  }
+}
+
+/* all projects button */
+
+.all-projects {
+  display:flex;
+  justify-content:center;
+  margin-top:2.5rem;
+}
+
+.button--projects:hover {
+  color:var(--blue);
+}
+
+/* buttons inside card area */
+
+/* .card-link {
+  color: var(--dark-grey);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  transition: .2s ease;
+}
+
+.card-link:hover {
+  color: black;
+} */
+
+.card-link {
+  color: var(--dark-grey);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  transition: .2s ease;
+}
+
+.card-link:hover {
+  color: black;
+}

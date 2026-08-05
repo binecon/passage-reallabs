@@ -1,86 +1,215 @@
 ---
-import '../styles/global.css';
-import '../styles/case-study.css';
-import Footer from '../components/Footer.astro';
+import { getCollection } from "astro:content";
+
+import "../styles/global.css";
+import "../styles/case-study.css";
+
+import Footer from "../components/Footer.astro";
+import BrandMarker from "../components/BrandMarker.astro";
+import PageHero from "../components/PageHero.astro";
+
 const { lab } = Astro.props;
+
+const allLabs = await getCollection("reallabs");
+
+const otherLabs = allLabs
+  .filter((item) => item.id !== lab.id)
+  .sort((a, b) => a.data.order - b.data.order);
 ---
 
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{lab.data.title} · Passage Reallabs</title>
-  </head>
 
-  <body class="case-study">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<header class="hero" style={`--lab-color: ${lab.data.color};`}>
-  <div>
-    <p class="label">Passage Reallab</p>
-    <h1>{lab.data.title}</h1>
-    <h2>{lab.data.subtitle}</h2>
+  <title>
+    {lab.data.title} · Passage Reallabs
+  </title>
+
+  <link rel="icon" type="image/svg+xml" href="/rl-favicon.svg" />
+</head>
+
+
+<body class="case-study">
+
+
+<div class="page" style={`--lab-color:${lab.data.color};`}>
+       
+
+<header>
+<PageHero
+  title={lab.data.title}
+  subtitle={lab.data.subtitle}
+  color={lab.data.color}
+>
+
+
+  <div class="lab-meta">
+
+
+    <div class="meta-block">
+
+      <h3>
+        Praxispartner
+      </h3>
+
+      <p>
+        {lab.data.partner}
+      </p>
+
+    </div>
+
+
+
+    <div class="meta-block">
+
+      <h3>
+        Durchführung
+      </h3>
+
+      <p>
+        {lab.data.date} · {lab.data.location}
+      </p>
+
+    </div>
+
+
+
+    <div class="meta-block">
+
+      <h3>
+        Teilnehmende
+      </h3>
+
+      <p>
+        {lab.data.participants.join(" · ")}
+      </p>
+
+    </div>
+
+
+
+    <div class="meta-block">
+
+      <h3>
+        Erprobte Kompetenzen
+      </h3>
+
+      <p>
+        {lab.data.comps?.join(" · ")}
+      </p>
+
+    </div>
+
+
+  </div>
+  <div slot="visual" class="lab-hero-visual">
+
+    <div class="lab-shape"></div>
+
   </div>
 
-  <!-- platzhalter home button -->
+</PageHero>
 
 </header>
 
 
-    <main>
-
-      <section class="facts">
-        <p class="section-label">
-          Projektsteckbrief
-        </p>
-
-        <dl>
-          <div>
-            <dt>Partner</dt>
-            <dd>{lab.data.partner}</dd>
-          </div>
-
-          <div>
-            <dt>Datum</dt>
-            <dd>{lab.data.date}</dd>
-          </div>
-
-          <div>
-            <dt>Ort</dt>
-            <dd>{lab.data.location}</dd>
-          </div>
-
-          <div>
-            <dt>Berufsfelder</dt>
-            <dd>{lab.data.fields.join(', ')}</dd>
-          </div>
-        </dl>
-      </section>
 
 
-      <article class="content">
-        <slot />
-      </article>
+
+<main>
 
 
-      <section class="partner-note">
-
-          <p class="section-label">
-          Praxispartner
-          </p>
-
-          <p>
-          Dieses Reallab entstand gemeinsam mit
-          <strong>{lab.data.partner}</strong>.
-          </p>
-
-      </section>
-
-  </main>
 
 
-    <Footer />
+<article class="content">
+
+  <slot />
+
+</article>
+
+    <section class="lab-gallery">
+        <img src={lab.data.image} alt={lab.data.alt} loading="lazy" />
+    </section>
 
 
-  </body>
+<section class="partner">
+
+
+      <p class="section-label">
+        <h2>Praxispartner</h2>
+      </p>
+
+
+      <p class="partner-text">
+
+        Kooperationspartner dieses Reallabs ist&nbsp;
+        <strong>{lab.data.partner}</strong>.
+
+      </p>
+
+
+
+      <a href="/partner" class="partner-link">
+
+        Eigenes Reallab entwickeln →
+
+      </a>
+  
+
+</section>
+
+
+
+
+
+<section class="more-labs">
+
+
+  <p class="section-label">
+
+    <span style="font-style: oblique;">
+      Weitere Reallabs
+    </span>
+
+  </p>
+
+
+
+  <nav class="lab-links">
+
+      {otherLabs.map((item) => (
+        <a href={`/reallabs/${item.id}/`}>
+          {item.data.title}
+        </a>
+      ))}
+
+  </nav>
+
+
+
+
+</section>
+
+
+
+
+
+</main>
+
+
+
+
+<Footer />
+
+
+
+
+</div>
+
+
+
+</body>
+
 </html>
-

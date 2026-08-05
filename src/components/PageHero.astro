@@ -1,0 +1,54 @@
+---
+import BrandMarker from "./BrandMarker.astro";
+
+const {
+  title,
+  subtitle,
+  intro,
+} = Astro.props;
+---
+
+  <header class={`page-hero ${Astro.slots.has('visual') ? 'page-hero--visual' : ''}`}>
+
+  <!-- Back home / brand identity -->
+  <BrandMarker />
+
+
+  <div class="page-hero-content">
+
+
+    <div class="page-hero-copy">
+
+
+      <h1>
+        {title}
+      </h1>
+
+
+      {subtitle && (
+        <p class="page-subtitle">
+          {subtitle}
+        </p>
+      )}
+
+
+      {intro && (
+        <p class="page-intro">
+          {intro}
+        </p>
+      )}
+
+
+      <slot />
+
+
+    </div>
+
+
+    <slot name="visual" />
+
+
+  </div>
+
+
+</header>

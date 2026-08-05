@@ -1,90 +1,323 @@
-.case-study .hero {
-
-  background: color-mix(
-    in srgb,
-    var(--lab-color),
-    white 25%
-  );
-
-  border-radius:20px;
-
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-
-  padding:3rem;
-
-  margin-bottom:4rem;
-}
+/* =========================
+   Case Study Layout
+========================= */
 
 
-.case-study .hero h1 {
+.case-study .page {
 
-  font-size:clamp(2rem,5vw,3rem);
-  margin:.5rem 0 1rem;
+  max-width:1100px;
+
+  margin:0 auto;
 
 }
 
 
-.case-study .hero h2 {
 
-  font-weight:400;
+/* =========================
+   Hero
+========================= */
+
+
+.lab-hero {
+
+  /* display:flex;
+
+  flex-direction:column;
+
+  gap:3rem; */
+
+  padding-top:1rem;
+   /* --lab-color: var(--lab-color); */
+
+
+}
+
+.lab-shape {
+  background:var(--lab-color);
+}
+
+
+
+
+/* =========================
+   Hero Text
+========================= */
+
+
+.lab-hero-copy h1 {
+
+  margin:0 0 1rem;
+
+  font-size:clamp(2.2rem,4vw,3rem);
+
+  font-weight:600;
+
+  line-height:1.15;
+
+}
+
+
+
+.lab-subtitle {
+
+  margin:0 0 2rem;
+
   max-width:600px;
 
-}
+  font-size:1.35rem;
 
+  line-height:1.45;
 
-.case-study .facts {
-
-  padding:2rem 0;
-  margin-bottom:3rem;
-
-}
-
-
-.case-study .facts dl {
-
-  display:grid;
-  gap:1rem;
-
-}
-
-
-.case-study .facts div {
-
-  display:grid;
-  grid-template-columns:160px 1fr;
-
-}
-
-
-.case-study dt {
-
-  text-transform:uppercase;
-  font-size:.75rem;
-  letter-spacing:.1em;
   color:var(--grey);
 
 }
 
 
-.case-study dd {
 
-  margin:0;
+/* =========================
+   Fields / Competencies
+========================= */
+
+
+.lab-meta {
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:1.5rem;
+
+  margin-top:3rem;
+
 }
 
 
-.case-study .content {
+
+.meta-block h3 {
+
+  margin:0 0 .4rem;
+
+  font-size:1rem;
+
+  font-weight:600;
+
+}
+
+
+
+.meta-block p {
+
+  margin:0;
+
+  color:var(--grey);
+
+  line-height:1.6;
+
+}
+
+
+
+/* =========================
+   Hero Visual
+========================= */
+
+
+.lab-hero-visual {
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+}
+
+
+
+.lab-shape {
+
+  width:280px;
+
+  aspect-ratio:1;
+
+  background:var(--lab-color);
+
+
+  clip-path:polygon(
+    18% 0%,
+    82% 8%,
+    100% 55%,
+    65% 100%,
+    15% 85%,
+    0% 35%
+  );
+
+}
+
+
+
+/* =========================
+   Praxisfrage
+========================= */
+
+
+.practice-question h2 {
+
+  margin-top:.8rem;
+
+  font-size:2rem;
+
+  font-weight:500;
+
+  line-height:1.35;
+
+}
+
+
+
+/* =========================
+   Content
+========================= */
+
+
+.content {
 
   max-width:750px;
-  margin:0 auto 4rem;
+
+  margin-top:4rem;
+
+  line-height:1.7;
+
+}
+
+.lab-gallery {
+  max-width: 760px;
+}
+
+.lab-gallery img {
+  width: 100%;
+  display: block;
+  border-radius: 20px;
+}
+
+
+
+/* =========================
+   Partner
+========================= */
+
+
+.partner {
+
+  margin-top:6rem;
+  padding-top:2rem;
+
+  border-top:1px solid var(--light-grey);
+
+}
+
+
+
+.partner h2 {
+
+  margin-top:.8rem;
+
+}
+
+/* =========================
+   Partner CTA
+========================= */
+
+.partner-text {
+
+  max-width:800px;
+
+  margin:1rem 0 1.5rem;
+
+  color:var(--grey);
+
   line-height:1.7;
 
 }
 
 
-.case-study .partner-note {
+.partner-link {
 
-  border-top:1px solid var(--light-grey);
+  display:inline-block;
+
+  color:var(--dark-grey);
+
+  text-decoration:none;
+
+  border-bottom:1px solid var(--dark-grey);
+
+  padding-bottom:.15rem;
+
+  transition:.2s ease;
+
+}
+
+
+.partner-link:hover {
+
+  color:var(--lab-color);
+
+  border-color:var(--lab-color);
+
+}
+
+/* =========================
+   More Labs
+========================= */
+.more-labs {
+  margin-top:4rem;
   padding-top:2rem;
+  border-top:1px solid #ddd;
+}
+
+.lab-links {
+  display:flex;
+  gap:1.5rem;
+}
+
+.lab-links a {
+  color:var(--dark-grey);
+  text-decoration:none;
+}
+
+.lab-links a:hover {
+  color:var(--lab-color);
+}
+
+/* =========================
+   Mobile
+========================= */
+
+
+@media(max-width:900px) {
+
+
+  .lab-hero-content {
+
+    grid-template-columns:1fr;
+
+  }
+
+
+
+  .lab-hero-visual {
+
+    display:none;
+
+  }
+
+
+
+  .lab-subtitle {
+
+    font-size:1.15rem;
+
+  }
+
+
 }

@@ -1,6 +1,9 @@
 ---
 const { lab } = Astro.props;
 ---
+
+<!-- complete lab page -->
+
 <article
   class="card"
   style={`
@@ -26,7 +29,7 @@ const { lab } = Astro.props;
     <div class="partner">
 
       <span class="label">
-        In Zusammenarbeit mit
+        Kooperation mit
       </span>
 
       <span class="partner-name">
@@ -39,18 +42,42 @@ const { lab } = Astro.props;
   </div>
 
 
-  <div class="card-footer">
+<div class="card-footer">
 
-    <a href={`/reallabs/${lab.id}/`} class="button button--card">
-      Projekt ansehen →
-    </a>
+  <a
+    href={`/reallabs/${lab.id}/`}
+    class="card-link"
+  >
+    Projekt ansehen →
+  </a>
 
-  </div>
+</div>
 
 </article>
 
 
 <style>
+
+  .brand-marker {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:.45rem 1rem;
+
+  border:1px solid var(--dark-grey);
+  border-radius:999px;
+
+  font-style:italic;
+  font-weight:300;
+  font-size:1.2rem;
+
+  color:var(--dark-grey);
+}
+
+.hero h1 {
+  margin-top:1.8rem;
+}
 
 .card {
   border:1px solid var(--grey);
@@ -157,7 +184,8 @@ const { lab } = Astro.props;
 
 .partner-name {
 
-  font-size:1rem;
+  font-size:1.1rem;
+  line-height:1.8rem;
   font-style:oblique;
 
   /* font-weight:500; */
