@@ -1,6 +1,5 @@
 ---
 import { getCollection } from 'astro:content';
-import CaseStudyCard from '../components/CaseStudyCard.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 import '../styles/index.css';
@@ -32,13 +31,13 @@ const labs = (await getCollection('reallabs'))
     <h1 class="hero-headline">
       Reale Aufgaben.<br>
       Neue Perspektiven.<br>
-      Potenzielle Fachkräfte.
+      Regionale Fachkräfte.
     </h1>
 
-    <p class="hero-intro">
-      Jugendliche bearbeiten während eines Projekttags gemeinsam 
-      mit Unternehmen reale Fragestellungen – wir übernehmen Organisation,
-      Moderation und Durchführung.
+     <p class="hero-intro">
+      Jugendliche bearbeiten reale Aufgabenstellungen regionaler Unternehmen und entwickeln dabei 
+      eigene Ideen und Lösungen. Wir organisieren, moderieren und begleiten den Projekttag – 
+      gemeinsam mit Jugendlichen, Schulen und Unternehmen in Halle (Saale).
     </p>
 
   </div>
@@ -46,30 +45,50 @@ const labs = (await getCollection('reallabs'))
   <div class="hero-visual">
       <img src="images/polygon-foto.png" alt="Passage Reallabs" class="platzhalter" />
   </div>
+
 </header>
 
+  
 <main>
     
-<!-- Projektvorschau -->
-<section class="section">
+<!-- labs preview -->
+<section class="section projects-preview">
 
-  <p class="section-label">Projekte</p>
+  <p class="section-label">
+    Projektbeispiel
+  </p>
 
-  <div class="cards">
 
-    <!-- {labs.slice(0, 2).map((lab) => (
-      <CaseStudyCard lab={lab} />
-    ))} -->
+  <a 
+    href="/reallabs/urbanlab/"
+    class="project-preview-item"
+    style="--lab-color:#95E5B2"
+  >
 
-  </div>
+ <div class="project-preview-content">
+  <h2>UrbanLab</h2>
+  <span class="project-fields">
+    Sensorik · Klimaadaptive Stadtentwicklung
+  </span>
+  <p>Stadtwerke Halle (Saale)</p>
+</div>
 
-    <div class="all-projects">
+<span class="project-link">
+  Projekt ansehen →
+</span>
+
+  </a>
+
+
+   <div class="projects-action">
       <a href="/projects" class="button button--projects">
         Alle Reallabs →
       </a>
-    </div>
+  </div>
+
 
 </section>
+
 
 
  <!-- How it works -->
@@ -122,25 +141,38 @@ const labs = (await getCollection('reallabs'))
   </section>
 
 
-  <!-- CTA -->
-    <section class="section partner-cta">
 
-  <p class="section-label">Kooperation</p>
+<!-- Einblicke -->
 
-  <h2>Bringen Sie Ihre Praxisfrage ein.</h2>
+<section class="section insights">
+  <div class="insights-content">
+    <div class="insights-text">
+      <p class="section-label">
+        Einblicke
+      </p>
 
-  <p class="text">
-    Wir entwickeln auf Basis Ihrer Praxisanforderungen einen maßgeschneiderten Projekttag 
-    und übernehmen Organisation, Moderation und Begleitung. Sie bringen Ihre fachliche
-    Perspektive ein und lernen potenzielle Nachwuchskräfte kennen.
-  </p>
+      <h3>
+        Was Jugendliche aus den Reallabs mitnehmen
+      </h3>
 
-  <div class="cta-action">
-      <a href="/partner" class="button button--cta">
-        Reallab starten →
+      <p class="text">
+        Ideen entwickeln, ausprobieren, mit echten Partnern arbeiten:<br>
+        In den <span style="font-style:italic">Reallabs</span> entdecken Jugendliche neue Perspektiven auf
+        Zukunftsthemen und Berufsfelder, die sie wirklich interessieren.
+      </p>
+
+      <a href="/jugend" class="button button--insights">
+        Mehr Einblicke →
       </a>
-  </div>
 
+    </div>
+    <div class="insights-media">
+      <img 
+        src="/images/reallab-preview.jpg"
+        alt="Jugendlicher mit Sensorbox beim Reallab Projekttag"
+      />
+    </div>
+  </div>
 </section>
 
 
@@ -175,38 +207,26 @@ const labs = (await getCollection('reallabs'))
 
 
 
-<!-- Einblicke -->
+  <!-- CTA -->
+    <section class="section partner-cta">
 
-<section class="section insights">
-  <div class="insights-content">
-    <div class="insights-text">
-      <p class="section-label">
-        Einblicke
-      </p>
+      <p class="section-label">Kooperation</p>
 
-      <h3>
-        Was Jugendliche aus den Reallabs mitnehmen
-      </h3>
+      <h2>Bringen Sie Ihre Praxisfrage ein.</h2>
 
       <p class="text">
-        Ideen entwickeln, ausprobieren, mit echten Partnern arbeiten:<br>
-        In den <span style="font-style:italic">Reallabs</span> entdecken Jugendliche neue Perspektiven auf
-        Zukunftsthemen und Berufsfelder, die sie wirklich interessieren.
+        Wir entwickeln auf Basis Ihrer Praxisanforderungen einen maßgeschneiderten Projekttag 
+        und übernehmen Organisation, Moderation und Begleitung. Sie bringen Ihre fachliche
+        Perspektive ein und lernen potenzielle Nachwuchskräfte kennen.
       </p>
 
-      <a href="/jugend" class="button button--insights">
-        Mehr Einblicke →
-      </a>
+      <div class="cta-action">
+          <a href="/partner" class="button button--cta">
+            Reallab starten →
+          </a>
+      </div>
 
-    </div>
-    <div class="insights-media">
-      <img 
-        src="/images/reallab-preview.jpg"
-        alt="Jugendlicher mit Sensorbox beim Reallab Projekttag"
-      />
-    </div>
-  </div>
-</section>
+    </section>
 
     </main>
 

@@ -1,82 +1,72 @@
+.project-item {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: inherit;
 
-.projects-overview {
-  max-width: 720px;
+  padding: 2rem 0 2rem 1rem;
+  border-bottom: 1px solid var(--light-grey);
 
+  transition: transform .5s ease, padding-left .5s ease;
 }
 
-.projects-list {
-  margin-top: 0.1rem;
+
+/* lab-coloured selection line */
+.project-item:not(:nth-last-child(-n+2))::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2rem;
+  bottom: 2rem;
+  width: 4px;
+  background: var(--lab-color);
+
+  opacity: 0;
+  transform: scaleY(.5);
+  transform-origin: center;
+
+  transition: opacity .2s ease, transform .3s ease;
 }
 
-/* .project-item {
-  padding: 2rem 0;
-  border-top: 1px solid var(--light-grey);
-  border-left: 4px solid transparent;
-  padding-left:1.5rem;
-  transition:.25s ease;
-} */
- .project-item {
-  display:block;
-  text-decoration:none;
-  color:inherit;
-  padding:2rem 0;
-  border-bottom:1px solid var(--light-grey);
-  transition:.2s ease;
+
+/* hover: move item + reveal line */
+.project-item:not(:nth-last-child(-n+2)):hover {
+  transform: translateX(.2rem);
+  padding-left: 1.5rem;
 }
 
-.project-item:last-child {
-  border-bottom: none;
-  border-left: none;
+.project-item:not(:nth-last-child(-n+2)):hover::before {
+  opacity: 1;
+  transform: scaleY(1);
 }
 
-.project-item:hover {
-   border-left-color:var(--lab-color);
-}
- .project-item:hover {
-  color:var(--lab-color);
+
+/* ImmoLab: no hover effect */
+.project-item:nth-last-child(2) {
+  transition: none;
 }
 
-/* extra*/
-.project-item:hover {
-  padding-left:.2rem;
+
+/* Reallab CTA: movement only, no lab line */
+.project-item:last-child:hover {
+  transform: translateX(.2rem);
+  padding-left: 1.5rem;
 }
 
-.project-item:last-child{
-  padding: 0
-}
 
+/* headings stay their normal colour */
 .project-item h2 {
   margin: 0 0 .6rem;
-  color: var(--dark-grey);
-}
-
-/* extra*/
-/* .project-item:hover h2 {
-  color:var(--lab-color);
-} */
-
-.meta {
-  display: flex;
-  gap: 1.5rem;
-  margin-bottom: .8rem;
-
-  font-size: .9rem;
-  color: var(--grey);
-}
-
-.project-item p {
-  margin: 0;
-  color: var(--dark-grey);
-  line-height: 1.6;
-}
-
-.project-item--placeholder {
-  margin-top:2rem;
-}
-
-.project-item--placeholder .button {
-  margin-top: 1.5rem;
 }
 
 
+/* final item */
+.project-item:last-child {
+  padding: 3rem 0 5rem;
+  border-bottom: none;
+}
 
+.project-item:last-child:hover {
+  transform: translateX(.1rem);
+  padding-left: .6rem;
+}

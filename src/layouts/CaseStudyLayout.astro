@@ -37,178 +37,152 @@ const otherLabs = allLabs
 <div class="page" style={`--lab-color:${lab.data.color};`}>
        
 
-<header>
-<PageHero
-  title={lab.data.title}
-  subtitle={lab.data.subtitle}
-  color={lab.data.color}
->
+      <header>
+      <PageHero
+        title={lab.data.title}
+        subtitle={lab.data.subtitle}
+        color={lab.data.color}
+      >
 
 
-  <div class="lab-meta">
+        <div class="lab-meta">
 
 
-    <div class="meta-block">
+          <div class="meta-block">
 
-      <h3>
-        Praxispartner
-      </h3>
+            <h3>
+              Praxispartner
+            </h3>
 
-      <p>
-        {lab.data.partner}
-      </p>
+            <p>
+              {lab.data.partner}
+            </p>
 
-    </div>
+          </div>
 
 
 
-    <div class="meta-block">
+          <div class="meta-block">
 
-      <h3>
-        Durchführung
-      </h3>
+            <h3>
+              Durchführung
+            </h3>
 
-      <p>
-        {lab.data.date} · {lab.data.location}
-      </p>
+            <p>
+              {lab.data.date} · {lab.data.location}
+            </p>
 
-    </div>
+          </div>
 
 
+          <div class="meta-block">
 
-    <div class="meta-block">
+            <h3>
+              Teilnehmende
+            </h3>
 
-      <h3>
-        Teilnehmende
-      </h3>
+            <p>
+              {lab.data.participants.join(" · ")}
+            </p>
 
-      <p>
-        {lab.data.participants.join(" · ")}
-      </p>
+          </div>
 
-    </div>
 
+          <div class="meta-block">
 
+            <h3>
+              Erprobte Kompetenzen
+            </h3>
 
-    <div class="meta-block">
+            <p>
+              {lab.data.comps?.join(" · ")}
+            </p>
 
-      <h3>
-        Erprobte Kompetenzen
-      </h3>
+          </div>
 
-      <p>
-        {lab.data.comps?.join(" · ")}
-      </p>
 
-    </div>
+        </div>
+        <div slot="visual" class="lab-hero-visual">
 
+          <div class="lab-shape"></div>
 
-  </div>
-  <div slot="visual" class="lab-hero-visual">
+        </div>
 
-    <div class="lab-shape"></div>
+      </PageHero>
 
-  </div>
+      </header>
 
-</PageHero>
+    <main>
 
-</header>
+      <article class="content">
 
+        <slot />
 
+      </article>
 
+          <section class="lab-gallery">
+              <img src={lab.data.image} alt={lab.data.alt} loading="lazy" />
+          </section>
 
 
-<main>
+      <section class="partner">
 
 
+            <p class="section-label">
+              <h2>Praxispartner</h2>
+            </p>
 
 
-<article class="content">
+            <p class="partner-text">
 
-  <slot />
+              Kooperationspartner dieses Reallabs ist&nbsp;
+              <strong>{lab.data.partner}</strong>.
 
-</article>
+            </p>
 
-    <section class="lab-gallery">
-        <img src={lab.data.image} alt={lab.data.alt} loading="lazy" />
-    </section>
 
 
-<section class="partner">
+            <a href="/partner" class="partner-link">
 
+              Eigenes Reallab entwickeln →
 
-      <p class="section-label">
-        <h2>Praxispartner</h2>
-      </p>
+            </a>
+        
 
+      </section>
 
-      <p class="partner-text">
 
-        Kooperationspartner dieses Reallabs ist&nbsp;
-        <strong>{lab.data.partner}</strong>.
 
-      </p>
+      <section class="more-labs">
 
 
+        <p class="section-label">
 
-      <a href="/partner" class="partner-link">
+          <span style="font-style: oblique;">
+            Weitere Reallabs
+          </span>
 
-        Eigenes Reallab entwickeln →
+        </p>
 
-      </a>
-  
 
-</section>
+        <nav class="lab-links">
 
+            {otherLabs.map((item) => (
+              <a href={`/reallabs/${item.id}/`}>
+                {item.data.title}
+              </a>
+            ))}
 
+        </nav>
 
+      </section>
 
 
-<section class="more-labs">
-
-
-  <p class="section-label">
-
-    <span style="font-style: oblique;">
-      Weitere Reallabs
-    </span>
-
-  </p>
-
-
-
-  <nav class="lab-links">
-
-      {otherLabs.map((item) => (
-        <a href={`/reallabs/${item.id}/`}>
-          {item.data.title}
-        </a>
-      ))}
-
-  </nav>
-
-
-
-
-</section>
-
-
-
-
-
-</main>
-
-
-
+  </main>
 
 <Footer />
 
-
-
-
 </div>
-
-
 
 </body>
 
