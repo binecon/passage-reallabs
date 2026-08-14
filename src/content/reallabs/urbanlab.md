@@ -1,7 +1,7 @@
 ---
 title: "UrbanLab"
 subtitle: "Mini-Sensorentestfeld & Daten-Dashboard"
-partner: "Stadtwerke Halle (Saale) // Historisches Technikzentrum"
+partner: "Historisches Technikzentrum, Stadtwerke Halle (Saale)"
 date: "2. September 2026"
 location: "HTZ Halle (Saale), Lauchstädter Str. 6"
 participants: 
@@ -33,7 +33,7 @@ Wie lässt sich Stadtentwicklung datenbasiert und klimaresilient gestalten? Dies
 
 ## Ablauf Projekttag
 
-_Was passiert am Projekttag?_
+_Was passierte am Projekttag?_
 
 In arbeitsteiligen Breakout-Sessions zu den Bereichen Sensorik, Datenerhebung, Medienproduktion und Präsentation eigneten sich die Schülerinnen und Schüler mit Unterstützung des medienpädagogischen Teams der Passage 13 zunächst grundlegende Kompetenzen an. 
 
@@ -42,7 +42,7 @@ In Teams entwickelten die Teilnehmenden ein Mini-Sensorentestfeld, programmierte
 
 ## Ergebnisse
 
-_Was entsteht?_
+_Was ist entstanden?_
 
 Entstanden sind Messungen, Präsentationen und mediale Dokumentationen aus Sicht der Jugendlichen. Die Messungen zeigten deutlich, wie stark Umweltbedingungen variieren können und welche Auswirkungen dies auf Menschen hat: In mehreren Innenräumen wurden sehr hohe CO₂-Werte festgestellt (teils über 4000 ppm), was auf unzureichende Belüftung hinweist und die Aufenthaltsqualität erheblich beeinträchtigen kann.
 
@@ -53,3 +53,5 @@ Auf Basis dieser Daten entwickelten die Teams konkrete, praxisnahe Lösungsansä
 ## Wirkung
 
 _Was bleibt?_
+
+Die Jugendlichen nehmen praktische Erfahrungen mit Sensorik und klimaadaptiver Stadtentwicklung mit. Für die Stadtwerke entstehen neue Perspektiven auf die eigene Fragestellung und ein direkter Austausch mit potenziellen Nachwuchskräften.

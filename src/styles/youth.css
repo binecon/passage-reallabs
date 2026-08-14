@@ -1,0 +1,161 @@
+/* =========================
+   Youth Corner
+========================= */
+
+.youth-intro {
+  max-width: 800px;
+  margin-bottom: 4rem;
+}
+
+
+/* =========================
+   Video cards
+========================= */
+
+.youth-videos {
+  max-width: 1100px;
+  margin: 0 auto 5rem;
+}
+
+.youth-videos h2 {
+  margin-bottom: 2rem;
+}
+
+
+.youth-video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+
+@media (max-width: 700px) {
+  .youth-video-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card */
+
+.youth-card {
+  overflow: hidden;
+
+  border: 1px solid var(--light-grey);
+  border-radius: 10px;
+
+  background: white;
+}
+
+
+/* Video */
+
+.youth-card-media {
+  aspect-ratio: 16 / 9;
+}
+.youth-card-media iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+}
+
+.video-placeholder {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  place-items: center;
+
+  background: var(--light-grey);
+  color: var(--grey);
+}
+
+/* Thumbnail */
+
+.youtube-preview {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 0;
+  border: 0;
+
+  background: none;
+  cursor: pointer;
+
+  overflow: hidden;
+}
+
+.youtube-preview img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+  object-fit: cover;
+
+  transition: transform .3s ease;
+}
+
+.youtube-preview:hover img {
+  transform: scale(1.03);
+}
+
+.play-button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 3.5rem;
+  height: 3.5rem;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+  background: white;
+
+  color: var(--dark-grey);
+  font-size: 1.1rem;
+}
+
+
+/* Card text */
+
+.youth-card-content {
+  padding: 1.5rem;
+}
+
+.youth-card-content h3 {
+  margin: 0 0 .5rem;
+}
+
+.youth-card-content p {
+  margin: 0;
+
+  color: var(--grey);
+  line-height: 1.6;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.youth-cta {
+  max-width: 800px;
+
+  margin: 0 auto 5rem;
+
+  text-align: center;
+}
+
+.youth-cta h2 {
+  margin-bottom: .7rem;
+}
+
+.youth-cta p {
+  margin-bottom: 1.5rem;
+}

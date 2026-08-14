@@ -3,7 +3,6 @@ import { getCollection } from 'astro:content';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 import '../styles/index.css';
-import '../styles/case-study-card.css';
 const labs = (await getCollection('reallabs'))
   .sort((a, b) => a.data.order - b.data.order);
 ---
@@ -161,7 +160,7 @@ const labs = (await getCollection('reallabs'))
         Zukunftsthemen und Berufsfelder, die sie wirklich interessieren.
       </p>
 
-      <a href="/jugend" class="button button--insights">
+      <a href="/youth" class="button button--insights">
         Mehr Einblicke →
       </a>
 
@@ -222,7 +221,7 @@ const labs = (await getCollection('reallabs'))
 
       <div class="cta-action">
           <a href="/partner" class="button button--cta">
-            Reallab starten →
+            Ihr Reallab →
           </a>
       </div>
 

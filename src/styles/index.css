@@ -158,6 +158,18 @@
   margin-top: 2.5rem;
 }
 
+/* button area */
+
+.button--project {
+  margin-top:1.8rem;
+}
+
+.button--projects:hover {
+  color: var(--blue);
+  border-color: var(--blue);
+  font-weight: 600;
+}
+
 
 
 /* Process */

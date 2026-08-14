@@ -1,0 +1,153 @@
+---
+import "../styles/global.css";
+import "../styles/youth.css";
+
+import Footer from "../components/Footer.astro";
+import BrandMarker from "../components/BrandMarker.astro";
+import PageHero from "../components/PageHero.astro";
+---
+
+<html lang="de">
+  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <header>
+      <PageHero
+        title="Reallab erleben"
+      >
+      </PageHero>
+    </header>
+
+    <main>
+
+      <article class="content youth-intro">
+
+        <p>
+          In einem Reallab arbeitest du an echten Fragen aus Unternehmen und deiner Stadt.
+          Du gestaltest mit, zum Beispiel bei Themen wie Stadtentwicklung, Wohnen, 
+          Gesundheit oder Logistik.
+        </p>
+
+      </article>
+
+
+      <section class="youth-videos">
+
+        <h2>Aus den Reallabs</h2>
+
+        <div class="youth-video-grid">
+
+          <article class="youth-card">
+
+            <div class="youth-card-media">
+
+            <button
+              class="youtube-preview"
+              data-video-id="VzoUBiMQ9ec"
+              aria-label="UrbanLab Video abspielen"
+            >
+              <img
+                src="https://img.youtube.com/vi/VzoUBiMQ9ec/hqdefault.jpg"
+                alt="UrbanLab – Reallab Projekttag"
+              />
+
+              <span class="play-button" aria-hidden="true">
+                ▶
+              </span>
+            </button>
+
+</div>
+
+            <div class="youth-card-content">
+              <h3>UrbanLab</h3>
+              <p>
+                Mit Sensoren untersuchen wir, wie sich unsere Stadt verändern lässt.
+              </p>
+            </div>
+
+
+          </article>
+
+
+          <article class="youth-card">
+
+            <div class="youth-card-media">
+              <div class="video-placeholder">
+                noch nicht verfügbar
+              </div>
+            </div>
+
+            <div class="youth-card-content">
+              <h3>SmartSpaces</h3>
+              <p>
+                Wie sieht die Logistik der Zukunft aus?
+              </p>
+            </div>
+
+          </article>
+
+
+          <article class="youth-card">
+
+            <div class="youth-card-media">
+              <div class="video-placeholder">
+                Video
+              </div>
+            </div>
+
+            <div class="youth-card-content">
+              <h3>MedicalLab</h3>
+              <p>
+                Gemeinsam entdecken wir Ideen für die Pflege und Medizin von morgen.
+              </p>
+            </div>
+
+          </article>
+
+        </div>
+
+      </section>
+
+
+      <section class="youth-cta">
+
+        <h2>Du willst ein Reallab an deine Schule bringen?</h2>
+         <p>Sprich deine Lehrkraft auf die Reallabs an. Oder schreib uns direkt.
+            <br>
+           <a href="mailto:reallabs@passage13.org" class="partner-link">Kontakt aufnehmen →</a> 
+          </p>
+
+      </section>
+
+    </main>
+      <Footer />
+
+  </body>
+</html>
+
+
+<script>
+  document.querySelectorAll<HTMLElement>(".youtube-preview").forEach(button => {
+
+    button.addEventListener("click", () => {
+
+      const videoId = button.dataset.videoId;
+
+      const iframe = document.createElement("iframe");
+
+      iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+      iframe.title = button.getAttribute("aria-label") || "Video abspielen";
+      iframe.allow =
+        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+      iframe.allowFullscreen = true;
+
+      button.replaceWith(iframe);
+
+    });
+
+  });
+</script>

@@ -1,166 +1,142 @@
 ---
 import '../styles/global.css';
 import '../styles/partner.css';
-
 import PageHero from "../components/PageHero.astro";
 import Footer from "../components/Footer.astro";
-
 ---
 
 <html lang="de">
-  
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
+
   <body>
-  
-<main>
-    <PageHero
-          title="Reallab entwickeln"
-        >
-          <p class="hero-note">
-            Entwickeln Sie mit uns ein Reallab und geben Sie Jugendlichen Einblicke in Ihre Arbeitswelt.
-       
-            <br/>
-            <strong>Sie bringen Ihre Fragestellung ein – wir übernehmen Organisation, Teilnehmendenkontakt und Durchführung.
-          </strong>
-  
+
+    <!-- with polygone behind text -->
+    <main class="partner-page"> 
+
+      <PageHero
+        title="Ihr Reallab"
+      >
+        <p>
+          Sie bringen eine echte Fragestellung aus Ihrem Unternehmen ein und
+          wir entwickeln daraus gemeinsam einen Projekttag für Jugendliche.
         </p>
-    </PageHero>
 
-        <section class="page-content partner-content">
+        <p>
+          Das Team des Smart-City-Bildungszentrums <span style="font-style: oblique;">Passage 13</span> übernimmt
+          Konzeption, Organisation und Durchführung.
+        </p>
+      </PageHero>
 
-              <article class="section partner-benefits">
 
-              <h2>Ihr Nutzen</h2>
- 
-               <ul class="simple-list">
+      <section>
 
-                  <li>Sichtbarkeit als zukunftsorientiertes Unternehmen</li> 
+        <!-- Nutzen -->
 
-                  <li>Kontakt zu Jugendlichen aus der Region</li>
+        <article class="section partner-benefits">
 
-                  <li>Authentischer Dialog mit zukünftigen Nachwuchskräften</li>
+          <h2>Was Sie davon haben</h2>
 
-                  <li>Bearbeitung eigener Praxisfragen</li>
+          <ul class="simple-list">
 
-                  <li>Beitrag zu Berufsorientierung und regionaler Fachkräftesicherung</li>
+            <li>
+              Sichtbarkeit als zukunftsorientiertes Unternehmen
+            </li>
 
-                </ul>
+            <li>
+              Kontakt zu Jugendlichen aus der Region
+            </li>
 
-            </article>
+            <li>
+              Authentischer Dialog mit potenziellen Nachwuchskräften
+            </li>
 
-           
-          <article class="section partner-process-section">
+            <li>
+              Neue Perspektiven auf eigene Praxisfragen
+            </li>
 
-              <h2>Von der Idee zum Reallab</h2>
+            <li>
+              Beitrag zu Berufsorientierung und regionaler Fachkräftesicherung
+            </li>
 
-              <ol class="partner-process">
-                <li>
-                  <strong>Fragestellung entwickeln</strong>
-                  <p>
-                    Gemeinsam identifizieren wir ein Thema aus Ihrer Praxis und
-                    entwickeln daraus eine passende Herausforderung für Jugendliche.
-                  </p>
-                </li>
+          </ul>
 
-                <li>
-                  <strong>Reallab gestalten</strong>
-                  <p>
-                    Wir übernehmen die Konzeption des Lernsettings, die Organisation
-                    und die Kommunikation mit den Teilnehmenden.
-                  </p>
-                </li>
+        </article>
 
-                <li>
-                  <strong>Projekttag durchführen</strong>
-                  <p>
-                    Jugendliche arbeiten an Ihrer realen Fragestellung und entwickeln
-                    eigene Ideen und Lösungsansätze.
-                  </p>
-                </li>
 
-                <li>
-                  <strong>Ergebnisse sichtbar machen</strong>
-                  <p>
-                    Gemeinsam reflektieren wir die Ergebnisse und machen die Wirkung
-                    des Reallabs sichtbar.
-                  </p>
-                </li>
-              </ol>
+        <!-- Aufwand -->
 
-          </article>
+        <article class="section partner-effort">
 
-          <article class="section partner-effort">
+          <h2>Was Sie einbringen</h2>
 
-                <h2>Ihr Aufwand</h2>
-
-                <p class="text">
-                Ein Reallab umfasst einen gemeinsamen Entwicklungsprozess und einen
-                Projekttag mit Jugendlichen. Die organisatorische Vorbereitung,
-                Kommunikation mit den Teilnehmenden und Durchführung übernehmen wir.
-                </p>
-
-            <ul class="simple-list">
-
-              <li>
-                <strong>Authentischer Lernort</strong><br>
-                Eine geeignete Räumlichkeit in Ihrem Unternehmen für ca. 20 Personen
-                (mit Internetzugang und Monitor)
-              </li>
-
-              <li>
-                <strong>Praxisbegleitung</strong><br>
-                Eine Ansprechperson aus Ihrem Unternehmen, die den Projekttag begleitet
-                und Einblicke in Ihre Arbeitswelt ermöglicht
-              </li>
-
-              <li>
-                <strong>Zeit für Austausch und Feedback</strong><br>
-                Ca. 5 Stunden Begleitung am Projekttag sowie Feedback zu den Ergebnissen
-              </li>
-
-            </ul>
-
-                <p>
-                Falls nur begrenzte zeitliche Kapazitäten vorhanden sind, ist auch eine
-                Begleitung in reduziertem Umfang möglich – beispielsweise durch einen
-                Praxisauftrag und eine abschließende Ergebnisabnahme (ca. 90 Minuten).
-                </p>
-
-            </article>
-
-        </section>
-
-        <section class="partner-cta">
-
-          <h2>
-            Sie haben eine Fragestellung aus Ihrer Praxis?
-          </h2>
-
-          <p>
-            Lassen Sie uns gemeinsam prüfen, wie daraus ein Reallab für
-            Jugendliche entstehen kann.
+          <p class="text">
+            Ein Reallab umfasst einen Projekttag mit Jugendlichen.
+            Dafür brauchen wir von Ihnen:
           </p>
 
-          <a href="/kontakt" class="partner-link">
-            Reallab gemeinsam entwickeln →
-          </a>
+          <ul class="simple-list">
 
-        </section>
+            <li>
+              <strong>Authentischer Lernort</strong>
+              Eine geeignete Räumlichkeit in Ihrem Unternehmen für ca. 20 Personen
+              – mit Internetzugang und Monitor
+            </li>
 
-</main>
+            <li>
+              <strong>Praxisbegleitung</strong>
+              Eine Ansprechperson aus Ihrem Unternehmen, die den Projekttag begleitet
+              und den Jugendlichen Einblicke in Ihre Arbeitswelt gibt
+            </li>
 
- <Footer />
+            <li>
+              <strong>Zeit für Austausch und Feedback</strong>
+              Circa 5 Stunden Begleitung am Projekttag sowie Zeit für den gemeinsamen
+              Austausch und das Feedback zu den Ergebnissen
+            </li>
 
-</body>
+          </ul>
+
+          <p>
+            Falls nur begrenzte zeitliche Kapazitäten vorhanden sind, ist auch eine
+            Begleitung in reduziertem Umfang möglich, beispielsweise durch einen
+            Praxisauftrag und eine abschließende Ergebnisabnahme (ca. 90 Minuten).
+          </p>
+
+        </article>
+
+      </section>
+
+
+      <!-- CTA -->
+
+      <section class="partner-cta">
+
+        <h2>
+          Sie haben eine Fragestellung aus Ihrer Praxis?
+        </h2>
+
+        <p>
+          Schreiben Sie uns kurz Ihr Thema. Wir melden uns für ein erstes Gespräch
+          und klären gemeinsam die nächsten Schritte.
+        </p>
+
+        <a
+          href="mailto:reallabs@passage13.org"
+          class="partner-link"
+        >
+          Kontakt aufnehmen →
+        </a>
+
+      </section>
+
+    </main>
+
+    <Footer />
+
+  </body>
 
 </html>
-
-
-
-    
-
-     
-      

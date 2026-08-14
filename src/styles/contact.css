@@ -1,4 +1,90 @@
-.projects-overview {
-  max-width: 720px;
-background-color: red;
+/* =========================
+   Steps
+========================= */
+
+.partner-content .section {
+  margin:3rem 0 3rem;
+}
+
+
+.partner-process {
+  list-style:none;
+
+  margin:2rem 0 3rem;
+
+  padding:0;
+
+  display:grid;
+  gap:2rem;
+
+  counter-reset:step;
+}
+
+
+.partner-cta {
+  margin-top:4rem;
+  margin-bottom:5rem;
+}
+
+
+.partner-process li {
+
+  position:relative;
+
+  padding-left:4.5rem;
+
+  counter-increment:step;
+
+}
+
+
+.partner-process li::before {
+
+  content:counter(step);
+
+  position:absolute;
+
+  left:0;
+  top:.15rem;
+
+  width:2.4rem;
+  height:2.4rem;
+
+  display:grid;
+  place-items:center;
+
+  border:1px solid var(--dark-grey);
+
+  border-radius:50%;
+
+  background:white;
+
+  color:var(--dark-grey);
+
+  font-weight:700;
+
+  font-size:.9rem;
+
+}
+
+
+.partner-process strong {
+
+  display:block;
+
+  margin-bottom:.5rem;
+
+  font-size:1.1rem;
+
+}
+
+
+.partner-process p {
+
+  margin:0;
+
+  color:var(--grey);
+
+  line-height:1.7;
+
 }

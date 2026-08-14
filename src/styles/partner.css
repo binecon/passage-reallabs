@@ -1,129 +1,238 @@
+/* =========================
+   Partner page
+========================= */
+
 .hero-note strong {
-  font-weight:600;
+  font-weight: 600;
   margin-top: 2rem;
 }
 
+
 /* =========================
-   Benefits & efforts
+   Benefits & Effort
 ========================= */
 
-.simple-list {
-
-  margin:0;
-  padding-left:1.2rem;
-
-  display:grid;
-  gap:.8rem;
-
-  color:var(--grey);
-  line-height:1.7;
-
+.partner-benefits,
+.partner-effort {
+  max-width: 800px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
-
-
-.simple-list li {
-
-  padding-left:.3rem;
-
-}
-
-
-.simple-list li::marker {
-
-  color:var(--dark-grey);
-
-}
-
-
 
 
 /* =========================
-   Steps
+   Benefits
 ========================= */
 
-.partner-content .section {
-  margin-bottom:3rem;
+.partner-benefits {
+  padding-top: 2rem;
+}
+
+.partner-benefits .simple-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: grid;
+  gap: .8rem;
+
+  color: var(--grey);
+  line-height: 1.7;
+}
+
+.partner-benefits .simple-list li {
+  position: relative;
+  padding-left: 2rem;
 }
 
 
-.partner-process {
-  list-style:none;
+/* filled bullets */
 
-  margin:2rem 0 3rem;
+.partner-benefits .simple-list li::before {
+  content: "";
 
-  padding:0;
+  position: absolute;
+  left: .6rem;
+  top: .6rem;
 
-  display:grid;
-  gap:2rem;
+  width: .55rem;
+  height: .55rem;
 
-  counter-reset:step;
+  background: var(--dark-grey);
+  border-radius: 50%;
 }
 
+
+/* =========================
+   Effort
+========================= */
+
+.partner-effort {
+  padding-top: 3rem;
+  margin-bottom: 5rem !important;
+}
+
+.partner-effort .simple-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: grid;
+  gap: 2rem;
+
+  color: var(--grey);
+  line-height: 1.7;
+}
+
+.partner-effort .simple-list li {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+
+/* open bullets */
+
+.partner-effort .simple-list li::before {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  top: .5rem;
+
+  width: .55rem;
+  height: .55rem;
+
+  border: 1.5px solid var(--dark-grey);
+  border-radius: 50%;
+}
+
+
+/* heading → description */
+
+.partner-effort .simple-list strong {
+  display: block;
+  margin-bottom: .2rem;
+}
+
+
+/* reduced space before CTA */
+
+.text {
+  margin: 2rem 0 2rem;
+}
+
+.partner-effort > p:last-child {
+  margin: 2.2rem 0 .8rem;
+}
+
+
+/* =========================
+   CTA
+========================= */
 
 .partner-cta {
-  margin-top:4rem;
-  margin-bottom:5rem;
+  max-width: 800px;
+  margin-top: 0 !important;
+  margin-bottom: 5rem;
+}
+
+.partner-cta h2 {
+  margin-top: 0;
 }
 
 
-.partner-process li {
+/* =========================
+   Partner page typography
+========================= */
 
-  position:relative;
+.partner-benefits,
+.partner-effort,
+.partner-cta {
+  max-width: 800px;
+}
 
-  padding-left:4.5rem;
+/* H2 */
+.partner-benefits h2,
+.partner-effort h2,
+.partner-cta h2 {
+  font-size: 1.8rem;
+}
 
-  counter-increment:step;
-
+.partner-benefits p,
+.partner-effort p,
+.partner-benefits .simple-list,
+.partner-effort .simple-list {
+  font-size: 1.05rem;
+  line-height: 1.65;
 }
 
 
-.partner-process li::before {
+/* Benefits */
 
-  content:counter(step);
-
-  position:absolute;
-
-  left:0;
-  top:.15rem;
-
-  width:2.4rem;
-  height:2.4rem;
-
-  display:grid;
-  place-items:center;
-
-  border:1px solid var(--dark-grey);
-
-  border-radius:50%;
-
-  background:white;
-
-  color:var(--dark-grey);
-
-  font-weight:700;
-
-  font-size:.9rem;
-
+.partner-benefits .simple-list {
+  gap: .9rem;
 }
 
 
-.partner-process strong {
+/* Effort */
 
-  display:block;
-
-  margin-bottom:.5rem;
-
-  font-size:1.1rem;
-
+.partner-effort .simple-list {
+  gap: 2rem;
 }
 
 
-.partner-process p {
+/* CTA */
 
-  margin:0;
+.partner-cta p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
 
-  color:var(--grey);
 
-  line-height:1.7;
 
+
+/* POLYGON */
+
+.partner-page {
+  position: relative;
+  overflow: hidden;
+}
+
+.partner-page::after {
+  content: "";
+  position: absolute;
+
+  top: 5rem;
+  right: -5rem;
+
+  width: 18rem;
+  height: 18rem;
+
+  background:
+    linear-gradient(
+      135deg,
+      #95E5B2 0 25%,
+      #404ED9 25% 50%,
+      #E393E9 50% 75%,
+      #EED55C 75% 100%
+    );
+
+  clip-path: polygon(
+    20% 0,
+    100% 12%,
+    88% 72%,
+    55% 100%,
+    8% 78%,
+    0 30%
+  );
+
+  opacity: .85;
+
+  pointer-events: none;
+  z-index: 0;
+}
+
+.partner-page > * {
+  position: relative;
+  z-index: 1;
 }
