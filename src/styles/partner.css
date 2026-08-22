@@ -2,10 +2,10 @@
    Partner page
 ========================= */
 
-.hero-note strong {
+/* .hero-note strong {
   font-weight: 600;
   margin-top: 2rem;
-}
+} */
 
 
 /* =========================
@@ -14,7 +14,7 @@
 
 .partner-benefits,
 .partner-effort {
-  max-width: 800px;
+  max-width: 1440px;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -148,7 +148,7 @@
 .partner-benefits,
 .partner-effort,
 .partner-cta {
-  max-width: 800px;
+  max-width: 1100px;
 }
 
 /* H2 */
@@ -202,8 +202,9 @@
   content: "";
   position: absolute;
 
+
   top: 5rem;
-  right: -5rem;
+  right: -1.5rem;
 
   width: 18rem;
   height: 18rem;
