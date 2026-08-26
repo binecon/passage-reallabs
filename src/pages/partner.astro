@@ -14,22 +14,27 @@ import Footer from "../components/Footer.astro";
 
   <body>
 
-    <!-- with polygone behind text -->
-    <main class="partner-page"> 
+ <main class="partner-page">
 
-      <PageHero
-        title="Ihr Reallab"
-      >
-        <p>
-          Sie bringen eine echte Fragestellung aus Ihrem Unternehmen ein und
-          wir entwickeln daraus gemeinsam einen Projekttag für Jugendliche.
-        </p>
+  <PageHero
+    title="Ihr Reallab" 
+  >
+    <p>
+      Sie bringen eine echte Fragestellung aus Ihrem Unternehmen ein und
+      wir entwickeln daraus gemeinsam einen Projekttag für Jugendliche.
+    </p>
 
-        <p>
-          Das Team des Smart-City-Bildungszentrums <span style="font-style: oblique;">Passage 13</span> übernimmt
-          Konzeption, Organisation und Durchführung.
-        </p>
-      </PageHero>
+    <p>
+      Das Team des Smart-City-Bildungszentrums
+      <span style="font-style: oblique;">&nbsp;Passage 13</span> übernimmt
+      Konzeption, Organisation und Durchführung.
+    </p>
+
+    <div slot="visual" class="page-hero-visual">
+      <div class="partner-shape"></div>
+    </div>
+
+  </PageHero>
 
 
       <section>
@@ -38,7 +43,7 @@ import Footer from "../components/Footer.astro";
 
         <article class="section partner-benefits">
 
-          <h2>Was Sie davon haben</h2>
+          <h3 class="list-heading">Was Sie davon haben</h3>
 
           <ul class="simple-list">
 
@@ -47,7 +52,7 @@ import Footer from "../components/Footer.astro";
             </li>
 
             <li>
-              Kontakt zu Jugendlichen aus der Region
+              Kontakt zu Schülerinnen und Schülern aus der Region
             </li>
 
             <li>
@@ -71,7 +76,7 @@ import Footer from "../components/Footer.astro";
 
         <article class="section partner-effort">
 
-          <h2>Was Sie einbringen</h2>
+          <h3 class="list-heading">Was Sie einbringen</h3>
 
           <p class="text">
             Ein Reallab umfasst einen Projekttag mit Jugendlichen.
@@ -81,29 +86,39 @@ import Footer from "../components/Footer.astro";
           <ul class="simple-list">
 
             <li>
-              <strong>Authentischer Lernort</strong>
-              Eine geeignete Räumlichkeit in Ihrem Unternehmen für ca. 20 Personen
-              – mit Internetzugang und Monitor
+               <span class="step-number">1</span>
+              <div>
+                <strong>Authentischer Lernort</strong>
+                Eine geeignete Räumlichkeit in Ihrem Unternehmen für ca. 20 Personen, 
+                mit Internetzugang und Monitor
+              </div>
             </li>
 
             <li>
-              <strong>Praxisbegleitung</strong>
-              Eine Ansprechperson aus Ihrem Unternehmen, die den Projekttag begleitet
-              und den Jugendlichen Einblicke in Ihre Arbeitswelt gibt
+               <span class="step-number">2</span>
+              <div>
+                <strong>Praxisbegleitung</strong>
+                Eine Ansprechperson aus Ihrem Unternehmen, die am Projekttag dabei ist und den Jugendlichen 
+                Einblicke in Ihre Arbeitswelt gibt*
+              </div>
             </li>
 
             <li>
+              <span class="step-number">3</span>
+             <div>
               <strong>Zeit für Austausch und Feedback</strong>
-              Circa 5 Stunden Begleitung am Projekttag sowie Zeit für den gemeinsamen
-              Austausch und das Feedback zu den Ergebnissen
+              Zu den Ergebnissen am Projekttagende, gemeinsam mit den Teilnehmenden
+             </div>
             </li>
 
           </ul>
 
-          <p>
+          <p class="additional">
+            * Die Vorbereitung und Durchführung übernehmen wir. Zeitaufwand für die Begleitung 
+            am Projekttag belaufen sich auf ca. insgesamt 5 Stunden. 
             Falls nur begrenzte zeitliche Kapazitäten vorhanden sind, ist auch eine
             Begleitung in reduziertem Umfang möglich, beispielsweise durch einen
-            Praxisauftrag und eine abschließende Ergebnisabnahme (ca. 90 Minuten).
+            Praxisauftrag zu Beginn und eine abschließende Ergebnisabnahme (ca. 90 Minuten).
           </p>
 
         </article>
@@ -114,12 +129,10 @@ import Footer from "../components/Footer.astro";
       <!-- CTA -->
 
       <section class="partner-cta">
+        
+        <h2>Sie haben eine Fragestellung aus Ihrer Praxis?</h2>
 
-        <h2>
-          Sie haben eine Fragestellung aus Ihrer Praxis?
-        </h2>
-
-        <p>
+        <p class="text">
           Schreiben Sie uns kurz Ihr Thema. Wir melden uns für ein erstes Gespräch
           und klären gemeinsam die nächsten Schritte.
         </p>

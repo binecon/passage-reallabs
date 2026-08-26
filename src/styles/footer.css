@@ -1,54 +1,56 @@
-.footer {
-  padding: 2.2rem 0;
+/* =========================
+   Footer
+========================= */
 
-  border-top: 1px solid #949695;
+.footer {
+  padding: 1.6rem 0;
+
+  border-top: 1px solid var(--light-grey);
 }
 
+
+/* =========================
+   Main
+========================= */
 
 .footer-main {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:2rem;
-  color: #5C5754;
-  font-size:.85rem;
-}
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
+  gap: 2rem;
+
+  color: var(--grey);
+}
 
 .footer-main p {
   margin: 0;
 }
 
-
 .footer-links {
-  display:flex;
-  gap:1.5rem;
+  display: flex;
+  gap: 3rem;
 }
-
 
 .footer-links a {
-  color:inherit;
-  text-decoration:none;
-  font-size:1rem;
+  color: inherit;
+  text-decoration: none;
 }
 
+
+/* =========================
+   Funding
+========================= */
 
 .footer-funding {
-  display:flex;
-  align-items:center;
-  gap:2rem;
+  display: flex;
+  align-items: center;
+   font-size: 1.4rem;
+  gap: 4rem;
 
-  margin-top:3.2rem;
+  margin-top: 6rem;
 
-  font-size:.8rem;
-  color:#949695;
-}
-
-
-.footer-logos {
-  display:flex;
-  align-items:center;
-  gap:2rem;
+  color: var(--light-grey);
 }
 
 .footer-label {
@@ -56,18 +58,32 @@
   line-height: 1.4;
 }
 
-.footer-logos img {
-  height:50px;
-  width:auto;
-
-}
-
-.footer-evaluation {
-  margin-top: 2rem;
+.footer-logos {
   display: flex;
   align-items: center;
-  gap: .75rem;
-  font-size: .75rem;
+
+  gap: 3rem;
+}
+
+.footer-logos img {
+  width: auto;
+  height: 60px;
+}
+
+
+/* =========================
+   Evaluation
+========================= */
+
+.footer-evaluation {
+  display: flex;
+  align-items: center;
+
+  gap: 2rem;
+
+  margin-top: 2rem;
+
+  font-size: 1.4rem;
   color: var(--light-grey);
 }
 
@@ -76,18 +92,26 @@
 }
 
 .footer-evaluation img {
-  height: 30px;
   width: auto;
+  height: 60px;
 }
 
 
+/* =========================
+   Responsive
+========================= */
 
-@media(max-width:700px) {
+@media (max-width: 700px) {
 
   .footer-main,
-  .footer-funding {
-    flex-direction:column;
-    align-items:flex-start;
+  .footer-funding,
+  .footer-evaluation {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-links {
+    gap: 1.5rem;
   }
 
 }

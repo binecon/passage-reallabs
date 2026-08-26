@@ -8,6 +8,7 @@
   /* padding:.45rem 1rem; */
   text-decoration: none;
   padding: 1rem;
+  margin: 3rem 0 3rem;
 
   border:1px solid var(--dark-grey);
   border-radius:999px;
@@ -15,7 +16,7 @@
 
   font-style:italic;
   font-weight:300;
-  font-size:1.2rem;
+  font-size:1.6rem;
 
   color:var(--dark-grey);
   text-decoration:none;

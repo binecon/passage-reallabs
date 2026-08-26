@@ -3,18 +3,17 @@
 ========================= */
 
 .youth-intro {
-  max-width: 1440px;
+  max-width: var(--intro-width);
   margin-bottom: 4rem;
 }
 
 
 /* =========================
-   Video cards
+   Video Cards
 ========================= */
 
 .youth-videos {
-  max-width: 1440px;
-  margin: 0 auto 5rem;
+  margin: 0 auto;
 }
 
 .youth-videos h2 {
@@ -24,18 +23,15 @@
 
 .youth-video-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 2rem;
 }
 
 
-@media (max-width: 700px) {
-  .youth-video-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Card */
+/* =========================
+   Card
+========================= */
 
 .youth-card {
   overflow: hidden;
@@ -47,30 +43,39 @@
 }
 
 
-/* Video */
+/* =========================
+   Video
+========================= */
 
 .youth-card-media {
   aspect-ratio: 16 / 9;
 }
+
 .youth-card-media iframe {
+  display: block;
+
   width: 100%;
   height: 100%;
-  display: block;
+
   border: 0;
 }
 
-.video-placeholder {
-  width: 100%;
-  height: 100%;
 
+.video-placeholder {
   display: grid;
   place-items: center;
+
+  width: 100%;
+  height: 100%;
 
   background: var(--light-grey);
   color: var(--grey);
 }
 
-/* Thumbnail */
+
+/* =========================
+   YouTube Thumbnail
+========================= */
 
 .youtube-preview {
   position: relative;
@@ -79,19 +84,20 @@
   height: 100%;
 
   padding: 0;
+
   border: 0;
-
   background: none;
-  cursor: pointer;
 
+  cursor: pointer;
   overflow: hidden;
 }
 
 .youtube-preview img {
+  display: block;
+
   width: 100%;
   height: 100%;
 
-  display: block;
   object-fit: cover;
 
   transition: transform .3s ease;
@@ -100,6 +106,9 @@
 .youtube-preview:hover img {
   transform: scale(1.03);
 }
+
+
+/* Play button */
 
 .play-button {
   position: absolute;
@@ -115,14 +124,17 @@
   place-items: center;
 
   border-radius: 50%;
-  background: white;
 
+  background: white;
   color: var(--dark-grey);
+
   font-size: 1.1rem;
 }
 
 
-/* Card text */
+/* =========================
+   Card Content
+========================= */
 
 .youth-card-content {
   padding: 1.5rem;
@@ -134,9 +146,7 @@
 
 .youth-card-content p {
   margin: 0;
-
   color: var(--grey);
-  line-height: 1.6;
 }
 
 
@@ -145,17 +155,32 @@
 ========================= */
 
 .youth-cta {
-  max-width: 800px;
-
-  margin: 0 auto 5rem;
-
   text-align: center;
+  margin: 8rem 0 8rem;
 }
 
 .youth-cta h2 {
-  margin-bottom: .7rem;
+  margin: 0 auto 2rem;
+  font-weight: 600;
 }
 
 .youth-cta p {
-  margin-bottom: 1.5rem;
+  max-width: 920px;
+  margin: 0 auto;
+  color: var(--grey);
+}
+
+
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 1200px) {
+
+  .youth-video-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
 }

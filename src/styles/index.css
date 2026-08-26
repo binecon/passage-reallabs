@@ -1,98 +1,160 @@
-/* Spezifika für index.astro */
+/* =========================
+   Landing Page
+========================= */
 
-
-/* Hero */
+/* =========================
+   Hero
+========================= */
 
 .hero {
-  display: grid;
-  grid-template-columns: 1fr 400px;
-  grid-template-areas:
-    "copy visual"
-    "intro intro";
-  row-gap: 1.5rem;
-  column-gap: 2rem;
-  align-items: top;
-  min-height: auto;
-  margin: 4rem 0 0;
+  position: relative;
+  z-index: 1;
+
+  padding-top: 6rem;
+
+  min-height: 450px;
 }
 
-.hero-brand {  font-weight: 600; font-size: 3.6rem;
-  margin: 0 0 1rem ; color:var(--dark-grey); }
+/* =========================
+   Hero Shape
+========================= */
 
+.hero-shape {
+  position: absolute;
+
+  width: 130vw;
+  height: 840px;
+
+  left: 40%;
+  top: -480px;
+
+  transform: translateX(-50%);
+
+  background: var(--green);
+  border-radius: 50%;
+
+  z-index: 0;
+}
+
+/* =========================
+   Hero Content
+========================= */
 
 .hero-copy {
-  grid-area: copy;
-  max-width: 900px;
+  position: relative;
+  z-index: 1;
 }
 
-.hero-intro {
-  grid-area: intro;
-  margin: 0;
-  line-height: 1.7;
+.hero-brand {
+  margin: 0 0 1rem;
+
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(3.5rem, 7vw, 7rem);
+  font-weight: 400;
+  line-height: .9;
+  letter-spacing: .005em;
+
+  color: var(--dark-grey);
+}
+.hero-subtitle {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 2rem;
+  padding-left: .3rem;
+  color: var(--grey)
 }
 
-.hero-visual {
-  grid-area: visual;
-}
+/* =========================
+   Tablet
+========================= */
 
-/* Mobile */
-@media (max-width: 1200px) {
+@media (max-width: 900px) {
+
   .hero {
-    margin-top: auto;
-    grid-template-columns: 2fr;
-    grid-template-areas:
-      "copy"
-      "intro"
-      "visual";
+    min-height: 400px;
+    padding-bottom: 4rem;
   }
 
-    .hero-visual {
-    grid-area: visual;
-    width: 70%;
-    max-width: 340px;
-    margin-inline: auto;
-    margin-bottom: 2.8rem;
+  .hero-shape {
+    width: 150vw;
+    height: 700px;
+
+    left: 40%;
+    top: -420px;
+  }
+  .hero-subtitle{
+    font-size: 1.6rem;
+    line-height: 2rem;
+    padding-left: .2rem;
   }
 }
 
 
-/* VERSION III line project list */
+/* =========================
+   Smartphone
+========================= */
 
-.projects-preview {
-  max-width: 1440px;
-  margin-inline: auto;
+@media (max-width: 600px) {
+
+  .hero {
+    min-height: 300px;
+    padding-bottom: 3rem;
+  }
+
+  .hero-shape {
+    width: 180vw;
+    height: 620px;
+
+    left: 40%;
+    top: -360px;
+  }
+  .hero-brand {
+  line-height: 1.05;
+  }
+  .hero-subtitle {
+    display: none;
+  }
 }
+
+
+/* =========================
+   Projects Preview
+========================= */
 
 .project-preview-item {
   position: relative;
-
   display: grid;
   grid-template-columns: 1fr;
-  
+
   padding: 2rem 1rem 2.5rem 1.5rem;
 
   border-top: 1px solid var(--light-grey);
   border-bottom: 1px solid var(--light-grey);
-  text-decoration: none;
+
   color: inherit;
+  text-decoration: none;
 
   transition:
     transform .3s ease,
     padding-left .3s ease;
 }
 
-/* lab-coloured selection line */
+
+/* Lab-coloured selection line */
+
 .project-preview-item::before {
   content: "";
+
   position: absolute;
   left: 0;
   top: 2rem;
   bottom: 2rem;
+
   width: 6px;
 
   background: var(--lab-color);
 
   opacity: 0;
+
   transform: scaleY(.5);
   transform-origin: center;
 
@@ -101,7 +163,9 @@
     transform .3s ease;
 }
 
-/* hover effect */
+
+/* Hover */
+
 .project-preview-item:hover {
   transform: translateX(.2rem);
   padding-left: 2rem;
@@ -113,7 +177,7 @@
 }
 
 
-/* content */
+/* Project content */
 
 .project-preview-item h2 {
   margin: 0 0 .6rem;
@@ -129,10 +193,11 @@
 }
 
 
-/* project link */
+/* Project link */
 
 .project-link {
   display: inline-block;
+
   margin-top: 1.5rem;
 
   color: inherit;
@@ -140,14 +205,12 @@
   text-underline-offset: .25rem;
 }
 
-
-/* no hover colour change for project link */
 .project-preview-item:hover .project-link {
   color: inherit;
 }
 
 
-/* all projects CTA */
+/* All projects CTA */
 
 .projects-action {
   display: flex;
@@ -155,10 +218,8 @@
   margin-top: 2.5rem;
 }
 
-/* button area */
-
 .button--project {
-  margin-top:1.8rem;
+  margin-top: 1.8rem;
 }
 
 .button--projects:hover {
@@ -168,54 +229,58 @@
 }
 
 
-
-/* Process */
-
 /* =========================
    Process
 ========================= */
 
 .process .section-header {
-  max-width: 800px;
+  max-width: 1000px;
   margin-bottom: 3.5rem;
 }
 
 .process-intro {
   margin: 0 0 2.5rem;
   color: var(--dark-grey);
-  line-height: 1.6;
 }
 
 .process-grid {
   display: grid;
+
   grid-template-columns: repeat(4, minmax(0, 1fr));
+
   gap: 2rem;
 }
 
 .step p {
-  line-height: 1.6;
   color: var(--grey);
 }
 
 .step-number {
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  border: 1px solid var(--text);
+  width: 2.8rem;
+  height: 2.8rem;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   margin-bottom: 1rem;
+
+  border: 1px solid var(--text);
+  border-radius: 50%;
+
   font-weight: 700;
   color: black;
 }
+
+
+/* Step colours */
 
 .step:nth-child(1) .step-number {
   background: var(--yellow);
 }
 
 .step:nth-child(2) .step-number {
-  background: #404ED9;
+  background: var(--blue);
   color: white;
 }
 
@@ -228,140 +293,173 @@
 }
 
 
-/* Tablet */
+/* Process – tablet */
 
 @media (max-width: 1200px) {
+
   .process-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
 }
 
 
-/* Smartphone */
+/* Process – smartphone */
 
 @media (max-width: 800px) {
+
   .process-grid {
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: 1fr;
   }
+
 }
 
 
-/* Einblicke */
+/* =========================
+   Insights
+========================= */
 
 .insights-content {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:3rem;
-  align-items:center;
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 3rem;
+
+  align-items: center;
 }
 
 .insights h2 {
-  margin:.5rem 0 1rem;
+  padding: 2rem 0 1rem;
+  font-weight: 600;
 }
 
 .insights p {
-  line-height:1.6;
   margin: 0 auto 2rem;
 }
+
 .insights-text {
   transform: translateY(-1rem);
 }
 
-.insights-text .section-label,
+.insights-text,
 .insights-text h2,
 .insights-text p {
   margin: 0;
 }
 
 .insights-media img {
-  width:100%;
-  border-radius:20px;
+  width: 100%;
+  border-radius: 20px;
 }
 
 
-/* button area */
+/* Insights CTA */
 
 .button--insights {
-  margin-top:1.8rem;
+  margin-top: 3rem;
 }
 
 .button--insights:hover {
   background: var(--blue);
   border-color: var(--blue);
-  color:white;
+  color: white;
 }
 
-@media(max-width:800px) {
+
+/* Insights – mobile */
+
+@media (max-width: 800px) {
+
   .insights-content {
-    grid-template-columns:1fr;
+    grid-template-columns: 1fr;
   }
+
 }
 
 
-/* Partnerstimmen */
+/* =========================
+   Testimonials
+========================= */
 
 .testimonial-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
-  gap:3rem;
+  display: grid;
 
+  grid-template-columns:
+    repeat(auto-fit, minmax(280px, 1fr));
+
+  gap: 3rem;
 }
 
 .testimonial {
-  max-width:500px;
+  max-width: 600px;
 }
 
 .quote {
-  font-size:1.2rem;
-  line-height:1.5;
-  margin:1rem 0 1.5rem;
+  margin: 2.2rem 0 1.5rem;
+
   font-style: italic;
   color: var(--dark-grey);
 }
 
 .quote::before {
-  content:"“";
-  font-size:4rem;
-  line-height:0;
-  vertical-align:-1rem;
+  content: "“";
+
+  padding-right: .2rem;
+
+  font-size: 5rem;
+  line-height: 0;
+
+  vertical-align: -1rem;
 }
 
 .author {
-  font-size:.9rem;
-  color:var(--grey)
-}
-
-
-
-/* CTA */
-
-.partner-cta {
-  text-align: center;
-}
-
-.partner-cta h2 {
-  margin: 1.5rem 0 1.5rem;
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-.partner-cta p {
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.7;
   color: var(--grey);
 }
 
 
-/* button area */
+/* Testimonials – mobile */
+
+@media (max-width: 800px) {
+
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================
+   Partner CTA
+========================= */
+
+.partner-cta {
+  padding-bottom: 3rem;
+  text-align: center;
+}
+
+.partner-cta h2 {
+  margin: 1.5rem 0 2.3rem;
+  font-weight: 700;
+}
+
+.partner-cta .text {
+  max-width: 920px;
+  margin: 0 auto;
+  color: var(--grey);
+}
+
+
+
+/* CTA button */
 
 .cta-action {
-  display:flex;
-  justify-content:center;
-  margin-top:2rem;
+  display: flex;
+  justify-content: center;
+
+  margin: 3rem 0;
 }
 
 .button--cta:hover {
-  background:var(--green);
+  background: var(--green);
 }
-

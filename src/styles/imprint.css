@@ -12,8 +12,9 @@
 ========================= */
 
 .imprint-content {
-  max-width: 1440px;
-  margin: 0 auto 6rem;
+  max-width: var(--content-width);
+  margin-inline: auto;
+  padding-bottom: 6rem;
 }
 
 
@@ -23,8 +24,18 @@
 
 .imprint-section {
   padding: 2.5rem 0;
+
   border-bottom: 1px solid var(--light-grey);
 }
+
+.contact-text{
+   max-width: var(--text-width);
+}
+
+
+/* .imprint-section h3 {
+  color: var(--dark-grey)
+} */
 
 .imprint-section:first-child {
   padding-top: 2rem;
@@ -35,19 +46,24 @@
 }
 
 
+/* =========================
+   Section heading
+========================= */
+
 .imprint-section h2 {
   margin: 0 0 1.2rem;
-  font-size: 1.5rem;
 }
 
+
+/* =========================
+   Text
+========================= */
 
 .imprint-section p {
   margin: 0 0 1rem;
 
   color: var(--grey);
-  line-height: 1.7;
 }
-
 
 .imprint-section p:last-child {
   margin-bottom: 0;
@@ -60,6 +76,7 @@
 
 .imprint-section a {
   color: inherit;
+
   text-decoration: underline;
   text-underline-offset: .2rem;
 }
@@ -95,10 +112,6 @@
 
   .imprint-section {
     padding: 2rem 0;
-  }
-
-  .imprint-section h2 {
-    font-size: 1.35rem;
   }
 
 }

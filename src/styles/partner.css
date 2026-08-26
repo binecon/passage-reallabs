@@ -1,12 +1,56 @@
 /* =========================
-   Partner page
+   Partner Page
 ========================= */
 
-/* .hero-note strong {
-  font-weight: 600;
-  margin-top: 2rem;
-} */
+.partner-page .page-hero {
+  position: relative;
+}
 
+.partner-page .page-hero-visual {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.partner-page .partner-shape {
+  width: 360px;
+  aspect-ratio: 1;
+}
+
+/* =========================
+   Hero Visual
+========================= */
+
+.partner-hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.partner-shape {
+  width: 360px;
+  aspect-ratio: 1;
+
+  background:
+    linear-gradient(
+      135deg,
+      #95E5B2 0 25%,
+      #404ED9 25% 50%,
+      #E393E9 50% 75%,
+      #EED55C 75% 100%
+    );
+
+  clip-path: polygon(
+    20% 0,
+    100% 12%,
+    88% 72%,
+    55% 100%,
+    8% 78%,
+    0 30%
+  );
+
+  opacity: .85;
+}
 
 /* =========================
    Benefits & Effort
@@ -14,9 +58,12 @@
 
 .partner-benefits,
 .partner-effort {
-  max-width: 1440px;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.list-heading {
+  padding-bottom: 1rem;
 }
 
 
@@ -25,28 +72,29 @@
 ========================= */
 
 .partner-benefits {
-  padding-top: 2rem;
+  padding: 2rem 0;
 }
 
 .partner-benefits .simple-list {
   list-style: none;
+
   margin: 0;
   padding: 0;
 
   display: grid;
-  gap: .8rem;
+  gap: 1.2rem;
 
   color: var(--grey);
-  line-height: 1.7;
 }
 
 .partner-benefits .simple-list li {
   position: relative;
-  padding-left: 2rem;
+
+  padding-left: 2.3rem;
 }
 
 
-/* filled bullets */
+/* Filled bullets */
 
 .partner-benefits .simple-list li::before {
   content: "";
@@ -70,44 +118,59 @@
 .partner-effort {
   padding-top: 3rem;
   margin-bottom: 5rem !important;
+  max-width: var(--intro-width);
 }
 
 .partner-effort .simple-list {
   list-style: none;
+  line-height: 2.3rem;
   margin: 0;
-  padding: 0;
+  padding: 1.2rem 0 1rem;
 
   display: grid;
-  gap: 2rem;
+  gap: 3rem;
 
   color: var(--grey);
-  line-height: 1.7;
 }
 
 .partner-effort .simple-list li {
   position: relative;
+
   padding-left: 1.5rem;
 }
 
 
-/* open bullets */
+/* Open bullets */
 
-.partner-effort .simple-list li::before {
-  content: "";
-
-  position: absolute;
-  left: 0;
-  top: .5rem;
-
-  width: .55rem;
-  height: .55rem;
-
-  border: 1.5px solid var(--dark-grey);
-  border-radius: 50%;
+.partner-effort .simple-list li {
+  display: grid;
+  grid-template-columns: 3.6rem 1fr;
+  gap: .8rem;
+  align-items: start;
 }
 
+.partner-effort .step-number {
+  width: 2.8rem;
+  height: 2.8rem;
 
-/* heading → description */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--dark-grey);
+  border-radius: 50%;
+
+  background: var(--bg);
+  color: var(--dark-grey);
+
+  font-weight: 600;
+  line-height: 1;
+}
+
+.additional {
+    max-width: var(--intro-width);
+}
+/* Heading → description */
 
 .partner-effort .simple-list strong {
   display: block;
@@ -115,11 +178,7 @@
 }
 
 
-/* reduced space before CTA */
-
-.text {
-  margin: 2rem 0 2rem;
-}
+/* Reduced space before CTA */
 
 .partner-effort > p:last-child {
   margin: 2.2rem 0 .8rem;
@@ -131,109 +190,17 @@
 ========================= */
 
 .partner-cta {
-  max-width: 800px;
-  margin-top: 0 !important;
-  margin-bottom: 5rem;
+  text-align: center;
+  margin: 10rem 0 10rem;
 }
 
 .partner-cta h2 {
-  margin-top: 0;
+  margin: 0 auto 2rem;
+  font-weight: 600;
 }
 
-
-/* =========================
-   Partner page typography
-========================= */
-
-.partner-benefits,
-.partner-effort,
-.partner-cta {
-  max-width: 1100px;
-}
-
-/* H2 */
-.partner-benefits h2,
-.partner-effort h2,
-.partner-cta h2 {
-  font-size: 1.8rem;
-}
-
-.partner-benefits p,
-.partner-effort p,
-.partner-benefits .simple-list,
-.partner-effort .simple-list {
-  font-size: 1.05rem;
-  line-height: 1.65;
-}
-
-
-/* Benefits */
-
-.partner-benefits .simple-list {
-  gap: .9rem;
-}
-
-
-/* Effort */
-
-.partner-effort .simple-list {
-  gap: 2rem;
-}
-
-
-/* CTA */
-
-.partner-cta p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-
-
-
-/* POLYGON */
-
-.partner-page {
-  position: relative;
-  overflow: hidden;
-}
-
-.partner-page::after {
-  content: "";
-  position: absolute;
-
-
-  top: 5rem;
-  right: -1.5rem;
-
-  width: 18rem;
-  height: 18rem;
-
-  background:
-    linear-gradient(
-      135deg,
-      #95E5B2 0 25%,
-      #404ED9 25% 50%,
-      #E393E9 50% 75%,
-      #EED55C 75% 100%
-    );
-
-  clip-path: polygon(
-    20% 0,
-    100% 12%,
-    88% 72%,
-    55% 100%,
-    8% 78%,
-    0 30%
-  );
-
-  opacity: .85;
-
-  pointer-events: none;
-  z-index: 0;
-}
-
-.partner-page > * {
-  position: relative;
-  z-index: 1;
+.partner-cta .text {
+  max-width: 820px;
+  margin: 0 auto;
+  color: var(--grey);
 }

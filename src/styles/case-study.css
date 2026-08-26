@@ -2,139 +2,28 @@
    Case Study Layout
 ========================= */
 
-
 .case-study .page {
-
-  max-width:1440px;
-
-  margin:0 auto;
-
+  max-width: var(--content-width);
+  margin-inline: auto;
 }
 
 
-
 /* =========================
-   Hero
+   Lab Hero
 ========================= */
 
-
-.lab-hero {
-  padding-top:1rem;
-
+.case-study .lab-hero-visual {
+  align-self: start;
+  justify-self: center;
+  margin-top: 0;
 }
 
 .lab-shape {
-  background:var(--lab-color);
-}
+  width: 360px;
+  aspect-ratio: 1;
+  background: var(--lab-color);
 
-
-
-
-/* =========================
-   Hero Text
-========================= */
-
-
-.lab-hero-copy h1 {
-
-  margin:0 0 1rem;
-
-  font-size:clamp(2.2rem,4vw,3rem);
-
-  font-weight:600;
-
-  line-height:1.15;
-
-}
-
-
-
-.lab-subtitle {
-
-  margin:0 0 2rem;
-
-  max-width:600px;
-
-  font-size:1.35rem;
-
-  line-height:1.45;
-
-  color:var(--grey);
-
-}
-
-
-
-/* =========================
-   Fields / Competencies
-========================= */
-
-
-.lab-meta {
-
-  display:flex;
-
-  flex-direction:column;
-
-  gap:1.5rem;
-
-  margin-top:3rem;
-
-}
-
-
-
-.meta-block h3 {
-
-  margin:0 0 .4rem;
-
-  font-size:1rem;
-
-  font-weight:600;
-
-}
-
-
-
-.meta-block p {
-
-  margin:0;
-
-  color:var(--grey);
-
-  line-height:1.6;
-
-}
-
-
-
-/* =========================
-   Hero Visual
-========================= */
-
-
-.lab-hero-visual {
-
-  display:flex;
-
-  justify-content:center;
-
-  align-items:center;
-
-}
-
-
-
-.lab-shape {
-
-  width:300px;
-
-  aspect-ratio:1;
-
-  background:var(--lab-color);
-
-
-  clip-path:polygon(
+  clip-path: polygon(
     18% 0%,
     82% 8%,
     100% 55%,
@@ -142,43 +31,54 @@
     15% 85%,
     0% 35%
   );
+}
 
+
+/* =========================
+   Fields / Competencies
+========================= */
+
+.lab-meta {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.meta-block h3 {
+  margin: 0 0 .4rem;
+  /* color: red; */
+}
+
+.meta-block p {
+  margin: 0;
+  color: var(--grey);
+  
 }
 
 
 
 /* =========================
-   Praxisfrage
+   Praxisfrage u.a.
 ========================= */
 
-
-.practice-question h2 {
-
-  margin-top:.8rem;
-
-  font-size:2rem;
-
-  font-weight:500;
-
-  line-height:1.35;
-
+.content h2 {
+  font-size: 2.3rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--dark-grey);
+  margin: 4rem 0 1.5rem;
+  color: var(--grey);
 }
-
-
 
 /* =========================
    Content
 ========================= */
 
-
 .content {
-
-  max-width:1440px;
-
-  margin:4rem 0 4rem;
-
-  line-height:1.7;
-
+  max-width: 1440px;
+  margin: 4rem 0;
 }
 
 .lab-gallery {
@@ -192,123 +92,91 @@
 }
 
 
-
 /* =========================
    Partner
 ========================= */
 
-
 .partner {
+  margin-top: 6rem;
+  padding-top: 2rem;
 
-  margin-top:6rem;
-  padding-top:2rem;
-
-  border-top:1px solid var(--light-grey);
-
+  border-top: 1px solid var(--light-grey);
 }
-
-
 
 .partner h2 {
-
-  margin-top:.8rem;
-
+  margin-top: .8rem;
 }
+
 
 /* =========================
    Partner CTA
 ========================= */
 
 .partner-text {
+  max-width: 900px;
+  margin: 1rem 0 1.5rem;
 
-  max-width:900px;
-
-  margin:1rem 0 1.5rem;
-
-  color:var(--grey);
-
-  line-height:1.7;
-
+  color: var(--grey);
 }
-
 
 .partner-link {
+  display: inline-block;
 
-  display:inline-block;
+  color: var(--dark-grey);
+  text-decoration: none;
 
-  color:var(--dark-grey);
+  border-bottom: 1px solid var(--dark-grey);
+  padding-bottom: .15rem;
 
-  text-decoration:none;
-
-  border-bottom:1px solid var(--dark-grey);
-
-  padding-bottom:.15rem;
-
-  transition:.2s ease;
-
+  transition: .2s ease;
 }
-
 
 .partner-link:hover {
-
-  color:var(--lab-color);
-
-  border-color:var(--lab-color);
-
+  color: var(--lab-color);
+  border-color: var(--lab-color);
 }
+
 
 /* =========================
    More Labs
 ========================= */
+
 .more-labs {
-  margin:4rem 0 4rem;
-  padding-top:2rem;
-  border-top:1px solid #ddd;
+  margin: 4rem 0;
+  padding-top: 2rem;
+
+  border-top: 1px solid var(--light-grey);
 }
 
 .lab-links {
-  display:flex;
-  gap:1.5rem;
+  display: flex;
+  gap: 1.5rem;
 }
 
 .lab-links a {
-  color:var(--dark-grey);
-  text-decoration:none;
+  color: var(--dark-grey);
+  text-decoration: none;
 }
 
 .lab-links a:hover {
-  color:var(--lab-color);
+  color: var(--lab-color);
 }
+
 
 /* =========================
    Mobile
 ========================= */
 
+@media (max-width: 900px) {
 
-@media(max-width:900px) {
-
-
-  .lab-hero-content {
-
-    grid-template-columns:1fr;
-
+  .lab-meta{
+    width: 800px;
+    grid-template-columns: 1fr;
   }
-
-
 
   .lab-hero-visual {
-
-    display:none;
-
-  }
-
-
-
-  .lab-subtitle {
-
-    font-size:1.15rem;
+    display: none;
 
   }
-
 
 }
