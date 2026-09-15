@@ -11,9 +11,10 @@ const labs = (await getCollection('reallabs'))
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" type="image/jpg" href="/favicon.jpg" />
+    <link rel="icon" type="image/svg+xml" href="images/fav.svg" />
+    <!-- <link rel="icon" type="image/jpg" href="images/fav.png" /> -->
     <title>Passage Reallabs</title>
+
   </head>
 
   <body>
@@ -24,19 +25,59 @@ const labs = (await getCollection('reallabs'))
        <div class="hero-shape"></div>
 
         <div class="hero-copy">
-          <h1 class="hero-brand">Passage Reallabs</h1>
+          <h1 class="hero-brand">Passage RealLabs</h1>
           <p class="hero-subtitle">Praxisnahe Berufsorientierung</p>
-             <!-- <p class="hero-intro">
-                Jugendliche lösen echte Praxisfragen. <br>
-                Unternehmen zeigen ihre Arbeitswelt <br>
-                und gewinnen Nachwuchskräfte. 
-            </p> -->
         </div>
 </header>
 
   
 <main>
-    
+<div class="intro">
+      <div >
+        <!-- <p class="intro-question">
+          Was sind Passage Reallabs?
+        </p> -->
+        <p class="intro-text">
+      
+          <strong><em>Passage Reallabs</em></strong> ist ein Format, das Unternehmen aus Halle (Saale) mit 
+          Jugendlichen aus der Region zusammenbringt. Während eines Projekttags lösen sie praktische und
+          authentische Aufgaben aus dem Unternehmenssalltag, entwickeln Lösungen und präsentieren diese 
+          abschließend in einem Pitch. 
+        </p>
+
+          <p>
+            <em>Mehrwert für Unternehmen:</em> 
+          </p>
+
+            <ul class="intro-mw">
+              <li><strong>Lernen Sie Nachwuchs kennen.</strong> Direkter Austausch mit Schüler:innen aus der Region</li>
+              <li><strong>Zeigen Sie Ihr Unternehmen.</strong> Geben Sie Einblicke in Ihre Arbeitswelt und Berufsfelder</li>
+              <li><strong>Zukunft mitgestalten.</strong> Beitrag zur Berufsorientierung und regionalen Fachkräftesicherung</li>
+            </ul>  
+          
+         </div>
+
+        <!-- <p class="intro-question">Was sind Reallabs?</p> -->
+        <!-- <p class="yyy">
+          <strong>Unternehmen aus Halle (Saale)</strong> bringen eine echte Praxisfrage aus Ihrem Arbeitsalltag ein. 
+          Jugendliche entwickeln während eines Projekttags gemeinsam mit Ihnen Lösungen und lernen Ihre Arbeitswelt kennen. 
+
+        </p>
+        
+         
+      </div>-->
+
+      <div>
+        <a>
+          <img src="/logos/smart-city.svg" alt="Smart City Halle" class="sc-logo">
+        </a>
+      <p class="smart-city-koop">In Kooperation mit Smart-City Halle (Saale)</p>
+    </div>
+
+</div>
+
+
+
 <!-- labs preview -->
 <section class="section projects-preview">
 
@@ -72,9 +113,45 @@ const labs = (await getCollection('reallabs'))
       </a>
   </div>
 
-
 </section>
 
+<!-- Stimmen -->
+ 
+    <section class="section">
+      <p class="section-label">Stimmen aus der Praxis</p>
+      <div class="testimonial-grid">
+          <article class="testimonial">
+            <p class="quote">
+              Die Zusammenarbeit mit den Jugendlichen hat uns neue Perspektiven
+              auf unsere Fragestellung eröffnet.
+            </p>
+            <p class="author">
+              Bärbel Uhlenhaut · Referentin Schulkommunikation<br>
+              Stadtwerke Halle
+            </p>
+          </article>
+          <article class="testimonial">
+            <p class="quote">
+              Das HTZ war eine spannende Abwechslung und eine sehr interessante und lehrreiche Erfahrung. 
+              Dabei hat uns vor allem die praktische Arbeit Freude bereitet. 
+            </p>
+            <p class="author">
+              Emily Lisson · Lehrkraft<br>
+              Gymnasium Landsberg
+            </p>
+          </article>
+        </div>
+      </section>
+
+ <!-- Bild -->
+<section class="section sensebox">
+
+      <img 
+        src="/images/sensebox-1.png"
+        alt="Jugendliche schreiben Sensorik-Code beim Reallab Projekttag"
+      />
+
+</section>
 
 
  <!-- How it works -->
@@ -84,9 +161,9 @@ const labs = (await getCollection('reallabs'))
       <p class="section-label">Ablauf eines Reallabs</p>
 
       <p class="process-intro text">
-        Ein gemeinsamer Prozess mit Mehrwert für beide Seiten: 
-        Jugendliche erleben Arbeitswelt praktisch und authentisch, Unternehmen 
-        entdecken Interessen und Potenziale zukünftiger Nachwuchskräfte.      
+        Mehrwert für beide Seiten: Jugendliche arbeiten an echten Aufgaben 
+        aus der Praxis, Unternehmen geben Einblicke in ihre Arbeitswelt und lernen dabei Interessen und 
+        Potenziale zukünftiger Nachwuchskräfte kennen.    
       </p>
     </div>
 
@@ -112,7 +189,7 @@ const labs = (await getCollection('reallabs'))
         <div class="step-number">3</div>
         <h3>Ergebnisse</h3>
         <p>
-          Ergebnisse werden von den jungen Teilnehmenden präsentiert und diskutiert
+          Die Jugendlichen präsentieren ihre Ergebnisse und diskutieren sie gemeinsam mit Ihnen
         </p>
       </article>
 
@@ -120,13 +197,11 @@ const labs = (await getCollection('reallabs'))
         <div class="step-number">4</div>
         <h3>Kontakte knüpfen</h3>
         <p>
-          Wenn die Zusammenarbeit überzeugt, entstehen daraus Kontakte, z.B. für Praktika und Ausbildungsplätze
+          Sie lernen Jugendliche mit eigenen Interessen und Potenzialen kennen. Sie knüpfen Kontakte für Praktika, Ausbildung oder weitere Zusammenarbeit
         </p>
       </article>
     </div>
   </section>
-
-
 
 <!-- Einblicke -->
 
@@ -143,8 +218,7 @@ const labs = (await getCollection('reallabs'))
 
       <p class="text">
         Ideen entwickeln, ausprobieren, mit echten Partnern arbeiten:<br>
-        In den <span style="font-style:italic">Reallabs</span> entdecken Jugendliche neue Perspektiven auf
-        Zukunftsthemen und Berufsfelder, die sie wirklich interessieren.
+        In den <span style="font-style:italic">Reallabs</span> entdecken Jugendliche neue Perspektiven auf Zukunftsthemen und Berufsfelder und erleben, was Arbeiten in diesen Feldern praktisch bedeutet.
       </p>
 
       <a href="/youth" class="button button--insights">
@@ -162,37 +236,6 @@ const labs = (await getCollection('reallabs'))
 </section>
 
 
-
-<!-- Stimmen -->
- 
-    <section class="section">
-      <p class="section-label">Stimmen aus der Praxis</p>
-      <div class="testimonial-grid">
-          <article class="testimonial">
-            <p class="quote">
-              Die Zusammenarbeit mit den Jugendlichen hat uns neue Perspektiven
-              auf unsere Fragestellung eröffnet.
-            </p>
-            <p class="author">
-              Name · Funktion<br>
-              Organisation
-            </p>
-          </article>
-          <article class="testimonial">
-            <p class="quote">
-              Das Reallab war eine spannende Möglichkeit, Nachwuchs für unsere
-              Themen zu begeistern.
-            </p>
-            <p class="author">
-              Name · Funktion<br>
-              Organisation
-            </p>
-          </article>
-        </div>
-      </section>
-
-
-
   <!-- CTA -->
     <section class="section partner-cta">
 
@@ -201,9 +244,9 @@ const labs = (await getCollection('reallabs'))
       <h2>Bringen Sie Ihre Praxisfrage ein.</h2>
 
       <p class="text">
-        Wir entwickeln auf Basis Ihrer Praxisanforderungen einen maßgeschneiderten Projekttag 
-        und übernehmen Organisation, Moderation und Begleitung. Sie bringen Ihre fachliche
-        Perspektive ein und lernen potenzielle Nachwuchskräfte kennen.
+        Wir entwickeln auf Basis Ihrer Praxisfrage einen passenden Projekttag und übernehmen 
+        Konzeption, Organisation, Moderation und Begleitung. Sie bringen Ihre fachliche Perspektive ein, 
+        geben Jugendlichen Einblicke in Ihre Arbeitswelt und lernen potenzielle Nachwuchskräfte kennen.
       </p>
 
       <div class="cta-action">

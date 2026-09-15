@@ -1,8 +1,10 @@
 ---
 import "../styles/footer.css";
 ---
+
 <footer class="footer">
 
+  <!-- Main footer line -->
   <div class="footer-main">
     <p>
       © 2026 Passage Reallabs · Smart-City-Bildungszentrum Halle (Saale)
@@ -15,31 +17,56 @@ import "../styles/footer.css";
   </div>
 
 
-  <div class="footer-funding">
+ <div class="footer-organisations">
 
-        <p class="footer-label">
-          Gefördert durch
-        </p>
+  <!-- Kooperation -->
+  <div class="footer-group--partners">
+    <p class="footer-label">In Kooperation mit</p>
 
-        <div class="footer-logos">
-            <a href="/"><img src="/logos/halle.svg" alt="Stadt Halle (Saale)"></a>
-            <a href="/"><img src="/logos/smart-city.svg" alt="Smart City Halle"></a>
-            <a href="/"><img src="/logos/kfw.svg" alt="KfW"></a>
-        </div>
-
+    <div class="footer-logos">
+      <a href="https://www.smartes.halle.de/">
+        <img src="/logos/smart-city.svg" alt="Smart City Halle">
+      </a>
+      <a href="/">
+        <img src="/logos/halle.svg" alt="Stadt Halle (Saale)">
+      </a>
+    </div>
   </div>
 
-<div class="footer-evaluation">
 
-  <p class="footer-label">
-    Wissenschaftlich<br>
-    begleitet durch
-  </p>
+  <!-- Wissenschaftliche Begleitung -->
+  <div class="footer-group--evaluation">
+    <p class="footer-label">Wissenschaftliche Begleitung</p>
 
-    <div class="footer-logos footer-logos--evaluation">
-      <a href="/"><img src="/logos/logo-zsh-ohne-text.svg" alt="Zentrum für Sozialforschung"></a>
-      <a href="/"><img src="/logos/fraunhofer.svg" alt="Fraunhofer Institut"></a>
+    <div class="footer-logos">
+      <a href="https://www.zsh-online.de">
+        <img
+          src="/logos/logo-zsh-ohne-text.svg"
+          alt="Zentrum für Sozialforschung"
+        >
+      </a>
+      <a href="https://www.muse.iao.fraunhofer.de">
+        <img
+          src="/logos/fraunhofer.svg"
+          alt="Fraunhofer Institut"
+        >
+      </a>
     </div>
+  </div>
+
+
+  <!-- Förderung -->
+  <div class="footer-group--funding">
+    <p class="footer-label">Gefördert durch</p>
+
+    <div class="footer-logos">
+     <img src="/logos/bmwsb.png" alt="BMWSB">
+      <a href="https://www.kfw.de/stories/wirtschaft/innovation/smart-cities/">
+        
+        <img src="/logos/kfw.png" alt="KfW">
+      </a>
+    </div>
+  </div>
 
 </div>
 

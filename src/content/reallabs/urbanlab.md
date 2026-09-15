@@ -5,9 +5,9 @@ partner: "Historisches Technikzentrum, Stadtwerke Halle (Saale)"
 date: "2. September 2026"
 location: "HTZ Halle (Saale), Lauchstädter Str. 6"
 participants: 
-- 18 Schüler:innen
+- 20 Schüler:innen
 - Klasse 10
-- Heinrich-Heine-Gemeinschaftsschule Halle (Saale)
+- Gymnasium Landsberg (Saalekreis)
 fields:
   - Nachhaltigkeit
   - Klimaadaptive Stadtplanung
