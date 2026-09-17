@@ -1,7 +1,7 @@
 ---
 title: "MedicalLab"
 subtitle: "Sensorentestfeld für Medizintechnik"
-partner: "KH Martha Maria Halle (Saale)"
+partner: "tba"
 date: "November 2026"
 location: "Halle (Saale)"
 participants: 

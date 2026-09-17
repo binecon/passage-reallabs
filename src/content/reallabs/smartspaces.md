@@ -1,7 +1,7 @@
 ---
 title: "SmartSpaces"
 subtitle: "Sensorentestfeld für Logistikprozesse"
-partner: "Starpark DHL Halle (Saale)"
+partner: "tba"
 date: "In Vorbereitung · Umsetzung geplant Oktober 2026"
 location: "Halle (Saale)"
 participants: 
