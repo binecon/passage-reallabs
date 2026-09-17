@@ -1,5 +1,6 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
+import type { symbol } from 'astro:schema';
 
 const reallabs = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/reallabs' }),
@@ -15,6 +16,7 @@ const reallabs = defineCollection({
     image: z.string().optional(),
     color: z.string(),
     titleColor: z.string().optional(),
+    symbol: z.string().optional(),
     order: z.number(),
     status: z.string(),
   })

@@ -2,32 +2,30 @@
    Partner Page
 ========================= */
 
-.partner-page .page-hero {
-  position: relative;
-}
-
 .partner-page .page-hero-visual {
-  position: absolute;
-  top: 0;
-  right: 0;
+  align-self: start;
+  justify-self: center;
 }
 
-.partner-page .partner-shape {
+.partner-shape {
   width: 360px;
   aspect-ratio: 1;
+  background: #D3D3D3;
+  clip-path: polygon(
+    18% 0%,
+    82% 8%,
+    100% 55%,
+    65% 100%,
+    15% 85%,
+    0% 35%
+  );
 }
 
 /* =========================
    Hero Visual
 ========================= */
 
-.partner-hero-visual {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.partner-shape {
+/* .partner-shape {
   width: 360px;
   aspect-ratio: 1;
 
@@ -50,7 +48,23 @@
   );
 
   opacity: .85;
+} */
+
+.partner-shape {
+  width: 360px;
+  aspect-ratio: 1;
+  background:#D3D3D3;
+
+  clip-path: polygon(
+    18% 0%,
+    82% 8%,
+    100% 55%,
+    65% 100%,
+    15% 85%,
+    0% 35%
+  );
 }
+
 
 /* =========================
    Benefits & Effort

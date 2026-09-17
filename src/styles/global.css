@@ -85,7 +85,7 @@ img {
 }
 
 .page-hero--visual .page-hero-content {
-  grid-template-columns: minmax(0, 1fr) 300px;
+  grid-template-columns: minmax(0, 1fr) 400px;
   gap: 3rem;
   align-items: center;
 }

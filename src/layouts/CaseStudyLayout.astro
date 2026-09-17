@@ -9,6 +9,8 @@ import BrandMarker from "../components/BrandMarker.astro";
 import PageHero from "../components/PageHero.astro";
 
 const { lab } = Astro.props;
+const { data } = lab;
+
 
 const allLabs = await getCollection("reallabs");
 
@@ -102,10 +104,11 @@ const otherLabs = allLabs
 
 
         </div>
+     
         <div slot="visual" class="page-hero-visual">
-
-          <div class="lab-shape"></div>
-
+          <div class="lab-shape">
+            <img src={`/symbols/${data.symbol}`} alt="" />
+          </div>
         </div>
 
       </PageHero>

@@ -20,6 +20,7 @@ comps:
 
 titleColor: "black" 
 color: "#F5AEFB"
+symbol: "medical.svg"
 order: 3
 status: "planned"
 ---

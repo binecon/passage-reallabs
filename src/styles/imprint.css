@@ -4,7 +4,7 @@
 
 .imprint-page {
   position: relative;
-  width: var(--content-width);
+  width: min(100%, var(--content-width));
 }
 
 
@@ -14,6 +14,7 @@
 ========================= */
 
 .imprint-content {
+  width: 100%;
   max-width: var(--content-width);
   margin-inline: auto;
   padding-bottom: 6rem;
@@ -29,6 +30,13 @@
 
   border-bottom: 1px solid var(--light-grey);
   max-width: var(--content-width);
+}
+
+.imprint-section a {
+  overflow-wrap: anywhere;
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: .2rem;
 }
 
 .contact-text{

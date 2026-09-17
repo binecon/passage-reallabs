@@ -21,6 +21,7 @@ image: "/images/urbanlab-team.webp"
 alt: "UrbanLab youth are working on sth"
 color: "#95E5B2"
 titleColor: "#95E5B2"
+symbol: "urban.svg"
 order: 1
 status: "active"
 ---

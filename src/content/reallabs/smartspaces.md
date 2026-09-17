@@ -20,6 +20,7 @@ comps:
 
 color: "#404ED9"
 titleColor: "#6E7EDC"
+symbol: "spaces.svg"
 order: 2
 status: "planned"
 ---
