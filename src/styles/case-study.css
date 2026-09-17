@@ -26,17 +26,18 @@
     width: 800px;
     grid-template-columns: 1fr;
   }
-
-  .case-study .page {
-  max-width: var(--narrow-width);
-  margin-inline: auto;
 }
 
-  .lab-shape {
-  width: 100px;
-}
-}
+/* 
+.page-hero-visual {
+  display: block;
+  gap: 3rem;
 
+  .lab-shape{
+    align-items: right;
+    width: 100px;
+  }
+} */
 
 /* =========================
    Fields / Competencies
