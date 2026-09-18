@@ -252,7 +252,7 @@
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
-  padding: 1rem 1rem 2.5rem 1.5rem;
+  padding: 1.5rem 1.5rem 2.5rem 2rem;
   border-top: 1px solid var(--light-grey);
   border-bottom: 1px solid var(--light-grey);
   color: inherit;
@@ -295,9 +295,8 @@
 }
 
 
-
 /* =========================
-   Mobile
+   Mobile Project Preview
 ========================= */
 
 @media (max-width: 800px) {
@@ -338,48 +337,6 @@
   color: var(--grey);
 }
 
-
-/* Project link */
-
-.project-link {
-  display: inline-block;
-
-  margin-top: 1.5rem;
-
-  color: inherit;
-  text-decoration: underline;
-  text-underline-offset: .25rem;
-}
-
-.project-preview-item:hover .project-link {
-  color: inherit;
-}
-
-
-/* All projects CTA */
-
-.projects-action {
-  display: flex;
-  justify-content: center;
-  margin-top: 2.5rem;
-}
-
-.button--project {
-  margin-top: 1.8rem;
-}
-
-.button--projects:hover {
-  color: var(--blue);
-  border-color: var(--blue);
-  font-weight: 600;
-}
-
-@media (max-width: 600px) {  
-.projects-action {
-  justify-content: left;
-}
-}
-
 /* =========================
    Testimonials
 ========================= */
@@ -404,9 +361,7 @@
 
 .quote::before {
   content: "“";
-
   padding-right: .2rem;
-
   font-size: 5rem;
   line-height: 0;
   vertical-align: -1rem;
@@ -439,7 +394,7 @@
 
 .sensebox img {
   display: block;
-  width: 70%;
+  width: 80%;
   border-radius: 20px;
   margin: 0;
 }
@@ -451,8 +406,24 @@
 
   .sensebox img {
     width: 100%;
-    margin: 2rem 0 0 
+    margin: 2rem 0 0; 
   }
+}
+
+/* =========================
+   All Projects Link
+========================= */
+
+.projects-action {
+  display: flex;
+  justify-content: left;
+  margin: 0;
+}
+
+.button--projects:hover {
+  color: var(--blue);
+  border-color: var(--blue);
+  font-weight: 600;
 }
 
 
@@ -462,8 +433,6 @@
 
 .process .section-header {
   max-width: var(--intro-width);
-  /* margin: 5rem 0 4rem; */
-
 }
 
 .process-intro {
@@ -530,7 +499,6 @@
 
   .process-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    /* margin: 0 0 0; */
   }
 
 }
@@ -650,8 +618,8 @@
 
 }
 
-@media (max-width: 600px) {  
-.cta-action {
-  justify-content: left;
-}
+@media (max-width: 800px) {  
+    .cta-action {
+      justify-content: center;
+  }
 }

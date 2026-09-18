@@ -7,8 +7,21 @@
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
 	</head>
-	<body>
+
+	<body id="top">
 		<slot />
+
+		<a href="#top" class="scroll-top" aria-label="Nach oben">↑</a>
+
+			 <script>
+				const scrollTop = document.querySelector<HTMLElement>('.scroll-top');
+
+				window.addEventListener('scroll', () => {
+				if (scrollTop) {
+					scrollTop.classList.toggle('is-visible', window.scrollY > 300);
+				}
+				});
+			</script>
 	</body>
 </html>
 
