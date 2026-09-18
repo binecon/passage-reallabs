@@ -96,6 +96,7 @@ img {
 @media (max-width: 900px) {
 
   .page-hero-content {
+    width: 100%; 
     grid-template-columns: 1fr;
   }
 
@@ -325,6 +326,7 @@ p {
 @media (max-width: 900px) {
 
   body {
+    width: 100%; 
     font-size: 1.4rem;
   }
 
@@ -350,6 +352,7 @@ p {
 @media (max-width: 600px) {
 
   body {
+    width: 100%; 
     padding: 1.25rem;
     font-size: 1.25rem;
   }
