@@ -206,7 +206,7 @@
 
 .partner-cta {
   text-align: center;
-  margin: 10rem 0 10rem;
+  margin: 4rem 0 6rem;
 }
 
 .partner-cta h2 {
@@ -218,4 +218,15 @@
   max-width: 820px;
   margin: 0 auto;
   color: var(--grey);
+}
+
+/* =========================
+   CTA Mobile
+========================= */
+
+@media (max-width: 800px) {
+
+  .partner-cta {
+    text-align: left;
+  }
 }

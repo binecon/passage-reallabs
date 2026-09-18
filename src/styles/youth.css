@@ -156,7 +156,7 @@
 
 .youth-cta {
   text-align: center;
-  margin: 8rem 0 8rem;
+  margin: 4rem 0 6rem;
 }
 
 .youth-cta h2 {
@@ -173,7 +173,7 @@
 
 
 /* =========================
-   Responsive
+   Mobile
 ========================= */
 
 @media (max-width: 1200px) {
@@ -182,5 +182,11 @@
     grid-template-columns: 1fr;
     gap: 4rem;
   }
-
 }
+
+@media (max-width: 800px) {
+  .youth-cta {
+    text-align: left;
+  }
+}
+

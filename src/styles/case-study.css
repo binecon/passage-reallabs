@@ -3,6 +3,7 @@
 ========================= */
 
 .case-study .page {
+  width: 100%;
   max-width: var(--content-width);
   margin-inline: auto;
 }
@@ -27,17 +28,6 @@
     grid-template-columns: 1fr;
   }
 }
-
-/* 
-.page-hero-visual {
-  display: block;
-  gap: 3rem;
-
-  .lab-shape{
-    align-items: right;
-    width: 100px;
-  }
-} */
 
 /* =========================
    Fields / Competencies
