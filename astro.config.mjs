@@ -1,6 +1,6 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://reallabs.passage13.org',
+  site: 'https://binecon.github.io',
+  base: '/passage-reallabs',
 });
