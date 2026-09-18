@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 import '../styles/index.css';
@@ -7,17 +8,16 @@ const labs = (await getCollection('reallabs'))
   .sort((a, b) => a.data.order - b.data.order);
 ---
 
-<html lang="de">
+<!-- <html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="images/fav.svg" />
-    <!-- <link rel="icon" type="image/jpg" href="images/fav.png" /> -->
     <title>Passage Reallabs</title>
 
   </head>
 
-  <body>
+  <body> -->
 
   <!-- Hero -->
 <header class="hero">
@@ -30,225 +30,226 @@ const labs = (await getCollection('reallabs'))
         </div>
 </header>
 
-  
-<main>
-<div class="intro">
+<Layout>
+      <main>
+      <div class="intro">
 
-  <div class="intro-box">
+        <div class="intro-box">
 
-    <div class="intro-text">
-      <strong><em>Passage Reallabs</em></strong> ist ein innovatives Format, das Unternehmen aus Halle (Saale) mit 
-      Jugendlichen aus der Region im Rahmen eines gemeinsamen Projekttags zusammenbringt.
-    </div>
+          <div class="intro-text">
+            <strong><em>Passage Reallabs</em></strong> ist ein innovatives Format, das Unternehmen aus Halle (Saale) mit 
+            Jugendlichen aus der Region im Rahmen eines gemeinsamen Projekttags zusammenbringt.
+          </div>
 
-    <div class="intro-list">
-      <p><em>Mehrwert für Unternehmen:</em></p>
+          <div class="intro-list">
+            <p><em>Mehrwert für Unternehmen:</em></p>
 
-      <ul class="intro-mw">
-        <li><strong>Lernen Sie Nachwuchs kennen,</strong> im direkten Austausch.</li>
-        <li><strong>Zeigen Sie Ihr Unternehmen,</strong> und geben Sie Einblicke in Ihre Arbeitswelt und Berufsfelder.</li>
-        <li><strong>Zukunft mitgestalten,</strong> mit Ihrem Beitrag zur Berufsorientierung und regionalen Fachkräftesicherung.</li>
-      </ul>
-    </div>
+            <ul class="intro-mw">
+              <li><strong>Lernen Sie Nachwuchs kennen,</strong> im direkten Austausch.</li>
+              <li><strong>Zeigen Sie Ihr Unternehmen,</strong> und geben Sie Einblicke in Ihre Arbeitswelt und Berufsfelder.</li>
+              <li><strong>Zukunft mitgestalten,</strong> mit Ihrem Beitrag zur Berufsorientierung und regionalen Fachkräftesicherung.</li>
+            </ul>
+          </div>
 
-  </div>
+        </div>
 
-  <div class="intro-logo">
-    <a>
-      <img src="/logos/smartcity.svg" alt="Smart City Halle" class="sc-logo">
-    </a>
-    <p class="smart-city-koop">Ein Projekt der Stadt Halle (Saale)</p>
-  </div>
+        <div class="intro-logo">
+          <a>
+            <img src="/logos/smartcity.svg" alt="Smart City Halle" class="sc-logo">
+          </a>
+          <p class="smart-city-koop">Ein Projekt der Stadt Halle (Saale)</p>
+        </div>
 
-</div>
-
-
-
-<!-- labs preview -->
-<section class="section projects-preview">
-
-  <p class="section-label">
-    Projektbeispiel
-  </p>
+      </div>
 
 
-  <a 
-    href="/reallabs/urbanlab/"
-    class="project-preview-item"
-    style="--lab-color:#95E5B2"
-  >
 
- <div class="project-preview-content">
-  <h2>UrbanLab</h2>
-  <span class="project-fields">
-    Sensorik · Klimaadaptive Stadtentwicklung
-  </span>
-  <p>Stadtwerke Halle (Saale)</p>
-</div>
+      <!-- labs preview -->
+      <section class="section projects-preview">
 
-<span class="project-link">
-  Projekt ansehen →
-</span>
-
-  </a>
-
-</section>
+        <p class="section-label">
+          Projektbeispiel
+        </p>
 
 
-<!-- Stimmen -->
- 
-    <section class="section">
-      <p class="section-label">Stimmen aus der Praxis</p>
-      <div class="testimonial-grid">
-          <article class="testimonial">
-            <p class="quote">
-              Die Zusammenarbeit mit den Jugendlichen hat uns neue Perspektiven
-              auf unsere Fragestellung eröffnet.
+        <a 
+          href="/reallabs/urbanlab/"
+          class="project-preview-item"
+          style="--lab-color:#95E5B2"
+        >
+
+      <div class="project-preview-content">
+        <h2>UrbanLab</h2>
+        <span class="project-fields">
+          Sensorik · Klimaadaptive Stadtentwicklung
+        </span>
+        <p>Stadtwerke Halle (Saale)</p>
+      </div>
+
+      <span class="project-link">
+        Projekt ansehen →
+      </span>
+
+        </a>
+
+      </section>
+
+
+      <!-- Stimmen -->
+      
+          <section class="section">
+            <p class="section-label">Stimmen aus der Praxis</p>
+            <div class="testimonial-grid">
+                <article class="testimonial">
+                  <p class="quote">
+                    Die Zusammenarbeit mit den Jugendlichen hat uns neue Perspektiven
+                    auf unsere Fragestellung eröffnet.
+                  </p>
+                  <p class="author">
+                    Bärbel Uhlenhaut · Referentin Schulkommunikation<br>
+                    Stadtwerke Halle
+                  </p>
+                </article>
+                <article class="testimonial">
+                  <p class="quote">
+                    Das HTZ war eine spannende Abwechslung und eine sehr interessante und lehrreiche Erfahrung. 
+                    Dabei hat uns vor allem die praktische Arbeit Freude bereitet. 
+                  </p>
+                  <p class="author">
+                    Emily Lisson · Lehrkraft<br>
+                    Gymnasium Landsberg
+                  </p>
+                </article>
+              </div>
+            </section>
+
+      <!-- Bild -->
+      <section class="section sensebox">
+
+            <img 
+              src="/images/sensebox-2.webp"
+              alt="Jugendliche schreiben Sensorik-Code beim Reallab Projekttag"
+            />
+
+      </section>
+
+      <!-- Alle Projekte -->
+
+        <div class="projects-action">
+            <a href="/projects" class="button button--projects">
+              Alle Reallabs →
+            </a>
+        </div>
+
+
+      <!-- How it works -->
+        <section class="section process">
+
+          <div class="section-header">
+            <p class="section-label">Ablauf eines Reallabs</p>
+
+            <p class="process-intro text">
+              Mehrwert für beide Seiten: Jugendliche arbeiten an echten Aufgaben 
+              aus der Praxis, Unternehmen geben Einblicke in ihre Arbeitswelt und lernen dabei Interessen und 
+              Potenziale zukünftiger Nachwuchskräfte kennen.    
             </p>
-            <p class="author">
-              Bärbel Uhlenhaut · Referentin Schulkommunikation<br>
-              Stadtwerke Halle
+          </div>
+
+          <div class="process-grid">
+            <article class="step">
+              <div class="step-number">1</div>
+              <h3>Praxisfrage</h3>
+              <p>
+                Sie bringen eine authentische Aufgabe oder Fragestellung aus Ihrem Arbeitsalltag mit
+              </p>
+            </article>
+
+            <article class="step">
+              <div class="step-number">2</div>
+              <h3>Projekttag</h3>
+              <p>
+                Wir übernehmen Planung, Moderation und die Zusammenarbeit mit den Teilnehmenden bzw. der Schulklasse
+                <!-- Beim Projekttag entwickeln Jugendliche Lösungen, Konzepte oder Prototypen -->
+              </p>
+            </article>
+
+            <article class="step">
+              <div class="step-number">3</div>
+              <h3>Ergebnisse</h3>
+              <p>
+                Die Jugendlichen präsentieren ihre Ergebnisse und diskutieren sie gemeinsam mit Ihnen
+              </p>
+            </article>
+
+            <article class="step">
+              <div class="step-number">4</div>
+              <h3>Kontakte knüpfen</h3>
+              <p>
+                Sie lernen Jugendliche mit eigenen Interessen und Potenzialen kennen. Sie knüpfen Kontakte für Praktika, Ausbildung oder weitere Zusammenarbeit
+              </p>
+            </article>
+          </div>
+        </section>
+
+
+      <!-- Einblicke -->
+
+      <section class="section insights">
+        <div class="insights-content">
+          <div class="insights-text">
+            <p class="section-label">
+              Einblicke
             </p>
-          </article>
-          <article class="testimonial">
-            <p class="quote">
-              Das HTZ war eine spannende Abwechslung und eine sehr interessante und lehrreiche Erfahrung. 
-              Dabei hat uns vor allem die praktische Arbeit Freude bereitet. 
+
+            <h2>
+              Was Jugendliche aus den Reallabs mitnehmen
+            </h2>
+
+            <p class="text">
+              Ideen entwickeln, ausprobieren, mit echten Partnern arbeiten:<br>
+              In den <span style="font-style:italic">Reallabs</span> entdecken Jugendliche neue Perspektiven auf Zukunftsthemen und Berufsfelder und erleben, was Arbeiten in diesen Feldern praktisch bedeutet.
             </p>
-            <p class="author">
-              Emily Lisson · Lehrkraft<br>
-              Gymnasium Landsberg
-            </p>
-          </article>
+
+            <a href="/youth" class="button button--insights">
+              Mehr Einblicke →
+            </a>
+
+          </div>
+          <div class="insights-media">
+            <img 
+              src="/images/reallab-preview.jpg"
+              alt="Jugendlicher mit Sensorbox beim Reallab Projekttag"
+            />
+          </div>
         </div>
       </section>
 
- <!-- Bild -->
-<section class="section sensebox">
 
-      <img 
-        src="/images/sensebox-2.webp"
-        alt="Jugendliche schreiben Sensorik-Code beim Reallab Projekttag"
-      />
+        <!-- CTA -->
+          <section class="section partner-cta">
 
-</section>
+            <p class="section-label">Kooperation</p>
 
-<!-- Alle Projekte -->
+            <h2>Bringen Sie Ihre Praxisfrage ein.</h2>
 
-  <div class="projects-action">
-      <a href="/projects" class="button button--projects">
-        Alle Reallabs →
-      </a>
-  </div>
+            <p class="text">
+              Wir entwickeln auf Basis Ihrer Praxisfrage einen passenden Projekttag und übernehmen 
+              Konzeption, Organisation, Moderation und Begleitung. Sie bringen Ihre fachliche Perspektive ein, 
+              geben Jugendlichen Einblicke in Ihre Arbeitswelt und lernen potenzielle Nachwuchskräfte kennen.
+            </p>
 
+            <div class="cta-action">
+                <a href="/partner" class="button button--cta">
+                  Ihr Reallab →
+                </a>
+            </div>
 
- <!-- How it works -->
-  <section class="section process">
+          </section>
 
-    <div class="section-header">
-      <p class="section-label">Ablauf eines Reallabs</p>
+          </main>
 
-      <p class="process-intro text">
-        Mehrwert für beide Seiten: Jugendliche arbeiten an echten Aufgaben 
-        aus der Praxis, Unternehmen geben Einblicke in ihre Arbeitswelt und lernen dabei Interessen und 
-        Potenziale zukünftiger Nachwuchskräfte kennen.    
-      </p>
-    </div>
+          <Footer />
 
-    <div class="process-grid">
-      <article class="step">
-        <div class="step-number">1</div>
-        <h3>Praxisfrage</h3>
-        <p>
-          Sie bringen eine authentische Aufgabe oder Fragestellung aus Ihrem Arbeitsalltag mit
-        </p>
-      </article>
+    </Layout>  
 
-      <article class="step">
-        <div class="step-number">2</div>
-        <h3>Projekttag</h3>
-        <p>
-          Wir übernehmen Planung, Moderation und die Zusammenarbeit mit den Teilnehmenden bzw. der Schulklasse
-          <!-- Beim Projekttag entwickeln Jugendliche Lösungen, Konzepte oder Prototypen -->
-        </p>
-      </article>
-
-      <article class="step">
-        <div class="step-number">3</div>
-        <h3>Ergebnisse</h3>
-        <p>
-          Die Jugendlichen präsentieren ihre Ergebnisse und diskutieren sie gemeinsam mit Ihnen
-        </p>
-      </article>
-
-      <article class="step">
-        <div class="step-number">4</div>
-        <h3>Kontakte knüpfen</h3>
-        <p>
-          Sie lernen Jugendliche mit eigenen Interessen und Potenzialen kennen. Sie knüpfen Kontakte für Praktika, Ausbildung oder weitere Zusammenarbeit
-        </p>
-      </article>
-    </div>
-  </section>
-
-
-<!-- Einblicke -->
-
-<section class="section insights">
-  <div class="insights-content">
-    <div class="insights-text">
-      <p class="section-label">
-        Einblicke
-      </p>
-
-      <h2>
-        Was Jugendliche aus den Reallabs mitnehmen
-      </h2>
-
-      <p class="text">
-        Ideen entwickeln, ausprobieren, mit echten Partnern arbeiten:<br>
-        In den <span style="font-style:italic">Reallabs</span> entdecken Jugendliche neue Perspektiven auf Zukunftsthemen und Berufsfelder und erleben, was Arbeiten in diesen Feldern praktisch bedeutet.
-      </p>
-
-      <a href="/youth" class="button button--insights">
-        Mehr Einblicke →
-      </a>
-
-    </div>
-    <div class="insights-media">
-      <img 
-        src="/images/reallab-preview.jpg"
-        alt="Jugendlicher mit Sensorbox beim Reallab Projekttag"
-      />
-    </div>
-  </div>
-</section>
-
-
-  <!-- CTA -->
-    <section class="section partner-cta">
-
-      <p class="section-label">Kooperation</p>
-
-      <h2>Bringen Sie Ihre Praxisfrage ein.</h2>
-
-      <p class="text">
-        Wir entwickeln auf Basis Ihrer Praxisfrage einen passenden Projekttag und übernehmen 
-        Konzeption, Organisation, Moderation und Begleitung. Sie bringen Ihre fachliche Perspektive ein, 
-        geben Jugendlichen Einblicke in Ihre Arbeitswelt und lernen potenzielle Nachwuchskräfte kennen.
-      </p>
-
-      <div class="cta-action">
-          <a href="/partner" class="button button--cta">
-            Ihr Reallab →
-          </a>
-      </div>
-
-    </section>
-
-    </main>
-
-    <Footer />
-  </body>
-</html>
  

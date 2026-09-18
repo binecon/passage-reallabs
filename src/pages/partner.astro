@@ -1,155 +1,155 @@
 ---
 import '../styles/global.css';
 import '../styles/partner.css';
+import Layout from '../layouts/Layout.astro';
 import PageHero from "../components/PageHero.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<html lang="de">
+<!-- <html lang="de">
 
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
 
-  <body>
+  <body> -->
 
- <main class="partner-page">
+  <Layout>  
+      <main class="partner-page">
 
-  <PageHero
-    title="Ihr Reallab" 
-  >
-    <p>
-      Sie bringen eine echte Fragestellung aus Ihrem Unternehmen ein und
-      wir entwickeln daraus gemeinsam einen Projekttag für Jugendliche.
-    </p>
-
-    <p>
-      Das Team des Smart-City-Bildungszentrums
-      <span style="font-style: oblique;">&nbsp;Passage 13</span> übernimmt
-      Konzeption, Organisation und Durchführung.
-    </p>
-
-    <div slot="visual" class="page-hero-visual">
-      <div class="partner-shape"></div>
-    </div>
-
-  </PageHero>
-
-
-      <section>
-
-        <!-- Nutzen -->
-
-        <article class="section partner-benefits">
-
-          <h3 class="list-heading">Was Sie davon haben</h3>
-
-          <ul class="simple-list">
-
-            <li>
-              Sichtbarkeit als <strong><em>zukunftsorientiertes Unternehmen</em></strong>
-            </li>
-
-            <li>
-              Austausch mit <strong><em> Jugendlichen aus der Region</em></strong>
-            </li>
-
-            <li>
-              <strong><em>Authentischer Dialog</em></strong> mit potenziellen Nachwuchskräften
-            </li>
-
-            <li>
-              <strong><em>Neue Perspektiven</em></strong> auf eigene Praxisfragen
-            </li>
-
-            <li>
-              Beitrag zu Berufsorientierung und <strong><em>regionaler Fachkräftesicherung</em></strong>
-            </li>
-
-          </ul>
-
-        </article>
-
-
-        <!-- Aufwand -->
-
-        <article class="section partner-effort">
-
-          <h3 class="list-heading">Was Sie einbringen</h3>
-
-          <p class="text">
-            Ein Reallab umfasst einen Projekttag mit Jugendlichen.
-            Dafür brauchen wir von Ihnen:
-          </p>
-
-          <ul class="simple-list">
-
-            <li>
-               <span class="step-number">1</span>
-              <div>
-                <strong>Authentischer Lernort</strong>
-                Eine geeignete Räumlichkeit in Ihrem Unternehmen für ca. 20 Personen, 
-                mit Internetzugang und Monitor
-              </div>
-            </li>
-
-            <li>
-               <span class="step-number">2</span>
-              <div>
-                <strong>Praxisbegleitung</strong>
-                Eine Ansprechperson aus Ihrem Unternehmen, die am Projekttag dabei ist und den Jugendlichen 
-                Einblicke in Ihre Arbeitswelt gibt*
-              </div>
-            </li>
-
-            <li>
-              <span class="step-number">3</span>
-             <div>
-              <strong>Zeit für Austausch und Feedback</strong>
-              Zu den Ergebnissen am Projekttagende, gemeinsam mit den Teilnehmenden
-             </div>
-            </li>
-
-          </ul>
-
-          <p class="additional">
-            *Die Vorbereitung und Durchführung übernehmen wir. Zeitaufwand für die Begleitung 
-            am Projekttag belaufen sich auf ca. insgesamt 5 Stunden. 
-            Falls nur begrenzte zeitliche Kapazitäten vorhanden sind, ist auch eine
-            Begleitung in reduziertem Umfang möglich, beispielsweise durch einen
-            Praxisauftrag zu Beginn und eine abschließende Ergebnisabnahme (ca. 90 Minuten).
-          </p>
-
-        </article>
-
-      </section>
-
-
-      <!-- CTA -->
-
-      <section class="partner-cta">
-        
-        <h2>Sie haben eine Fragestellung aus Ihrer Praxis?</h2>
-
-        <p class="text">
-          Schreiben Sie uns kurz Ihr Thema. Wir melden uns für ein erstes Gespräch
-          und klären gemeinsam die nächsten Schritte.
-        </p>
-
-        <a
-          href="mailto:reallabs@passage13.org"
-          class="partner-link"
+        <PageHero
+          title="Ihr Reallab" 
         >
-          Kontakt aufnehmen →
-        </a>
+          <p>
+            Sie bringen eine echte Fragestellung aus Ihrem Unternehmen ein und
+            wir entwickeln daraus gemeinsam einen Projekttag für Jugendliche.
+          </p>
 
-      </section>
+          <p>
+            Das Team des Smart-City-Bildungszentrums
+            <span style="font-style: oblique;">&nbsp;Passage 13</span> übernimmt
+            Konzeption, Organisation und Durchführung.
+          </p>
 
-    </main>
+          <div slot="visual" class="page-hero-visual">
+            <div class="partner-shape"></div>
+          </div>
 
-    <Footer />
+        </PageHero>
 
-  </body>
 
-</html>
+            <section>
+
+              <!-- Nutzen -->
+
+              <article class="section partner-benefits">
+
+                <h3 class="list-heading">Was Sie davon haben</h3>
+
+                <ul class="simple-list">
+
+                  <li>
+                    Sichtbarkeit als <strong><em>zukunftsorientiertes Unternehmen</em></strong>
+                  </li>
+
+                  <li>
+                    Austausch mit <strong><em> Jugendlichen aus der Region</em></strong>
+                  </li>
+
+                  <li>
+                    <strong><em>Authentischer Dialog</em></strong> mit potenziellen Nachwuchskräften
+                  </li>
+
+                  <li>
+                    <strong><em>Neue Perspektiven</em></strong> auf eigene Praxisfragen
+                  </li>
+
+                  <li>
+                    Beitrag zu Berufsorientierung und <strong><em>regionaler Fachkräftesicherung</em></strong>
+                  </li>
+
+                </ul>
+
+              </article>
+
+
+              <!-- Aufwand -->
+
+              <article class="section partner-effort">
+
+                <h3 class="list-heading">Was Sie einbringen</h3>
+
+                <p class="text">
+                  Ein Reallab umfasst einen Projekttag mit Jugendlichen.
+                  Dafür brauchen wir von Ihnen:
+                </p>
+
+                <ul class="simple-list">
+
+                  <li>
+                    <span class="step-number">1</span>
+                    <div>
+                      <strong>Authentischer Lernort</strong>
+                      Eine geeignete Räumlichkeit in Ihrem Unternehmen für ca. 20 Personen, 
+                      mit Internetzugang und Monitor
+                    </div>
+                  </li>
+
+                  <li>
+                    <span class="step-number">2</span>
+                    <div>
+                      <strong>Praxisbegleitung</strong>
+                      Eine Ansprechperson aus Ihrem Unternehmen, die am Projekttag dabei ist und den Jugendlichen 
+                      Einblicke in Ihre Arbeitswelt gibt*
+                    </div>
+                  </li>
+
+                  <li>
+                    <span class="step-number">3</span>
+                  <div>
+                    <strong>Zeit für Austausch und Feedback</strong>
+                    Zu den Ergebnissen am Projekttagende, gemeinsam mit den Teilnehmenden
+                  </div>
+                  </li>
+
+                </ul>
+
+                <p class="additional">
+                  *Die Vorbereitung und Durchführung übernehmen wir. Zeitaufwand für die Begleitung 
+                  am Projekttag belaufen sich auf ca. insgesamt 5 Stunden. 
+                  Falls nur begrenzte zeitliche Kapazitäten vorhanden sind, ist auch eine
+                  Begleitung in reduziertem Umfang möglich, beispielsweise durch einen
+                  Praxisauftrag zu Beginn und eine abschließende Ergebnisabnahme (ca. 90 Minuten).
+                </p>
+
+              </article>
+
+            </section>
+
+
+            <!-- CTA -->
+
+            <section class="partner-cta">
+              
+              <h2>Sie haben eine Fragestellung aus Ihrer Praxis?</h2>
+
+              <p class="text">
+                Schreiben Sie uns kurz Ihr Thema. Wir melden uns für ein erstes Gespräch
+                und klären gemeinsam die nächsten Schritte.
+              </p>
+
+              <a
+                href="mailto:reallabs@passage13.org"
+                class="partner-link"
+              >
+                Kontakt aufnehmen →
+              </a>
+
+            </section>
+
+          </main>
+
+          <Footer />
+
+  </Layout>

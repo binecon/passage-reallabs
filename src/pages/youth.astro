@@ -1,20 +1,13 @@
 ---
 import "../styles/global.css";
 import "../styles/youth.css";
-
+import Layout from '../layouts/Layout.astro';
 import Footer from "../components/Footer.astro";
 import BrandMarker from "../components/BrandMarker.astro";
 import PageHero from "../components/PageHero.astro";
 ---
 
-<html lang="de">
-  
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
 
-  <body>
     <header>
       <PageHero
         title="Am Reallab teilnehmen"
@@ -22,6 +15,8 @@ import PageHero from "../components/PageHero.astro";
       </PageHero>
     </header>
 
+    
+<Layout>
     <main>
 
       <article class="content youth-intro">
@@ -126,9 +121,7 @@ import PageHero from "../components/PageHero.astro";
     </main>
       <Footer />
 
-  </body>
-</html>
-
+</Layout>
 
 <script>
   document.querySelectorAll<HTMLElement>(".youtube-preview").forEach(button => {

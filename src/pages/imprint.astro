@@ -1,12 +1,12 @@
 ---
 import "../styles/global.css";
 import "../styles/imprint.css";
-
+import Layout from '../layouts/Layout.astro';
 import Footer from "../components/Footer.astro";
 import PageHero from "../components/PageHero.astro";
 ---
 
-<html lang="de">
+<!-- <html lang="de">
 
   <head>
     <meta charset="UTF-8" />
@@ -14,8 +14,9 @@ import PageHero from "../components/PageHero.astro";
     <title>Kontakt & Impressum | Passage Reallabs</title>
   </head>
 
-  <body>
+  <body> -->
 
+  <Layout>
     <main class="imprint-page">
 
 
@@ -261,6 +262,4 @@ import PageHero from "../components/PageHero.astro";
 
     <Footer />
 
-  </body>
-
-</html>
+  </Layout>

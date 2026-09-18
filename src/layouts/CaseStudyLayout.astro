@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import Layout from '../layouts/Layout.astro';
 
 import "../styles/global.css";
 import "../styles/case-study.css";
@@ -19,174 +20,155 @@ const otherLabs = allLabs
   .sort((a, b) => a.data.order - b.data.order);
 ---
 
-<html lang="de">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<Layout>
+  <div class="page case-study" style={`--lab-color:${lab.data.color};`}>
 
-  <title>
-    {lab.data.title} · Passage Reallabs
-  </title>
+            <header>
+            <PageHero
+              title={lab.data.title}
+              subtitle={lab.data.subtitle}
+              color={lab.data.color}
+            >
 
-  <!-- <link rel="icon" type="image/svg+xml" href="/fav.svg" /> -->
-</head>
 
+              <div class="lab-meta">
 
-<body class="case-study">
 
+                <div class="meta-block">
 
-<div class="page" style={`--lab-color:${lab.data.color};`}>
-       
+                  <h4>
+                    Praxispartner
+                  </h4>
 
-      <header>
-      <PageHero
-        title={lab.data.title}
-        subtitle={lab.data.subtitle}
-        color={lab.data.color}
-      >
+                  <p>
+                    {lab.data.partner}
+                  </p>
 
+                </div>
 
-        <div class="lab-meta">
 
 
-          <div class="meta-block">
+                <div class="meta-block">
 
-            <h4>
-              Praxispartner
-            </h4>
+                  <h4>
+                    Durchführung
+                  </h4>
 
-            <p>
-              {lab.data.partner}
-            </p>
+                  <p>
+                    {lab.data.date} · {lab.data.location}
+                  </p>
 
-          </div>
+                </div>
 
 
+                <div class="meta-block">
 
-          <div class="meta-block">
+                  <h4>
+                    Teilnehmende
+                  </h4>
 
-            <h4>
-              Durchführung
-            </h4>
+                  <p>
+                    {lab.data.participants.join(" · ")}
+                  </p>
 
-            <p>
-              {lab.data.date} · {lab.data.location}
-            </p>
+                </div>
 
-          </div>
 
+                <div class="meta-block">
 
-          <div class="meta-block">
+                  <h4>
+                    Erprobte Kompetenzen
+                  </h4>
 
-            <h4>
-              Teilnehmende
-            </h4>
+                  <p>
+                    {lab.data.comps?.join(" · ")}
+                  </p>
 
-            <p>
-              {lab.data.participants.join(" · ")}
-            </p>
+                </div>
 
-          </div>
 
+              </div>
+          
+              <div slot="visual" class="page-hero-visual">
+                <div class="lab-shape">
+                  <img src={`/symbols/${data.symbol}`} alt="lab symbol in lab colour" />
+                </div>
+              </div>
 
-          <div class="meta-block">
+            </PageHero>
 
-            <h4>
-              Erprobte Kompetenzen
-            </h4>
+            </header>
 
-            <p>
-              {lab.data.comps?.join(" · ")}
-            </p>
+          <main>
 
-          </div>
+            <article class="content">
 
+              <slot />
 
-        </div>
-     
-        <div slot="visual" class="page-hero-visual">
-          <div class="lab-shape">
-            <img src={`/symbols/${data.symbol}`} alt="lab symbol in lab colour" />
-          </div>
-        </div>
+            </article>
 
-      </PageHero>
+                <section class="lab-gallery">
+                    <img src={lab.data.image} alt={lab.data.alt} loading="lazy" />
+                </section>
 
-      </header>
 
-    <main>
+            <section class="partner">
 
-      <article class="content">
 
-        <slot />
+                  <p class="section-label">
+                    <h2>Praxispartner</h2>
+                  </p>
 
-      </article>
 
-          <section class="lab-gallery">
-              <img src={lab.data.image} alt={lab.data.alt} loading="lazy" />
-          </section>
+                  <p class="partner-text">
 
+                    Kooperationspartner dieses <em>Reallabs</em> ist&nbsp;
+                    <strong>{lab.data.partner}</strong>.
 
-      <section class="partner">
+                  </p>
 
 
-            <p class="section-label">
-              <h2>Praxispartner</h2>
-            </p>
 
+                  <a href="/partner" class="partner-link">
 
-            <p class="partner-text">
+                    Eigenes Reallab entwickeln →
 
-              Kooperationspartner dieses <em>Reallabs</em> ist&nbsp;
-              <strong>{lab.data.partner}</strong>.
+                  </a>
+              
 
-            </p>
+            </section>
 
 
 
-            <a href="/partner" class="partner-link">
+            <section class="more-labs">
 
-              Eigenes Reallab entwickeln →
 
-            </a>
-        
+              <p class="section-label">
 
-      </section>
+                <span style="font-style: oblique;">
+                  Weitere Reallabs
+                </span>
 
+              </p>
 
 
-      <section class="more-labs">
+              <nav class="lab-links">
 
+                  {otherLabs.map((item) => (
+                    <a href={`/reallabs/${item.id}/`}>
+                      {item.data.title}
+                    </a>
+                  ))}
 
-        <p class="section-label">
+              </nav>
 
-          <span style="font-style: oblique;">
-            Weitere Reallabs
-          </span>
+            </section>
 
-        </p>
 
+        </main>
 
-        <nav class="lab-links">
+      <Footer />
 
-            {otherLabs.map((item) => (
-              <a href={`/reallabs/${item.id}/`}>
-                {item.data.title}
-              </a>
-            ))}
-
-        </nav>
-
-      </section>
-
-
-  </main>
-
-<Footer />
-
-</div>
-
-</body>
-
-</html>
+  </div>
+</Layout>

@@ -130,7 +130,7 @@
   align-items: center;
   gap: 5rem;
   max-width: var(--content-width);
-  margin: 0 0 0;
+  margin: 1.2rem 0 0;
 }
 
 .intro-box {
@@ -426,6 +426,11 @@
   font-weight: 600;
 }
 
+@media (max-width: 800px) {
+  .projects-action {
+    margin-top: 3rem;
+  }
+}
 
 /* =========================
    Process
@@ -488,9 +493,6 @@
   background: var(--red);
 }
 
-
-/* Process – tablet */
-
 @media (max-width: 1200px) {
 
   .process .section-header {
@@ -502,9 +504,6 @@
   }
 
 }
-
-
-/* Process – smartphone */
 
 @media (max-width: 800px) {
 
