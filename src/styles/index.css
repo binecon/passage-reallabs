@@ -52,7 +52,7 @@
   font-weight: 400;
   line-height: .9;
   letter-spacing: .005em;
-  color: var(--dark-grey);
+  color: #639776;
 }
 
 .hero-subtitle {
@@ -101,11 +101,12 @@
 
   .hero {
     min-height: 270px;
-    padding-top: 4rem;
+    padding-top: 3.5rem;
   }
 
   .hero-shape {
-    width: 175vw;
+    width:100%;
+    max-width: 175vw;
     height: 570px;
     left: 42%;
     top: -330px;
