@@ -105,7 +105,7 @@
   }
 
   .hero-shape {
-    max-width: 175vw;
+    width: 175vw;
     height: 570px;
     left: 42%;
     top: -330px;
