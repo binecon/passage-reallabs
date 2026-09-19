@@ -16,9 +16,9 @@
 .hero-shape {
   position: absolute;
   width: 130vw;
-  height: 760px;
-  left: 34%;
-  top: -450px;
+  height: 750px;
+  left: 35%;
+  top: -470px;
   transform: translateX(-50%);
   background: var(--green);
   border-radius: 50%;

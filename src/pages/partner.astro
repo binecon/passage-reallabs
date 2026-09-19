@@ -123,25 +123,49 @@ import Footer from "../components/Footer.astro";
 
             <!-- CTA -->
 
-       <section class="section cta">
+            <section class="partner-section">
 
-            <h2>Sie haben eine Fragestellung aus Ihrer Praxis?</h2>
+              <h2 class="section-label">Praxispartner</h2>
 
-            <p class="text">
-              Schreiben Sie uns kurz Ihr Thema. Wir melden uns für ein erstes Gespräch
-              und klären gemeinsam die nächsten Schritte.
-            </p>
+              <p class="partner-text">
+                Sie möchten ein <em>Reallab</em> mit uns entwickeln und eine
+                konkrete Fragestellung aus Ihrer Praxis bearbeiten?
+              </p>
 
-            <div class="cta-action">
               <a
                 href="mailto:reallabs@passage13.org"
-                class="button button--cta"
+                class="partner-link"
               >
-                Kontakt aufnehmen →
+                Eigenes Reallab entwickeln →
               </a>
-            </div>
 
-      </section>
+            </section>
+
+
+            <section class="more-labs">
+
+              <p class="section-label">
+                <span style="font-style: oblique;">
+                  Weitere Reallabs
+                </span>
+              </p>
+
+              <nav class="lab-links">
+                <a href={`${import.meta.env.BASE_URL}/reallabs/urbanlab/`}>
+                  Urbanlab
+                </a>
+                <a href={`${import.meta.env.BASE_URL}/reallabs/medicallab/`}>
+                  Medicallab
+                </a>
+                 <a href={`${import.meta.env.BASE_URL}/reallabs/smartspaces/`}>
+                  SmartSpaces
+                </a>
+              </nav>
+
+            </section>
+
+
+
 
           </main>
 

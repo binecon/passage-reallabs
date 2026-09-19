@@ -69,6 +69,7 @@
 
   .partner .page-hero-content {
     display: contents;
+
   }
 
   /* Row 1: BrandMarker */
@@ -94,8 +95,8 @@
     display: block;
     grid-column: 2;
     grid-row: 2;
-    justify-self: center;
-    align-self: start;
+    justify-self: left;
+    align-self: left;
   }
 
   /* Row 3: subtitle + meta + rest */
@@ -227,16 +228,14 @@
   margin-bottom: .2rem;
 }
 
-
-/* Reduced space before CTA */
-
 .partner-effort > p:last-child {
   margin: 2rem 0 0;
 }
 
 
+
 /* =========================
-   CTA Mobile Spcific
+   Mobile Spcific
 ========================= */
 
 @media (max-width: 800px) {
@@ -253,4 +252,64 @@
       width: 2.4rem;
       height: 2.4rem;
   }
+}
+
+
+/* =========================
+   Partner
+========================= */
+
+.partner-section {
+  margin-top: 6rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--light-grey);
+}
+
+.partner-section h2 {
+  margin-top: .8rem;
+}
+
+.partner-text {
+  max-width: 900px;
+  margin: 1rem 0 1.5rem;
+  color: var(--grey);
+}
+
+.partner-link {
+  display: inline-block;
+  color: var(--dark-grey);
+  text-decoration: none;
+  border-bottom: 1px solid var(--dark-grey);
+  padding-bottom: .15rem;
+  transition: .2s ease;
+}
+
+.partner-link:hover {
+  color: var(--green);
+  border-color: var(--green);
+}
+
+
+/* =========================
+   More Labs
+========================= */
+
+.more-labs {
+  margin: 4rem 0 6rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--light-grey);
+}
+
+.lab-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.lab-links a {
+  color: var(--dark-grey);
+  text-decoration: none;
+}
+
+.lab-links a:hover {
+  color: var(--green);
 }
