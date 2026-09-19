@@ -8,16 +8,6 @@ const labs = (await getCollection('reallabs'))
   .sort((a, b) => a.data.order - b.data.order);
 ---
 
-<!-- <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="images/fav.svg" />
-    <title>Passage Reallabs</title>
-
-  </head>
-
-  <body> -->
 
   <!-- Hero -->
 <header class="hero">
@@ -70,17 +60,13 @@ const labs = (await getCollection('reallabs'))
 
       <!-- labs preview -->
       <section class="section projects-preview">
-
         <p class="section-label">
           Projektbeispiel
         </p>
+       
+        <!-- <a href="/reallabs/urbanlab/" class="project-preview-item" style="--lab-color:#95E5B2"> -->
+         <a href={`${import.meta.env.BASE_URL}/reallabs/urbanlab/`} class="project-preview-item" style="--lab-color:#95E5B2">
 
-
-        <a 
-          href="/reallabs/urbanlab/"
-          class="project-preview-item"
-          style="--lab-color:#95E5B2"
-        >
 
       <div class="project-preview-content">
         <h2>UrbanLab</h2>
@@ -142,7 +128,10 @@ const labs = (await getCollection('reallabs'))
       <!-- Alle Projekte -->
 
         <div class="projects-action">
-            <a href="/projects" class="button button--projects">
+            <!-- <a href="/projects" class="button button--projects">
+              Alle Reallabs →
+            </a> -->
+            <a href={`${import.meta.env.BASE_URL}/projects`} class="button button--projects">
               Alle Reallabs →
             </a>
         </div>
@@ -216,16 +205,17 @@ const labs = (await getCollection('reallabs'))
               In den <span style="font-style:italic">Reallabs</span> entdecken Jugendliche neue Perspektiven auf Zukunftsthemen und Berufsfelder und erleben, was Arbeiten in diesen Feldern praktisch bedeutet.
             </p>
 
-            <a href="/youth" class="button button--insights">
+            <!-- <a href="/youth" class="button button--insights">
+              Mehr Einblicke →
+            </a> -->
+            <a href={`${import.meta.env.BASE_URL}/youth`} class="button button--projects"></a>
               Mehr Einblicke →
             </a>
 
           </div>
           <div class="insights-media">
             <!-- <img 
-              src="/images/reallab-preview.jpg"
-              alt="Jugendlicher mit Sensorbox beim Reallab Projekttag"
-            /> -->
+              src="/images/reallab-preview.jpg" alt="Jugendlicher mit Sensorbox beim Reallab Projekttag" /> -->
               <img
                 src={`${import.meta.env.BASE_URL}/images/reallab-preview.webp`}
                 alt="Jugendlicher mit Sensorbox beim Reallab Projekttag"
@@ -250,7 +240,10 @@ const labs = (await getCollection('reallabs'))
             </p>
 
             <div class="cta-action">
-                <a href="/partner" class="button button--cta">
+                <!-- <a href="/partner" class="button button--cta">
+                  Ihr Reallab →
+                </a> -->
+                <a href={`${import.meta.env.BASE_URL}/partner`} class="button button--cta"></a>
                   Ihr Reallab →
                 </a>
             </div>
