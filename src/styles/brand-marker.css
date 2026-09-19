@@ -1,4 +1,9 @@
 .brand-marker {
+  position: relative;
+  z-index: 9999;
+  pointer-events: auto;
+  cursor: pointer;
+
   display:inline-flex;
   align-items:center;
   justify-content:center;
