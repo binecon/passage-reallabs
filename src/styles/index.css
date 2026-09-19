@@ -316,9 +316,9 @@
   }
 
   .project-preview-item::before {
-    top: 1.8rem;
-    bottom: 6rem;
-    width: 6px;
+    top: 2rem;
+    bottom: 2rem;
+    width: 5px;
     opacity: 1;
     transform: none;
     transition: none !important;
@@ -423,7 +423,7 @@
 .projects-action {
   display: flex;
   justify-content: center;
-  margin-right: 16rem;
+  margin-right: 18rem;
 }
 
 .button--projects:hover {
@@ -432,9 +432,9 @@
   font-weight: 600;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .projects-action {
-    margin-top: 3rem;
+    justify-content: left;
   }
 }
 
@@ -447,7 +447,7 @@
 }
 
 .process-intro {
-  margin: 0 0 2.5rem;
+  margin: 0 0 3.8rem;
   color: var(--dark-grey);
 }
 

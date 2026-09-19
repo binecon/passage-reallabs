@@ -1,5 +1,5 @@
 /* =========================
-   Project List
+   Project Items
 ========================= */
 
 .project-item {
@@ -19,7 +19,7 @@
    Lab-coloured selection line
 ========================= */
 
-.project-item:not(:nth-last-child(-n+2))::before {
+.project-item:not(:last-child)::before {
   content: "";
 
   position: absolute;
@@ -41,61 +41,20 @@
     transform .3s ease;
 }
 
-/* =========================
-   Hover
-========================= */
-
-.project-item:not(:nth-last-child(-n+2)):hover {
-  transform: translateX(.2rem);
-  /* padding-left: 3rem; */
-}
-
-.project-item:not(:nth-last-child(-n+2)):hover::before {
-  opacity: 1;
-  transform: scaleY(1);
-}
-
-
 
 /* =========================
-   Mobile
+   Desktop interaction
 ========================= */
 
-@media (max-width: 800px) {
+@media (min-width: 801px) {
 
-  .project-item {
-    transform: none !important;
-    padding-left: 3rem;
-    transition: none;
-  }
-
-  /* Line for every project except the final CTA */
-  .project-item:not(:last-child)::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 3.5rem;
-    bottom: 3.2rem;
-    width: 6px;
-    background: var(--lab-color);
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
-
-  /* No line on final CTA */
-  .project-item:last-child::before {
-    display: none;
-  }
-
-    .project-item:not(:nth-last-child(-n+2)):hover {
-    transform: none;
-    padding-left: 0;
+  .project-item:not(:nth-last-child(-n+2)):hover {
+    transform: translateX(.2rem);
   }
 
   .project-item:not(:nth-last-child(-n+2)):hover::before {
     opacity: 1;
-    transform: none;
+    transform: scaleY(1);
   }
 
 }
@@ -103,7 +62,7 @@
 
 /* =========================
    Reallab CTA
-   Movement only, no lab line
+   Desktop interaction only
 ========================= */
 
 .project-item:last-child {
@@ -112,9 +71,64 @@
   border-bottom: none;
 }
 
-.project-item:last-child:hover {
-  transform: translateX(.1rem);
-  padding-left: .6rem;
+@media (min-width: 801px) {
+
+  .project-item:last-child:hover {
+    transform: translateX(.1rem);
+    padding-left: .6rem;
+  }
+
 }
 
 
+/* =========================
+   Mobile
+   Static layout
+========================= */
+
+@media (max-width: 800px) {
+
+  .project-item {
+    transform: none;
+    padding-left: 3rem;
+    transition: none;
+  }
+
+
+  /* Static lab-coloured line
+     for every actual project */
+
+  .project-item:not(:last-child)::before {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+
+  /* No hover interaction */
+
+  .project-item:hover {
+    transform: none;
+    padding-left: 3rem;
+  }
+
+  .project-item:hover::before {
+    opacity: 1;
+    transform: none;
+  }
+
+
+  /* CTA: no line, no movement */
+
+  .project-item:last-child {
+    padding: 3rem 0 5rem;
+    margin-bottom: 3rem;
+    border-bottom: none;
+  }
+
+  .project-item:last-child:hover {
+    transform: none;
+    padding-left: 0;
+  }
+
+}
