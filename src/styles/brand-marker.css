@@ -34,3 +34,9 @@
   color:white;
 }
 
+@media (max-width: 900px) {
+  .brand-marker{
+  margin: 1rem 0 0;
+  }
+}
+
