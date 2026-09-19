@@ -80,22 +80,21 @@
 
 }
 
-
 /* =========================
    Mobile
    Static layout
 ========================= */
 
 @media (max-width: 800px) {
+
   .project-item,
-  .project-item:hover {
+  .project-item:hover,
+  .project-item:focus,
+  .project-item:active {
     transform: none !important;
-    padding-left: 3rem;
+    padding-left: 3rem !important;
     transition: none !important;
   }
-
-  /* Static lab-coloured line
-     for every actual project */
 
   .project-item:not(:last-child)::before {
     opacity: 1;
@@ -103,34 +102,28 @@
     transition: none;
   }
 
-
-  /* No hover interaction */
-
-  .project-item:hover {
-    transform: none;
-    padding-left: 3rem;
-  }
-
-  .project-item:hover::before {
+  .project-item:hover::before,
+  .project-item:focus::before,
+  .project-item:active::before {
     opacity: 1;
     transform: none;
   }
 
-
-  /* CTA: no line, no movement */
-
-  .project-item:last-child {
-    padding: 3rem 0 5rem;
-    margin-bottom: 3rem;
-    border-bottom: none;
-  }
-
+  /* CTA */
   .project-item:last-child,
-  .project-item:last-child:hover {
+  .project-item:last-child:hover,
+  .project-item:last-child:focus,
+  .project-item:last-child:active {
     transform: none !important;
-    padding-left: 0;
+    padding-left: 0 !important;
     transition: none !important;
   }
-
 }
 
+/* =========================
+   Link
+========================= */
+
+.partner-link:hover {
+  color: var(--green);
+}

@@ -434,23 +434,3 @@ p {
   }
 }
 
-
-@media (max-width: 800px) {
-  .project-item,
-  .project-item:hover,
-  .project-item:focus,
-  .project-item:active {
-    transform: none !important;
-    padding-left: 3rem !important;
-    margin-left: 0 !important;
-    transition: none !important;
-  }
-
-  .project-item *,
-  .project-item:hover *,
-  .project-item:focus *,
-  .project-item:active * {
-    transform: none !important;
-    transition: none !important;
-  }
-}
