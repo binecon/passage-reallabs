@@ -423,6 +423,7 @@
 .projects-action {
   display: flex;
   justify-content: center;
+  margin-right: 16rem;
 }
 
 .button--projects:hover {
