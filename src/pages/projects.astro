@@ -38,7 +38,8 @@ const labs = await getCollection("reallabs");
       
       <section class="projects-list">
 
-        <a href="/reallabs/urbanlab/" class="project-item" style="--lab-color:#95E5B2">
+       <a href={`${import.meta.env.BASE_URL}/reallabs/urbanlab/`} class="project-item" style="--lab-color:#95E5B2">
+        <!-- <a href="/reallabs/urbanlab/" class="project-item" style="--lab-color:#95E5B2"> -->
 
           <h2>UrbanLab</h2>
 
@@ -53,8 +54,9 @@ const labs = await getCollection("reallabs");
 
         </a>
 
-        
-          <a href="/reallabs/smartspaces/" class="project-item" style="--lab-color:#404ED9">
+        <a href={`${import.meta.env.BASE_URL}/reallabs/smartspaces/`} class="project-item" style="--lab-color:#404ED9">
+          
+          <!-- <a href="/reallabs/smartspaces/" class="project-item" style="--lab-color:#404ED9"> -->
           <h2>SmartSpaces</h2>
 
           <div class="meta">
@@ -67,7 +69,9 @@ const labs = await getCollection("reallabs");
 
         </a>
 
-           <a href="/reallabs/medicallab/" class="project-item" style="--lab-color:#E393E9">    
+        <a href={`${import.meta.env.BASE_URL}/reallabs/medicallab/`} class="project-item" style="--lab-color:#E393E9">
+
+           <!-- <a href="/reallabs/medicallab/" class="project-item" style="--lab-color:#E393E9">     -->
           <h2>MedicalLab</h2>
 
           <div class="meta">
@@ -109,7 +113,8 @@ const labs = await getCollection("reallabs");
             &nbsp;passend zu Ihrem Unternehmen und Ihren Themen
           </p>
 
-          <a href="/partner" class="partner-link">
+          <a href={`${import.meta.env.BASE_URL}/partner`} class="partner-link">
+          <!-- <a href="/partner" class="partner-link"> -->
              Eigenes Reallab entwickeln →
           </a>
 
