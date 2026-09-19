@@ -106,21 +106,8 @@ img {
   .page-hero-copy {
     width: 100%;
     max-width: none;
-    min-width: 500px;
+    min-width: 0;
   }
-
-  .page-hero-visual {
-    display: none;
-  }
-
-}
-@media (max-width: 600px) {
-  .page-hero-copy {
-    width: 100%;
-    max-width: none;
-    min-width: 320px;
-  }
-
 }
 
 /* =========================
@@ -288,41 +275,6 @@ p {
 
 
 /* =========================
-   Partner CTA
-========================= */
-
-.partner-text {
-  max-width: 600px;
-
-  margin: 1rem 0 1.5rem;
-
-  color: var(--grey);
-  line-height: 1.7;
-
-}
-
-
-.partner-link {
-  display: inline-block;
-
-  color: var(--dark-grey);
-  text-decoration: none;
-
-  border-bottom: 1px solid var(--dark-grey);
-
-  padding: 1.5rem 0 .15rem;
-
-  transition: .2s ease;
-}
-
-
-.partner-link:hover {
-  color: var(--lab-color);
-  border-color: var(--lab-color);
-}
-
-
-/* =========================
    Responsive Typography
 ========================= */
 
@@ -427,5 +379,46 @@ p {
   .scroll-top {
     right: 1.5rem;
     bottom: 1.5rem;
+  }
+}
+
+/* =========================
+   CTA
+========================= */
+
+.cta {
+  padding: 4rem 0 2rem;
+  text-align: center;
+}
+
+.cta h2 {
+  margin: 1.5rem 0 2.3rem;
+  font-weight: 700;
+}
+
+.cta .text {
+  max-width: 920px;
+  margin: 0 auto;
+  color: var(--grey);
+}
+
+.cta-action {
+  display: flex;
+  justify-content: center;
+  margin: 2.8rem 0;
+}
+
+.button--cta:hover {
+  background: var(--green);
+}
+
+@media (max-width: 800px) {
+  .cta {
+    padding: 0;
+    text-align: left;
+  }
+
+  .cta-action {
+    justify-content: center;
   }
 }

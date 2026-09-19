@@ -3,31 +3,20 @@ import "../styles/global.css";
 import "../styles/youth.css";
 import Layout from '../layouts/Layout.astro';
 import Footer from "../components/Footer.astro";
-import BrandMarker from "../components/BrandMarker.astro";
 import PageHero from "../components/PageHero.astro";
 ---
 
-
-    <header>
-      <PageHero
-        title="Am Reallab teilnehmen"
-      >
-      </PageHero>
-    </header>
-
-    
 <Layout>
     <main>
 
-      <article class="content youth-intro">
-
-        <p>
+      <PageHero title="Am Reallab teilnehmen">
+         <p>
           In einem Reallab arbeitest du an echten Fragen aus Unternehmen und deiner Stadt.
           Du gestaltest mit, zum Beispiel bei Themen wie Stadtentwicklung, Wohnen, 
           Gesundheit oder Logistik.
         </p>
 
-      </article>
+      </PageHero>
 
 
       <section class="youth-videos">
@@ -108,13 +97,22 @@ import PageHero from "../components/PageHero.astro";
       </section>
 
 
-      <section class="youth-cta">
+   <section class="section cta">
 
         <h2>Du willst ein Reallab an deine Schule bringen?</h2>
-         <p>Sprich deine Lehrkraft auf die Reallabs an. Oder schreib uns direkt.
-            <br>
-           <a href="mailto:reallabs@passage13.org" class="partner-link">Kontakt aufnehmen →</a> 
-          </p>
+
+        <p class="text">
+          Sprich deine Lehrkraft auf die Reallabs an. Oder schreib uns direkt.
+        </p>
+
+        <div class="cta-action">
+          <a
+            href="mailto:reallabs@passage13.org"
+            class="button button--cta"
+          >
+            Kontakt aufnehmen →
+          </a>
+        </div>
 
       </section>
 

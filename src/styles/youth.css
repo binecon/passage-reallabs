@@ -149,33 +149,6 @@
   color: var(--grey);
 }
 
-
-/* =========================
-   CTA
-========================= */
-
-.youth-cta {
-  text-align: center;
-  margin: 4rem 0 6rem;
-}
-
-.youth-cta h2 {
-  margin: 0 auto 2rem;
-  font-weight: 600;
-}
-
-.youth-cta p {
-  max-width: 920px;
-  margin: 0 auto;
-  color: var(--grey);
-}
-
-
-
-/* =========================
-   Mobile
-========================= */
-
 @media (max-width: 1200px) {
 
   .youth-video-grid {
@@ -184,9 +157,4 @@
   }
 }
 
-@media (max-width: 800px) {
-  .youth-cta {
-    text-align: left;
-  }
-}
 

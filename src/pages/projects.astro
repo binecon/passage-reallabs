@@ -2,7 +2,7 @@
 import '../styles/global.css';
 import '../styles/projects.css';
 import Layout from '../layouts/Layout.astro';
-import BrandMarker from "../components/BrandMarker.astro";
+import PageHero from "../components/PageHero.astro";
 import Footer from "../components/Footer.astro";
 
 import { getCollection } from "astro:content";
@@ -10,31 +10,16 @@ const labs = await getCollection("reallabs");
 ---
 
 <Layout>
+  <main>
+    <PageHero title="Alle Reallabs">
+      <p>
+        Wir arbeiten mit Unternehmen und Institutionen aus der Region Halle
+        (Saale) zusammen. Einige Reallabs befinden sich bereits in der
+        Umsetzung, weitere entstehen gemeinsam mit neuen Partnern.
+      </p>
+    </PageHero>
 
-    <main>
-      <section class="page-hero projects-hero">
-
-              <BrandMarker />
-
-              <div class="page-hero-content">
-
-                <div class="page-hero-copy page-content">
-
-                  <h1>
-                    Alle Reallabs
-                  </h1>
-
-                  <p>
-                    Wir arbeiten mit Unternehmen und Institutionen aus der Region Halle
-                    (Saale) zusammen. Einige Reallabs befinden sich bereits in der
-                    Umsetzung, weitere entstehen gemeinsam mit neuen Partnern.
-                  </p>
-
-                </div>
-
-              </div>
-
-      </section>
+    <!-- rest of projects page -->
       
       <section class="projects-list">
 

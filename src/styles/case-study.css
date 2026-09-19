@@ -10,11 +10,12 @@
 
 
 /* =========================
-   Lab Hero
+   Lab Brand Visual
 ========================= */
 
 .lab-shape {
-  width: 400px;
+  width: clamp(220px, 28vw, 400px);
+  aspect-ratio: 1;
 }
 
 /* =========================
@@ -23,9 +24,35 @@
 
 @media (max-width: 900px) {
 
-  .lab-meta{
-    width: 800px;
-    grid-template-columns: 1fr;
+  .case-study .page-hero {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    align-items: start;
+  }
+
+   .case-study .page-hero-content {
+    display: contents;
+  }
+
+ .case-study .page-hero-copy {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .case-study .page-hero-visual {
+    display: block;
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+    align-self: start;
+  }
+
+ .case-study .lab-shape {
+    width: clamp(160px, 30vw, 240px);
+  }
+
+  .case-study .lab-meta {
+    width: 100%;
   }
 }
 
@@ -51,8 +78,6 @@
   
 }
 
-
-
 /* =========================
    Praxisfrage u.a.
 ========================= */
@@ -71,11 +96,12 @@
 ========================= */
 
 .content {
-  max-width: 1440px;
+  max-width: var(--content-width);
   margin: 4rem 0;
 }
 
 .lab-gallery {
+  width: 100%;
   max-width: 900px;
 }
 

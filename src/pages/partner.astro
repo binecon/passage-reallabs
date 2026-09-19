@@ -7,8 +7,9 @@ import Footer from "../components/Footer.astro";
 ---
 
 
+
   <Layout>  
-      <main class="partner-page">
+      <main class="partner-page partner">
 
         <PageHero
           title="Ihr Reallab" 
@@ -25,7 +26,7 @@ import Footer from "../components/Footer.astro";
           </p>
 
           <div slot="visual" class="page-hero-visual">
-            <div class="partner-shape"></div>
+            <div class="lab-shape"></div>
           </div>
 
         </PageHero>
@@ -122,23 +123,25 @@ import Footer from "../components/Footer.astro";
 
             <!-- CTA -->
 
-            <section class="partner-cta">
-              
-              <h2>Sie haben eine Fragestellung aus Ihrer Praxis?</h2>
+       <section class="section cta">
 
-              <p class="text">
-                Schreiben Sie uns kurz Ihr Thema. Wir melden uns für ein erstes Gespräch
-                und klären gemeinsam die nächsten Schritte.
-              </p>
+            <h2>Sie haben eine Fragestellung aus Ihrer Praxis?</h2>
 
+            <p class="text">
+              Schreiben Sie uns kurz Ihr Thema. Wir melden uns für ein erstes Gespräch
+              und klären gemeinsam die nächsten Schritte.
+            </p>
+
+            <div class="cta-action">
               <a
                 href="mailto:reallabs@passage13.org"
-                class="partner-link"
+                class="button button--cta"
               >
                 Kontakt aufnehmen →
               </a>
+            </div>
 
-            </section>
+      </section>
 
           </main>
 
