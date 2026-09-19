@@ -68,6 +68,21 @@ img {
   display: block;
 }
 
+@media (max-width: 600px) {
+  .page-hero-content,
+  .page-hero-copy,
+  .page-hero-visual,
+  .section,
+  main {
+    min-width: 0;
+  }
+}
+@media (max-width: 600px) {
+  img {
+    max-width: 100%;
+  }
+}
+
 /* =========================
    Hero
 ========================= */
@@ -97,16 +112,16 @@ img {
 /* Mobile */
 
 @media (max-width: 900px) {
-
   .page-hero-content {
-    width: 100%; 
-    grid-template-columns: 1fr;
+    width: 100%;
+    min-width: 0;
+    grid-template-columns: minmax(0, 1fr);
   }
 
-  .page-hero-copy {
-    width: 100%;
-    max-width: none;
+  .page-hero-copy,
+  .page-hero-visual {
     min-width: 0;
+    max-width: 100%;
   }
 }
 
