@@ -106,7 +106,7 @@
   }
 
   .partner .lab-shape {
-    width: clamp(120px, 25vw, 180px);
+    width: clamp(120px, 25vw, 160px);
   }
 
   /* .partner .lab-shape {
@@ -252,10 +252,12 @@
   .process-grid {
     grid-template-columns: 1fr;
   }
-    .additional {
-    font-size: 1.2rem;
-}
-
+  .step h3 {
+  font-size: 1.4rem;
+  }
+  .additional {
+  font-size: 1.1rem;
+  }
 }
 
 /* =========================
@@ -263,7 +265,7 @@
 ========================= */
 
 .partner-section {
-  margin-top: 6rem;
+  margin-top: 2rem;
   padding-top: 2rem;
   border-top: 1px solid var(--light-grey);
 }
