@@ -258,7 +258,12 @@
   .additional {
   font-size: 1.1rem;
   }
+  .list-heading {
+      font-size: 1.8rem;
+      margin: 0 0 .6rem;
+    }
 }
+
 
 /* =========================
    Partner
