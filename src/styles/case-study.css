@@ -56,7 +56,7 @@
     display: block;
     grid-column: 2;
     grid-row: 2;
-    justify-self: center;
+    justify-self: left;
     align-self: start;
   
   }
@@ -86,12 +86,11 @@
   }
 
   .case-study .lab-shape {
-    width: clamp(140px, 28vw, 100px);
+    width: clamp(100px, 28vw, 80px);
   }
     /* .case-study .lab-shape {
     width: clamp(160px, 30vw, 220px);
   } */
-
 
   .case-study .lab-meta{
     width: 100%;

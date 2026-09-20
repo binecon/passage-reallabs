@@ -135,7 +135,6 @@
 
 .partner-benefits {
   padding: 2rem 0;
-  /* background-color: bisque; */
 }
 
 .partner-benefits .simple-list {
@@ -149,22 +148,24 @@
 
 .partner-benefits .simple-list li {
   position: relative;
-  padding-left: 2.3rem;
+  padding-left: 1.8rem;
   line-height: 2.3rem;
 }
 
 
-/* Filled bullets */
-
 .partner-benefits .simple-list li::before {
-  content: "";
+  content: "✓";
   position: absolute;
-  left: .8rem;
-  top: .8rem;
-  width: .52rem;
-  height: .52rem;
-  background: var(--dark-grey);
-  border-radius: 50%;
+  left: 0;
+  top: .05rem;
+  color: var(--dark-grey);
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.partner-benefits strong {
+  font-weight: 500;
+  color: var(--dark-grey);
 }
 
 
@@ -173,43 +174,35 @@
 ========================= */
 
 .partner-effort {
-  padding-top: 3rem;
+  padding-top: 2rem;
   margin-bottom: 5rem !important;
   max-width: var(--intro-width);
 }
 
-.partner-effort .simple-list {
-  list-style: none;
-  line-height: 2.3rem;
-  margin: 0;
-  padding: 1.2rem 0 1rem;
+.process-intro {
+  margin: 0 0 3rem;
+  color: var(--dark-grey);
+}
+
+.process-grid {
   display: grid;
-  gap: 3rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+}
+.step h3 {
+  font-size: 1.8rem;
+}
+.step p {
   color: var(--grey);
-}
-
-.partner-effort .simple-list {
-  position: relative;
-}
-
-.partner-section{
-  margin-bottom: 0;
 }
 
 /* Open bullets */
 
-.partner-effort .simple-list li {
-  position: relative;
-  display: grid;
-  grid-template-columns: 3.6rem 1fr;
-  gap: .8rem;
-  align-items: start;
-}
 
 .partner-effort .step-number {
   width: 2.8rem;
   height: 2.8rem;
-
+  margin-bottom: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -217,14 +210,16 @@
   border: 1px solid var(--dark-grey);
   border-radius: 50%;
   background: var(--bg);
-  color: var(--dark-grey);
   font-weight: 600;
   line-height: 1;   
 }
 
 .additional {
     max-width: var(--intro-width);
+    color: var(--grey);
+    font-size: 1.5rem;
 }
+
 /* Heading → description */
 
 .partner-effort .simple-list strong {
@@ -241,26 +236,27 @@
    Mobile Spcific
 ========================= */
 
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
 
-    .partner-effort .simple-list {
-      padding: 1rem 0 0.8rem;
-    }
-  
-    /* Open bullets */
-
-    .partner-effort .simple-list li {
-      padding: 0;
-      grid-template-columns: 3rem 1fr;
-      gap: .8rem;
-  }
-
-    .partner-effort .step-number {
-      width: 2.4rem;
-      height: 2.4rem;
-    }
+  .process .section-header {
+  max-width: var(--intro-width);
 }
 
+  .process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 800px) {
+
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+    .additional {
+    font-size: 1.2rem;
+}
+
+}
 
 /* =========================
    Partner
