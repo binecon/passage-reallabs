@@ -80,7 +80,7 @@
 .footer-logos {
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .footer-logos img {
@@ -94,7 +94,7 @@
 ========================= */
 
 .footer-group--partners .footer-logos img[src*="smart-city-2"] {
-  height: 90px;
+  height: 100px;
   width: auto;
 }
 
@@ -125,7 +125,7 @@
 
   .footer {
     width: 100%; 
-    padding-bottom: 5rem;
+    padding-bottom: 1rem;
   }
 
   .footer-organisations {
@@ -133,30 +133,47 @@
     flex-wrap: wrap;
     gap: 3rem;
   }
+  .footer-links {
+    gap: 2.5rem;
+  }
+    .footer-links .left{
+    gap: 2rem;
+    border-bottom: 1px solid var(--dark-grey);
+    padding-bottom: .15rem;
+    text-decoration: none;
+    transition: .2s ease;
+  }
 
-
+    .footer-links .right{
+    border-bottom: 1px solid var(--dark-grey);
+    padding-bottom: .15rem;
+    text-decoration: none;
+    transition: .2s ease;
+  }
 
   /* Scale logos down slightly */
  
-  .footer-group--partners .footer-logos img[src*="smart-city-2"] {
-    height: 70px;
-  }
+    .footer-group--partners .footer-logos img[src*="smart-city-2"] {
+      height: 90px;
+      width: auto;
+    }
 
-  .footer-group--partners .footer-logos img[src*="halle"] {
-    height: 50px;
-  }
+    .footer-group--partners .footer-logos img[src*="halle"] {
+      height: 70px;
+    }
 
-  .footer-group--evaluation .footer-logos img[src*="ZSH"] {
-    height: 50px;
-  }
+    .footer-group--evaluation .footer-logos img[src*="ZSH"] {
+      height: 70px;
+    }
 
-  .footer-group--evaluation .footer-logos img[src*="fraunhofer"] {
-    height: 60px;
-  }
+    .footer-group--evaluation .footer-logos img[src*="fraunhofer"] {
+      height: 70px;
+    }
 
-  .footer-group--funding .footer-logos img[src*="kfw2"] {
-    height: 70px;
-  }
+    .footer-group--funding .footer-logos img[src*="kfw"] {
+      height: 90px;
+      margin-top: 1rem;
+    }
 }
 
 
@@ -167,10 +184,6 @@
     align-items: flex-start;
   }
 
-  .footer-links {
-    gap: 1.5rem;
-  }
-
   .footer-organisations {
     flex-direction: column;
     align-items: flex-start;
@@ -179,7 +192,7 @@
   }
 
   .footer-label {
-    font-size: 1rem;
+    font-size: 1.15rem;
     line-height: 1;
   }
 
@@ -192,31 +205,27 @@
     gap: 1.5rem;
   }
 
-  /* Partners */
+  /* Scale logos down again */
+ 
+    .footer-group--partners .footer-logos img[src*="smart-city-2"] {
+      height: 80px;
+      width: auto;
+    }
 
-   .footer-group--partners .footer-logos img[src*="smart-city-2"] {
-    height: 50px;
-  }
+    .footer-group--partners .footer-logos img[src*="halle"] {
+      height: 60px;
+    }
 
-  .footer-group--partners .footer-logos img[src*="halle"] {
-    height: 35px;
-  }
+    .footer-group--evaluation .footer-logos img[src*="ZSH"] {
+      height: 60px;
+    }
 
-  /* Scientific evaluation */
+    .footer-group--evaluation .footer-logos img[src*="fraunhofer"] {
+      height: 60px;
+    }
 
-  .footer-group--evaluation .footer-logos img[src*="ZSH"] {
-    height: 40px;
-  }
-
-  .footer-group--evaluation .footer-logos img[src*="fraunhofer"] {
-    height: 50px;
-  }
-
-  /* Funding */
-  .footer-group--funding .footer-logos img[src*="kfw2"] {
-    height: 50px;
-  }
-  .footer-group--funding .footer-logos {
-    gap: .8rem;
-  }
+    .footer-group--funding .footer-logos img[src*="kfw"] {
+      height: 80px;
+      margin-top: 1rem;
+    }
 }

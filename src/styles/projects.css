@@ -25,21 +25,15 @@ h2{
 
 .project-item:not(:last-child)::before {
   content: "";
-
   position: absolute;
   left: 0;
   top: 3rem;
   bottom: 3rem;
-
   width: 5px;
-
   background: var(--lab-color);
-
   opacity: 0;
-
   transform: scaleY(.5);
   transform-origin: center;
-
   transition:
     opacity .2s ease,
     transform .3s ease;
@@ -97,6 +91,7 @@ h2{
   .project-item:active {
     transform: none !important;
     transition: none !important;
+    padding: 2rem 0 2rem 1.8rem;
   }
 
   .project-item:not(:last-child)::before {

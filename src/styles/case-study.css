@@ -87,9 +87,6 @@
   .case-study .lab-shape {
     width: clamp(100px, 28vw, 80px);
   }
-    /* .case-study .lab-shape {
-    width: clamp(160px, 30vw, 220px);
-  } */
 
   .case-study .lab-meta{
     width: 100%;
@@ -145,12 +142,13 @@
 
 .content {
   max-width: var(--content-width);
-  margin: 4rem 0;
+  /* margin: 4rem 0 2rem; */
 }
 
 .lab-gallery {
   width: 100%;
   max-width: 900px;
+  padding: 2rem 0 2rem;
 }
 
 .lab-gallery img {
@@ -159,15 +157,19 @@
   border-radius: 20px;
 }
 
+@media (max-width: 600px) {
+  .lab-gallery{
+    padding: 1.5rem 0 .5rem;
+  }
+}
 
 /* =========================
    Partner
 ========================= */
 
 .partner {
-  margin-top: 6rem;
+  margin-top: 3rem;
   padding-top: 2rem;
-
   border-top: 1px solid var(--light-grey);
 }
 
