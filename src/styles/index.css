@@ -215,7 +215,6 @@
     align-items: flex-start;
     text-align: left;
   }
-
   .sc-logo {
     width: 160px;
   }
@@ -235,8 +234,16 @@
   .smart-city-koop {
     max-width: 60%;
   }
+    .sc-logo {
+    width: 140px;
+  }
 }
 
+@media (max-width: 600px) {
+ .sc-logo {
+    width: 120px;
+  }
+}
 
 /* =========================
    Projects Preview
