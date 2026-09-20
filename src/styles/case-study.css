@@ -58,7 +58,6 @@
     grid-row: 2;
     justify-self: left;
     align-self: start;
-  
   }
   /* Row 2 — title, lower left */
   .case-study .page-hero-copy {
@@ -94,6 +93,14 @@
 
   .case-study .lab-meta{
     width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+
+  /* Row 2 — shape, upper right */
+  .case-study .page-hero-visual {
+    justify-self: right;
   }
 }
 /* =========================

@@ -96,7 +96,6 @@ h2{
   .project-item:focus,
   .project-item:active {
     transform: none !important;
-    /* padding-left: 3rem !important; */
     transition: none !important;
   }
 
@@ -135,6 +134,17 @@ h2{
    Link
 ========================= */
 
+.partner-link {
+  display: inline-block;
+
+  color: var(--dark-grey);
+  text-decoration: none;
+
+  border-bottom: 1px solid var(--dark-grey);
+  padding-bottom: .15rem;
+
+  transition: .2s ease;
+}
 .partner-link:hover {
   color: var(--green);
 }
