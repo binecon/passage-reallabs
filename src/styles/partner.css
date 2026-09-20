@@ -124,6 +124,11 @@
   margin-bottom: 0;
 }
 
+.list-heading {
+  padding-bottom: 1rem;
+}
+
+
 /* =========================
    Benefits
 ========================= */
@@ -138,14 +143,14 @@
   margin: 0;
   padding: 0;
   display: grid;
-  gap:1rem;
+  gap:1.5rem;
   color: var(--grey);
 }
 
 .partner-benefits .simple-list li {
   position: relative;
   padding-left: 2.3rem;
-  line-height: 2rem;
+  line-height: 2.3rem;
 }
 
 
@@ -168,23 +173,27 @@
 ========================= */
 
 .partner-effort {
-  padding-top: 2rem;
+  padding-top: 3rem;
+  margin-bottom: 5rem !important;
   max-width: var(--intro-width);
-  /* background-color: aquamarine; */
 }
 
 .partner-effort .simple-list {
   list-style: none;
-  line-height: 2rem;
+  line-height: 2.3rem;
   margin: 0;
-  /* padding: 1.2rem 0 10rem; */
+  padding: 1.2rem 0 1rem;
   display: grid;
-  gap: 2rem;
+  gap: 3rem;
   color: var(--grey);
 }
 
 .partner-effort .simple-list {
   position: relative;
+}
+
+.partner-section{
+  margin-bottom: 0;
 }
 
 /* Open bullets */
@@ -193,6 +202,7 @@
   position: relative;
   display: grid;
   grid-template-columns: 3.6rem 1fr;
+  gap: .8rem;
   align-items: start;
 }
 
@@ -209,8 +219,7 @@
   background: var(--bg);
   color: var(--dark-grey);
   font-weight: 600;
-  line-height: 1;
-     
+  line-height: 1;   
 }
 
 .additional {
@@ -228,7 +237,6 @@
 }
 
 
-
 /* =========================
    Mobile Spcific
 ========================= */
@@ -238,15 +246,19 @@
     .partner-effort .simple-list {
       padding: 1rem 0 0.8rem;
     }
+  
+    /* Open bullets */
 
     .partner-effort .simple-list li {
       padding: 0;
+      grid-template-columns: 3rem 1fr;
+      gap: .8rem;
   }
 
     .partner-effort .step-number {
       width: 2.4rem;
       height: 2.4rem;
-  }
+    }
 }
 
 
