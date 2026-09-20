@@ -53,6 +53,4 @@ Auf Basis dieser Daten entwickelten die Teams konkrete, praxisnahe Lösungsansä
 
 ## Wirkung
 
-_Was bleibt?_
-
-Die Jugendlichen nehmen praktische Erfahrungen mit Sensorik und klimaadaptiver Stadtentwicklung mit. Für die Stadtwerke entstehen neue Perspektiven auf die eigene Fragestellung und ein direkter Austausch mit potenziellen Nachwuchskräften.
+Die Jugendlichen nehmen praktische Erfahrungen mit Sensorik und klimaadaptiver Stadtentwicklung mit. Für die Stadtwerke sind neue Perspektiven auf die eigene Fragestellung entstanden, sowie ein direkter Austausch mit potenziellen Nachwuchskräften. 
