@@ -3,7 +3,7 @@
 ========================= */
 
 .footer {
-  padding: 1.6rem 0 3rem;
+  padding-top: 1.6rem;
   border-top: 1px solid var(--light-grey);
 }
 
@@ -93,8 +93,8 @@
    Individual groups
 ========================= */
 
-.footer-group--partners .footer-logos img[src*="SC"] {
-  height: 110px;
+.footer-group--partners .footer-logos img[src*="smart-city-2"] {
+  height: 90px;
   width: auto;
 }
 
@@ -138,8 +138,8 @@
 
   /* Scale logos down slightly */
  
-  .footer-group--partners .footer-logos img[src*="SC"] {
-    height: 85px;
+  .footer-group--partners .footer-logos img[src*="smart-city-2"] {
+    height: 70px;
   }
 
   .footer-group--partners .footer-logos img[src*="halle"] {
@@ -157,7 +157,6 @@
   .footer-group--funding .footer-logos img[src*="kfw2"] {
     height: 70px;
   }
-
 }
 
 
@@ -195,7 +194,7 @@
 
   /* Partners */
 
-   .footer-group--partners .footer-logos img[src*="SC"] {
+   .footer-group--partners .footer-logos img[src*="smart-city-2"] {
     height: 50px;
   }
 
@@ -220,5 +219,4 @@
   .footer-group--funding .footer-logos {
     gap: .8rem;
   }
-
 }

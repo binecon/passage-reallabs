@@ -128,7 +128,7 @@
 .intro {
   display: flex;
   align-items: center;
-  gap: 5rem;
+  gap: 3rem;
   max-width: var(--content-width);
   margin: 1.2rem 0 0;
 }
@@ -139,7 +139,7 @@
 }
 
 .intro-text {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   font-size: 1.8rem;
   line-height: 1.5;
 }
@@ -163,8 +163,8 @@
   padding-left: 0;
 }
 
-.intro-logo {
-  flex: 0 0 260px;
+.logo-section {
+  flex: 0 0 180px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -174,13 +174,13 @@
 .sc-logo {
   width: 200px;
   max-width: 100%;
-  /* margin-top: 1rem; */
 }
 
 .smart-city-koop {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   text-align: left;
+  padding-top: 0.6rem;
 }
   
 /* =========================
@@ -347,8 +347,7 @@
 .testimonial-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 3rem;
-
+  gap: 2rem;
 }
 
 .testimonial {
@@ -356,8 +355,7 @@
 }
 
 .quote {
-  margin: 2.2rem 0 1rem;
-
+  margin: 1.8rem 0 0;
   font-style: italic;
   color: var(--dark-grey);
 }
@@ -372,6 +370,7 @@
 
 .author {
   color: var(--grey);
+  padding-top: 1rem;
 }
 
 
@@ -383,46 +382,29 @@
     grid-template-columns: 1fr;
     margin: 0;
   }
-
 }
 
-
-/* =========================
-   Image
-========================= */
-
-.section:has(+ .sensebox) {
-  margin-bottom: .5rem;
-}
-
-.sensebox img {
-  max-width: 100%;
-  display: block;
-  width: 80%;
-  border-radius: 20px;
-  margin: 0;
-}
+/* Image  */
 
 .sensebox {
-  margin-bottom: 4rem;
+  max-width: 80%;
+  border-radius: 20px;
+  margin: 4rem 0 3.5rem;
 }
 
 @media (max-width: 800px) {
-
-  .sensebox img {
-    width: 100%;
-    margin: 2rem 0 0; 
+  .sensebox {
+    max-width: 100%;
+    margin: 2.5rem 0 0;
   }
 }
 
-/* =========================
-   All Projects Link
-========================= */
+/* All projects link */
 
 .projects-action {
   display: flex;
   justify-content: center;
-  margin-right: 18rem;
+  margin: 3rem 20rem 0 0;
 }
 
 .button--projects:hover {
@@ -434,7 +416,7 @@
 @media (max-width: 900px) {
   .projects-action {
     justify-content: left;
-    margin: 0;
+    margin: 2rem 0 0 0;
   }
 }
 
@@ -447,7 +429,7 @@
 }
 
 .process-intro {
-  margin: 0 0 3.8rem;
+  margin: 0 0 3rem;
   color: var(--dark-grey);
 }
 
@@ -559,7 +541,7 @@
 /* Insights CTA */
 
 .button--insights {
-  margin-top: 3rem;
+  margin-top: 2.3rem;
 }
 
 .button--insights:hover {
@@ -580,7 +562,7 @@
 }
 
 /* =========================
-   Partner CTA
+  CTA
 ========================= */
 
 .partner-cta {
@@ -599,13 +581,10 @@
   color: var(--grey);
 }
 
-
-/* CTA button */
-
 .cta-action {
   display: flex;
   justify-content: center;
-  margin: 2.8rem 0;
+  margin: 2.3rem 0;
 }
 
 .button--cta:hover {
@@ -622,6 +601,6 @@
 
 @media (max-width: 800px) {  
   .cta-action {
-    justify-content: center;
+    justify-content: left;
   }
 }

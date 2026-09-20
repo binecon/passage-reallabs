@@ -65,7 +65,14 @@
     display: contents;
   }
 
-  .case-study .page-hero-copy h1 {
+  .case-study .page-hero-copy h1{
+    grid-column: 1;
+    grid-row: 2;
+    align-self: end;
+    margin: 0;
+  }
+
+  .case-study .page-subtitle{
     grid-column: 1;
     grid-row: 2;
     align-self: end;
@@ -95,21 +102,22 @@
 ========================= */
 
 .lab-meta {
+  grid-column: 1 / -1;
+  grid-row: 3;
   display: flex;
   flex-direction: column;
-
-  gap: 1.5rem;
+  gap: 1.2rem;
   margin-top: 3rem;
 }
 
 .meta-block h3 {
+  font-size: 1.3rem;
   margin: 0 0 .4rem;
 }
 
 .meta-block p {
   margin: 0;
   color: var(--grey);
-  
 }
 
 /* =========================

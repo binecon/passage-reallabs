@@ -141,7 +141,6 @@ img {
   .case-study .lab-meta {
     max-width: none;
   }
-
 }
 
 /* =========================
@@ -288,15 +287,11 @@ p {
 ========================= */
 
 .section {
-  margin: 6rem 0 8rem;
+  margin: 6rem 0 6rem;
 }
 
 .section:first-child {
   margin-top: 0;
-}
-
-.section:last-child {
-  margin-bottom: 8rem;
 }
 
 
@@ -365,8 +360,8 @@ p {
 ========================= */
 .scroll-top {
   position: fixed;
-  right: 5rem;
-  bottom: 4rem;
+  right: 6rem;
+  bottom: 6rem;
 
   width: 3.2rem;
   height: 3.2rem;
