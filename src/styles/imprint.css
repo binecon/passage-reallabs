@@ -15,7 +15,6 @@
   width: 100%;
   max-width: var(--content-width);
   margin-inline: auto;
-  padding-bottom: 6rem;
 }
 
 
@@ -24,10 +23,9 @@
 ========================= */
 
 .imprint-section {
-  padding: 2.5rem 0;
-
   border-bottom: 1px solid var(--light-grey);
   max-width: var(--content-width);
+  padding: 2rem 0 3rem;
 }
 
 .imprint-section a {
@@ -47,14 +45,7 @@
 
 .imprint-section:last-child {
   border-bottom: none;
-}
-
-/* =========================
-   SmartCity Section
-========================= */
-
-.smartcity {
-  padding-top: 2rem;
+  padding-bottom: 4rem;
 }
 
 /* =========================
@@ -65,13 +56,25 @@
   margin: 0 0 1.2rem;
 }
 
+@media (max-width: 800px) {
+
+  h1 {
+    margin: 2.5rem 0 1rem;
+  }
+}
+
+  h3 {
+    font-size: 1.6rem;
+    margin: 0 0 .4rem;
+    color: var(--grey);
+  }
 
 /* =========================
    Text
 ========================= */
 
 .imprint-section p {
-  margin: 0 0 1rem;
+  margin-top: 1.2rem;
 
   color: var(--grey);
 }
@@ -91,8 +94,6 @@
   text-decoration: underline;
   text-underline-offset: .2rem;
 }
-
-
 
 /* =========================
    Credits
@@ -116,15 +117,9 @@
    Mobile
 ========================= */
 
-@media (max-width: 700px) {
 
-  .imprint-content {
-    margin-bottom: 4rem;
-  }
 
-  .imprint-section {
-    padding: 2rem 0;
-  }
+ 
 
-}
+
 

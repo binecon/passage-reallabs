@@ -153,6 +153,8 @@ a:visited {
   text-decoration: underline;
 }
 
+.email:after { content: "@passage13.org"; }
+.emailp13:after { content: "@gmail.com"; }
 
 /* =========================
    Typography
@@ -162,7 +164,6 @@ a:visited {
 
 h1 {
   margin: 0 0 1.5rem;
-
   font-size: 5rem;
   font-weight: 500;
   line-height: 1.15;

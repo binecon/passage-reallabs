@@ -124,17 +124,13 @@
   margin-bottom: 0;
 }
 
-.list-heading {
-  padding-bottom: 1rem;
-}
-
-
 /* =========================
    Benefits
 ========================= */
 
 .partner-benefits {
   padding: 2rem 0;
+  /* background-color: bisque; */
 }
 
 .partner-benefits .simple-list {
@@ -142,14 +138,14 @@
   margin: 0;
   padding: 0;
   display: grid;
-  gap:1.5rem;
+  gap:1rem;
   color: var(--grey);
 }
 
 .partner-benefits .simple-list li {
   position: relative;
   padding-left: 2.3rem;
-  line-height: 2.3rem;
+  line-height: 2rem;
 }
 
 
@@ -172,18 +168,18 @@
 ========================= */
 
 .partner-effort {
-  padding-top: 3rem;
-  margin-bottom: 5rem !important;
+  padding-top: 2rem;
   max-width: var(--intro-width);
+  /* background-color: aquamarine; */
 }
 
 .partner-effort .simple-list {
   list-style: none;
-  line-height: 2.3rem;
+  line-height: 2rem;
   margin: 0;
-  padding: 1.2rem 0 1rem;
+  /* padding: 1.2rem 0 10rem; */
   display: grid;
-  gap: 3rem;
+  gap: 2rem;
   color: var(--grey);
 }
 
@@ -197,7 +193,6 @@
   position: relative;
   display: grid;
   grid-template-columns: 3.6rem 1fr;
-  gap: .8rem;
   align-items: start;
 }
 
