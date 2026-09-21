@@ -235,11 +235,11 @@ p {
   }
 
   h1 {
-    font-size: 3.8rem;
+    font-size: 3.6rem;
   }
 
   h2 {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
   }
 
   h3 {
@@ -395,8 +395,8 @@ p {
 ========================= */
 .scroll-top {
   position: fixed;
-  right: 6rem;
-  bottom: 6rem;
+  right: 3rem;
+  bottom: 3rem;
 
   width: 3.2rem;
   height: 3.2rem;
