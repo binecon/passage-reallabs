@@ -218,7 +218,7 @@
     text-align: left;
   }
   .sc-logo {
-    width: 160px;
+    width: 180px;
   }
 
   .smart-city-koop {
@@ -243,7 +243,7 @@
 
 @media (max-width: 600px) {
  .sc-logo {
-    width: 120px;
+    width: 160px;
   }
 }
 
