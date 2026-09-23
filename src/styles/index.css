@@ -195,8 +195,8 @@
     width: 100%; 
     flex-direction: column;
     align-items: flex-start;
-    gap: 2.5rem;
-    margin: 0 0 0;
+    gap: 1rem;
+    margin: 0 0 4rem;
   }
 
   .intro-text {
@@ -209,7 +209,7 @@
   }
 
   .intro-mw li {
-    padding: 1rem 0 0;
+    padding: .8rem 0 0;
   }
 
   .logo-section {
@@ -218,7 +218,7 @@
     text-align: left;
   }
   .sc-logo {
-    width: 180px;
+    width: 160px;
   }
 
   .smart-city-koop {
@@ -243,7 +243,7 @@
 
 @media (max-width: 600px) {
  .sc-logo {
-    width: 160px;
+    width: 120px;
   }
 }
 
@@ -352,7 +352,7 @@
 .testimonial-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .testimonial {
@@ -421,7 +421,7 @@
 @media (max-width: 900px) {
   .projects-action {
     justify-content: left;
-    margin: 3rem 0 0 0;
+    margin: 2rem 0 0 0;
   }
 }
 
@@ -498,6 +498,7 @@
 
   .process-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap:1.2rem;
   }
 
 }
@@ -506,7 +507,12 @@
 
   .process-grid {
     grid-template-columns: 1fr;
+    gap:.8rem;
   }
+  .process-intro {
+  margin: 0 0 2.3rem;
+  color: var(--dark-grey);
+}
 
 }
 

@@ -148,7 +148,7 @@ img {
 
 a,
 a:visited {
-  color: black;
+  /* color: black; */
   text-decoration: underline;
 }
 
