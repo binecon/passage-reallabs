@@ -10,13 +10,13 @@
   position: relative;
   z-index: 1;
   padding-top: 4.5rem;
-  min-height: 310px;
+  min-height: 300px;
 }
 
 .hero-shape {
   position: absolute;
   width: 140vw;
-  height: 730px;
+  height: 700px;
   left: 35%;
   top: -470px;
   transform: translateX(-55%);

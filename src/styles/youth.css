@@ -3,8 +3,7 @@
 ========================= */
 
 .youth-intro {
-  max-width: var(--intro-width);
-  margin-bottom: 4rem;
+  /* max-width: var(--narrow-width); */
 }
 
 
