@@ -58,7 +58,7 @@
 .footer-organisations {
   display: flex;
   align-items: flex-start;
-  gap: 8rem;
+  gap: 6rem;
   margin-top: 4rem;
   color: var(--light-grey);
 }
@@ -94,24 +94,24 @@
 ========================= */
 
 .footer-group--partners .footer-logos img[src*="smart-city-2"] {
-  height: 100px;
+  height: 85px;
   width: auto;
 }
 
 .footer-group--partners .footer-logos img[src*="halle"] {
-  height: 80px;
+  height: 65px;
 }
 
 .footer-group--evaluation .footer-logos img[src*="ZSH"] {
-  height: 80px;
+  height: 65px;
 }
 
 .footer-group--evaluation .footer-logos img[src*="fraunhofer"] {
-  height: 90px;
+  height: 75px;
 }
 
 .footer-group--funding .footer-logos img[src*="kfw"] {
-  height: 100px;
+  height: 85px;
   margin-top: 1rem;
 }
 
@@ -153,27 +153,28 @@
 
   /* Scale logos down slightly */
  
-    .footer-group--partners .footer-logos img[src*="smart-city-2"] {
-      height: 90px;
+      .footer-group--partners .footer-logos img[src*="smart-city-2"] {
+      height: 75px;
       width: auto;
     }
 
     .footer-group--partners .footer-logos img[src*="halle"] {
-      height: 70px;
+      height: 55px;
     }
 
     .footer-group--evaluation .footer-logos img[src*="ZSH"] {
-      height: 70px;
+      height: 55px;
     }
 
     .footer-group--evaluation .footer-logos img[src*="fraunhofer"] {
-      height: 80px;
+      height: 65px;
     }
 
     .footer-group--funding .footer-logos img[src*="kfw"] {
-      height: 90px;
+      height: 75px;
       margin-top: 1rem;
     }
+
 }
 
 
@@ -192,7 +193,7 @@
   }
 
   .footer-label {
-    font-size: 1.15rem;
+    font-size: .95rem;
     line-height: 1;
   }
 
@@ -208,24 +209,24 @@
   /* Scale logos down again */
  
     .footer-group--partners .footer-logos img[src*="smart-city-2"] {
-      height: 80px;
+      height: 65px;
       width: auto;
     }
 
     .footer-group--partners .footer-logos img[src*="halle"] {
-      height: 60px;
+      height: 45px;
     }
 
     .footer-group--evaluation .footer-logos img[src*="ZSH"] {
-      height: 60px;
+      height: 45px;
     }
 
     .footer-group--evaluation .footer-logos img[src*="fraunhofer"] {
-      height: 70px;
+      height: 55px;
     }
 
     .footer-group--funding .footer-logos img[src*="kfw"] {
-      height: 80px;
+      height: 65px;
       margin-top: 1rem;
     }
 }
