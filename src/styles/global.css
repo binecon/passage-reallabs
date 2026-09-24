@@ -398,15 +398,9 @@ p {
     border-color .2s ease;
 }
 
-@media (max-width: 900px) {
-  .button {
-    font-size: 1.2rem;
-  }
-}
-
 @media (max-width: 600px) {
   .button {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 }
 
