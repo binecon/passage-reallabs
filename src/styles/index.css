@@ -15,11 +15,11 @@
 
 .hero-shape {
   position: absolute;
-  width: 125vw;
-  height: 750px;
-  left: 32%;
+  width: 140vw;
+  height: 730px;
+  left: 35%;
   top: -470px;
-  transform: translateX(-50%);
+  transform: translateX(-55%);
   background: var(--green);
   border-radius: 50%;
   z-index: 0;
@@ -131,7 +131,7 @@
   align-items: center;
   gap: 3rem;
   max-width: var(--content-width);
-  margin: 1.2rem 0 0;
+
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
@@ -193,7 +193,6 @@
 }
 
 .smart-city-koop {
-  margin: 0;
   font-size: .9rem;
   text-align: left;
   padding-top: 0.6rem;
@@ -240,12 +239,8 @@
   .intro-text {
     width: 100%;
   }
-
-  .smart-city-koop {
-    max-width: 60%;
-  }
     .sc-logo {
-    width: 140px;
+    width: 120px;
   }
 }
 
