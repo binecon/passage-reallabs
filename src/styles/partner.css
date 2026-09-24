@@ -23,62 +23,31 @@
 }
 
 
-/* =========================
-   Hero Visual
-========================= */
-
-/* .partner-shape {
-  width: 360px;
-  aspect-ratio: 1;
-
-  background:
-    linear-gradient(
-      135deg,
-      #95E5B2 0 25%,
-      #404ED9 25% 50%,
-      #E393E9 50% 75%,
-      #EED55C 75% 100%
-    );
-
-  clip-path: polygon(
-    20% 0,
-    100% 12%,
-    88% 72%,
-    55% 100%,
-    8% 78%,
-    0 30%
-  );
-
-  opacity: .85;
-} */
-
 
 /* =========================
    Mobile
 ========================= */
 
 @media (max-width: 900px) {
-
   .partner .page-hero {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(150px, 30vw);
     grid-template-rows: auto auto auto;
     column-gap: 1.5rem;
+    row-gap: 0;
     align-items: start;
+    padding: 0;
   }
 
   .partner .page-hero-content {
     display: contents;
-
   }
 
-  /* Row 1: BrandMarker */
   .partner .page-hero > .brand-marker {
     grid-column: 1 / -1;
     grid-row: 1;
   }
 
-  /* Row 2: title, left */
   .partner .page-hero-copy {
     display: contents;
   }
@@ -90,52 +59,45 @@
     margin: 0;
   }
 
-  /* Row 2: shape, right */
   .partner .page-hero-visual {
     display: block;
     grid-column: 2;
     grid-row: 2;
     justify-self: left;
-    align-self: left;
+    align-self: start;
   }
 
-  /* Row 3: subtitle + meta + rest */
   .partner .page-hero-details {
     grid-column: 1 / -1;
     grid-row: 3;
+    margin-top: 1.8rem;
   }
 
   .partner .lab-shape {
-    width: clamp(120px, 25vw, 160px);
+    width: clamp(110px, 25vw, 150px);
   }
 }
 
 /* =========================
    Benefits & Effort
 ========================= */
-
-.partner-benefits,
-.partner-effort {
-  margin-top: 0;
-  margin-bottom: 0;
+.partner-page .section {
+  margin: 2rem 0;
 }
 
-.partner-benefits h3{
+.partner-benefits h2{
   padding: .5rem 0 .5rem;
   font-size: 1.6rem;
 }
 
-.partner-effort h3{
-  padding: 1.5rem 0 0;
+.partner-effort h2{
+  padding-top: 2.3rem;
+  font-size: 1.6rem;
 }
 
 /* =========================
    Benefits
 ========================= */
-
-.partner-benefits {
-  padding: 1rem 0;
-}
 
 .partner-benefits .simple-list {
   list-style: none;
@@ -174,7 +136,6 @@
 ========================= */
 
 .partner-effort {
-  padding-top: 1rem;
   margin-bottom: 4rem;
   max-width: var(--content-width);
 }
@@ -218,7 +179,7 @@
 .additional {
     max-width: var(--content-width);
     color: var(--grey);
-    font-size: 1.05rem;
+    font-size: 1.2rem;
 }
 
 /* Heading → description */
@@ -246,9 +207,6 @@
   .process-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-    .additional {
-    font-size: .9rem;
-  }
 }
 
 @media (max-width: 800px) {
@@ -264,7 +222,7 @@
       margin: 0 0 .6rem;
   }
   .additional {
-    font-size: .8rem;
+    font-size: 1rem;
   }
 }
 
