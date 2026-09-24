@@ -85,7 +85,7 @@
   }
 
   .case-study .lab-shape {
-    width: clamp(100px, 28vw, 80px);
+    width: clamp(90px, 28vw, 80px);
   }
 
   .case-study .lab-meta{
