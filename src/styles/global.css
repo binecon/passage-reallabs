@@ -15,11 +15,11 @@
   --yellow: #EED55C;
   --red: #DC7F5A;
 
-  --page-width: 1600px;
-  --content-width: 1400px;
-  --intro-width:1100px;
-  --text-width: 900px;
-  --narrow-width: 620px;
+  --page-width: 1440px;
+  --content-width: 1200px;
+  --intro-width: 1000px;
+  --text-width: 780px;
+  --narrow-width: 560px;
 }
 
 * {
@@ -33,10 +33,10 @@ html {
 body {
   margin: 0 auto;
   max-width: var(--page-width);
-  padding: 2rem 3rem;
+  padding: 1.8rem 2.8rem;
 
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
 
   background: var(--bg);
   color: var(--dark-grey);
@@ -167,43 +167,27 @@ a:visited {
 
 h1 {
   margin: 0 0 1.5rem;
-  font-size: 5rem;
+  font-size: 3.2rem;
   font-weight: 500;
   line-height: 1.15;
   color: var(--dark-grey);
 }
 
 h2 {
-  margin: 1rem 0 1rem;
-  font-size: 2.8rem;
+  /* margin: 1rem 0 1rem; */
+  font-size: 1.8rem;
   font-weight: 500;
-  line-height: 1.4;
+  line-height: 1.3;
 }
 
 h3 {
   margin: 0 0 1rem;
-  font-size: 2.3rem;
+  font-size: 1.6rem;
   font-weight: 600;
   line-height: 1.3;
   color: var(--dark-grey);
 }
 
-h4 {
-  margin: 0 0 .6rem;
-  font-size: 1.6rem;
-  font-style: italic;
-  font-weight: 600;
-  line-height: 1.2;
-  color: var(--grey);
-}
-
-.content h2 {
-  font-size: 2.3rem;
-  font-weight: 500;
-  line-height: 1.2;
-  color: var(--grey);
-  margin: 4rem 0 1.5rem;
-}
 
 
 /* Body text */
@@ -218,41 +202,6 @@ p {
   line-height: 1.7;
 }
 
-
-/* =========================
-   iPad breakpoint
-========================= */
-
-@media (max-width: 1100px) and (min-width: 901px) {
-
-  body {
-    font-size: 1.4rem;
-    padding: 1.5rem 2rem;
-  }
-
-  h1 {
-    font-size: 3.6rem;
-  }
-
-  h2 {
-    font-size: 2.3rem;
-  }
-
-  h3 {
-    font-size: 2rem;
-  }
-
-  .section {
-    margin: 4rem 0;
-  }
-
-  .page-hero--visual .page-hero-content {
-    grid-template-columns: minmax(0, 1fr) 300px;
-    gap: 2rem;
-  }
-}
-
-
 /* =========================
    Labels
 ========================= */
@@ -264,46 +213,46 @@ p {
   line-height: 1.4;
   color: var(--grey);
 }
-
 .meta-label,
 .section-label {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-weight: 400;
-  line-height: 1.3;
+  line-height: 1.2;
   color: var(--light-grey);
 
   text-transform: uppercase;
   letter-spacing: .1em;
 }
-
 .meta {
   line-height: 3rem;
 }
 
+@media (max-width: 900px) {
+  .label,
+  .project-label {
+    font-size: 1.3rem;
+  }
 
-/* =========================
-   Buttons
-========================= */
+  .meta-label,
+  .section-label {
+    font-size: 1.3rem;
+  }
 
-.button {
-  display: inline-block;
+  .meta {
+    line-height: 2.5rem;
+  }
+}
 
-  padding: .6rem;
+@media (max-width: 600px) {
+  .label,
+  .project-label {
+    font-size: 1.2rem;
+  }
 
-  border: 1px solid var(--dark-grey);
-  border-radius: 15px;
-
-  color: var(--dark-grey);
-  text-decoration: none;
-
-  font-size: 1.6rem;
-  font-weight: 400;
-  font-style: italic;
-
-  transition:
-    background-color .2s ease,
-    color .2s ease,
-    border-color .2s ease;
+  .meta-label,
+  .section-label {
+    font-size: 1.1rem;
+  }
 }
 
 
@@ -312,13 +261,48 @@ p {
 ========================= */
 
 .section {
-  margin: clamp(3.5rem, 8vw, 6rem) 0;
+  margin: clamp(4rem, 6vw, 6rem) 0;
 }
 
 .section:first-child {
   margin-top: 0;
 }
 
+
+
+
+/* =========================
+   iPad breakpoint
+========================= */
+
+@media (max-width: 1100px) and (min-width: 901px) {
+
+  body {
+    font-size: 1.15rem;
+    padding: 1.5rem 2rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  /* .section {
+    margin: 3rem 0;
+  } */
+
+  .page-hero--visual .page-hero-content {
+    grid-template-columns: minmax(0, 1fr) 280px;
+    gap: 2rem;
+  }
+}
 
 /* =========================
    Responsive Typography
@@ -328,24 +312,24 @@ p {
 
   body {
     width: 100%;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
   }
 
   h1 {
-    font-size: 2.8rem;
-    margin: 1rem 0 1rem;
+    font-size: 2.6rem;
+    margin: 1rem 0;
   }
 
   h2 {
-    font-size: 2.4rem;
+    font-size: 2rem;
   }
 
   h3 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   .button {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -355,40 +339,125 @@ p {
   body {
     width: 100%;
     padding: 1.25rem;
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 
   h1 {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
   }
 
   h2 {
-    font-size: 2.1rem;
+    font-size: 1.8rem;
     line-height: 1.3;
   }
 
   h3 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     line-height: 1.25;
   }
 
   p,
   .text {
-    line-height: 1.55;
+    line-height: 1.65;
   }
 
-  .content h2 {
+  /* .content h2 {
     margin-top: 2.5rem;
     margin-bottom: 1rem;
-  }
+  } */
 
   .label,
   .project-label {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .button {
-    font-size: 1.25rem;
+    font-size: 1rem;
+  }
+}
+
+
+/* =========================
+   Buttons
+========================= */
+
+.button {
+  display: inline-block;
+  padding: .5rem;
+  border: 1px solid var(--dark-grey);
+  border-radius: 15px;
+  color: var(--dark-grey);
+  text-decoration: none;
+
+  font-size: 1.3rem;
+  font-weight: 400;
+  font-style: italic;
+
+  transition:
+    background-color .2s ease,
+    color .2s ease,
+    border-color .2s ease;
+}
+
+@media (max-width: 1100px) {
+  .button {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .button {
+    font-size: 1.1rem;
+    padding: .45rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .button {
+    font-size: 1rem;
+    padding: .4rem .5rem;
+  }
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta {
+  /* padding: 1rem 0 1.8rem; */
+  text-align: center;
+}
+
+.cta h2 {
+  /* margin: 1.5rem 0 2.3rem; */
+  font-weight: 600;
+}
+
+.cta .text {
+  max-width: 920px;
+  margin: 0 auto;
+  color: var(--grey);
+}
+
+.cta-action {
+  display: flex;
+  justify-content: center;
+  /* margin: 2.6rem 0; */
+}
+
+.button--cta:hover {
+  background: var(--green);
+}
+
+@media (max-width: 800px) {
+  .cta {
+    padding: 0;
+    text-align: left;
+  }
+
+  .cta-action {
+    justify-content: center;
   }
 }
 
@@ -401,8 +470,8 @@ p {
   right: 3rem;
   bottom: 3rem;
 
-  width: 3.2rem;
-  height: 3.2rem;
+  width: 3rem;
+  height: 3rem;
 
   display: flex;
   align-items: center;
@@ -414,7 +483,7 @@ p {
   background: rgb(250 250 248 / 60%);
   color: var(--dark-grey);
 
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 500;
   line-height: 1;
   text-decoration: none;
@@ -440,45 +509,3 @@ p {
     bottom: 1.5rem;
   }
 }
-
-/* =========================
-   CTA
-========================= */
-
-.cta {
-  padding: 1.5rem 0 1.8rem;
-  text-align: center;
-}
-
-.cta h2 {
-  margin: 1.5rem 0 2.3rem;
-  font-weight: 700;
-}
-
-.cta .text {
-  max-width: 920px;
-  margin: 0 auto;
-  color: var(--grey);
-}
-
-.cta-action {
-  display: flex;
-  justify-content: center;
-  margin: 2.8rem 0;
-}
-
-.button--cta:hover {
-  background: var(--green);
-}
-
-@media (max-width: 800px) {
-  .cta {
-    padding: 0;
-    text-align: left;
-  }
-
-  .cta-action {
-    justify-content: center;
-  }
-}
-

@@ -15,9 +15,9 @@
 
 .hero-shape {
   position: absolute;
-  width: 130vw;
+  width: 125vw;
   height: 750px;
-  left: 35%;
+  left: 32%;
   top: -470px;
   transform: translateX(-50%);
   background: var(--green);
@@ -38,7 +38,7 @@
 .hero-brand {
   margin: 0 0 .7rem;
   font-family: "Space Grotesk", sans-serif;
-  font-size: clamp(3.2rem, 6.2vw, 6rem);
+  font-size: clamp(2.8rem, 5.8vw, 4.8rem);
   font-weight: 400;
   line-height: .8;
   letter-spacing: .005em;
@@ -48,7 +48,7 @@
 .hero-subtitle {
   padding-left: .3rem;
   font-family: "Space Grotesk", sans-serif;
-  font-size: 2.2rem;
+  font-size: 2rem;
   color: #639776;
 }
 
@@ -112,7 +112,8 @@
     top: -280px;
   }
   .hero-brand {
-    font-size: clamp(3.2rem, 13vw, 5rem);
+    font-size: clamp(2.8rem, 12vw, 3.6rem);
+    max-width: 400px;
     line-height: 1.05;
     min-width: 0;
   }
@@ -131,6 +132,7 @@
   gap: 3rem;
   max-width: var(--content-width);
   margin: 1.2rem 0 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .intro-box {
@@ -140,7 +142,7 @@
 
 .intro-text {
   margin-bottom: 2rem;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   line-height: 1.5;
 }
 
@@ -156,16 +158,28 @@
   list-style: none;
   font-family: "Space Grotesk", sans-serif;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 .intro-mw li {
-  padding-left: 0;
+  position: relative;
+  padding-left: 1.8rem
+}
+
+.intro-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: .05rem;
+  color: var(--dark-grey);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
 }
 
 .logo-section {
   width: 100%;
-  flex: 0 0 180px;
+  flex: 0 0 160px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -180,10 +194,12 @@
 
 .smart-city-koop {
   margin: 0;
-  font-size: 1.1rem;
+  font-size: .9rem;
   text-align: left;
   padding-top: 0.6rem;
 }
+
+
   
 /* =========================
    Intro & Logo — Tablet / Phone
@@ -196,20 +212,18 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
-    margin: 0 0 4rem;
+    margin: 0 0 3rem;
   }
 
   .intro-text {
     max-width: none;
+    font-size: 1.4rem;
+    line-height: 1.5;
   }
 
   .intro-box {
     width: 100%;
     max-width: none;
-  }
-
-  .intro-mw li {
-    padding: .8rem 0 0;
   }
 
   .logo-section {
@@ -218,13 +232,7 @@
     text-align: left;
   }
   .sc-logo {
-    width: 160px;
-  }
-
-  .smart-city-koop {
-    max-width: 100%;
-    text-align: left;
-    
+    width: 140px;
   }
 }
 
@@ -243,7 +251,12 @@
 
 @media (max-width: 600px) {
  .sc-logo {
+    width: 100px;
+  }
+  .smart-city-koop {
     width: 120px;
+    font-size: .8rem;
+    line-height: 1.6;
   }
 }
 
@@ -255,7 +268,7 @@
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
-  padding: 3rem;
+  padding: 2.3rem;
   border-top: 1px solid var(--light-grey);
   border-bottom: 1px solid var(--light-grey);
   color: inherit;
@@ -272,8 +285,8 @@
   content: "";
   position: absolute;
   left: 0;
-  top: 3rem;
-  bottom: 3rem;
+  top: 2.7rem;
+  bottom: 2.7rem;
   width: 5px;
   background: var(--lab-color);
   opacity: 0;
@@ -360,7 +373,7 @@
 }
 
 .quote {
-  margin: 1.8rem 0 0;
+  margin: 1rem 0 0;
   font-style: italic;
   color: var(--dark-grey);
 }
@@ -368,7 +381,7 @@
 .quote::before {
   content: "“";
   padding-right: .2rem;
-  font-size: 5rem;
+  font-size: 3.8rem;
   line-height: 0;
   vertical-align: -1rem;
 }
@@ -387,6 +400,10 @@
     grid-template-columns: 1fr;
     margin: 0;
   }
+  .quote::before {
+  font-size: 3.5rem;
+
+  }
 }
 
 /* Image  */
@@ -394,7 +411,7 @@
 .sensebox {
   max-width: 80%;
   border-radius: 20px;
-  margin: 4rem 0 3.5rem;
+  margin: 4rem 0 3rem;
 }
 
 @media (max-width: 800px) {
@@ -409,7 +426,7 @@
 .projects-action {
   display: flex;
   justify-content: center;
-  margin: 3rem 20rem 0 0;
+  margin: 0 20rem 0 0;
 }
 
 .button--projects:hover {
@@ -449,13 +466,17 @@
   margin: 0;
 }
 
+/* .step h3 {
+  font-size: 1.6rem;
+} */
+
 .step p {
   color: var(--grey);
 }
 
 .step-number {
-  width: 2.8rem;
-  height: 2.8rem;
+  width: 2.3rem;
+  height: 2.3rem;
 
   display: flex;
   align-items: center;
@@ -468,6 +489,37 @@
 
   font-weight: 700;
   color: black;
+}
+
+.step-number {
+  width: 2.3rem;
+  height: 2.3rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 1rem;
+
+  border: 1px solid var(--text);
+  border-radius: 50%;
+
+  font-weight: 700;
+  color: black;
+}
+
+@media (max-width: 900px) {
+  .step-number {
+    width: 2.1rem;
+    height: 2.1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .step-number {
+    width: 2rem;
+    height: 2rem;
+  }
 }
 
 
@@ -510,9 +562,9 @@
     gap:.8rem;
   }
   .process-intro {
-  margin: 0 0 2.3rem;
-  color: var(--dark-grey);
-}
+    margin: 0 0 2.3rem;
+    color: var(--dark-grey);
+  }
 
 }
 
@@ -529,7 +581,7 @@
 }
 
 .insights h2 {
-  padding: 2rem 0 1rem;
+  padding: 1rem 0 1rem;
   font-weight: 600;
 }
 
@@ -556,7 +608,7 @@
 /* Insights CTA */
 
 .button--insights {
-  margin-top: 2.3rem;
+  margin-top: 2rem;
 }
 
 .button--insights:hover {
@@ -573,33 +625,19 @@
   .insights-content {
     grid-template-columns: 1fr;
   }
-
+  .button--insights {
+    margin-top: 1.5rem;
+  }
 }
 
 /* =========================
   CTA
 ========================= */
 
-.partner-cta {
-  padding: 4rem 0 2rem;
-  text-align: center;
-}
-
-.partner-cta h2 {
-  margin: 1.5rem 0 2.3rem;
-  font-weight: 700;
-}
-
-.partner-cta .text {
-  max-width: 920px;
-  margin: 0 auto;
-  color: var(--grey);
-}
-
 .cta-action {
   display: flex;
   justify-content: center;
-  margin: 2.3rem 0;
+  margin: 2rem 0;
 }
 
 .button--cta:hover {
@@ -617,5 +655,6 @@
 @media (max-width: 800px) {  
   .cta-action {
     justify-content: left;
+    margin-top: 1.5rem;
   }
 }
