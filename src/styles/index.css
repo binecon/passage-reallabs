@@ -10,7 +10,7 @@
   position: relative;
   z-index: 1;
   padding-top: 4.5rem;
-  min-height: 280px;
+  min-height: 310px;
 }
 
 .hero-shape {
@@ -38,7 +38,7 @@
 .hero-brand {
   margin: 0 0 .7rem;
   font-family: "Space Grotesk", sans-serif;
-  font-size: clamp(2.8rem, 5.8vw, 4.8rem);
+  font-size: clamp(2.3rem, 5.8vw, 4.5rem);
   font-weight: 400;
   line-height: .8;
   letter-spacing: .005em;
@@ -60,7 +60,7 @@
 @media (max-width: 900px) {
 
   .hero {
-    min-height: 220px;
+    min-height: 240px;
     padding-top: 3rem;
     min-width: 0;
   }
