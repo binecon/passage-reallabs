@@ -63,8 +63,8 @@
     display: block;
     grid-column: 2;
     grid-row: 2;
-    justify-self: left;
-    align-self: start;
+    justify-self: center;
+    align-self: left;
   }
 
   .partner .page-hero-details {
@@ -92,7 +92,7 @@
 }
 
 .partner-effort h2{
-  padding-top: 2rem;
+  padding-top: 2.2rem;
   font-size: 1.8rem;
   font-weight: 600;
 }
@@ -222,6 +222,12 @@
   .list-heading {
       font-size: 1.8rem;
       margin: 0 0 .6rem;
+  }
+  .partner-page .section {
+    margin: 1.6rem 0;
+  }
+  .process-grid {
+    gap: 1.2rem;
   }
   .additional {
     font-size: 1rem;
