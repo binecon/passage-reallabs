@@ -222,11 +222,11 @@
     }
 
     .footer-group--evaluation .footer-logos img[src*="fraunhofer"] {
-      height: 55px;
+      height: 60px;
     }
 
     .footer-group--funding .footer-logos img[src*="kfw"] {
-      height: 65px;
+      height: 63px;
       margin-top: 1rem;
     }
 }
