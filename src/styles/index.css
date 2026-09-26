@@ -629,7 +629,7 @@
 .cta-action {
   display: flex;
   justify-content: center;
-  margin: 2rem 0;
+  margin: 2rem 0 2rem;
 }
 
 .button--cta:hover {
