@@ -147,7 +147,7 @@
 .process-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 2rem;
+  gap: 2.2rem;
 }
 .step h3 {
   padding-top: 1rem;
