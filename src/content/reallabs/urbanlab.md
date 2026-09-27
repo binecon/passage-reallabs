@@ -54,4 +54,4 @@ Auf Basis dieser Daten entwickelten die Teams konkrete, praxisnahe Lösungsansä
 
 ## Wirkung
 
-Die Jugendlichen nehmen praktische Erfahrungen mit Sensorik und klimaadaptiver Stadtentwicklung mit. Für die Stadtwerke sind neue Perspektiven auf die eigene Fragestellung entstanden, sowie ein direkter Austausch mit potenziellen Nachwuchskräften: Im Anschluss an ihr Feedback zu den Ergebnispräsetationen der Teams wies die Leiterin des HTZ, Frau Uhlenhaut, die Jugendlichen auf die konkreten Möglichkeiten von Praktika und Ausbildungen bei den Stadtwerken Halle (Saale) hin.
+Die Jugendlichen nehmen praktische Erfahrungen mit Klimasensorik und Raumplanung mit. Für die Stadtwerke ist ein direkter Austausch mit potenziellen Nachwuchskräften entstanden: Im Anschluss an ihr Feedback wies die Leiterin des HTZ, Frau Uhlenhaut, die Jugendlichen auf die konkreten Möglichkeiten von Praktika und Ausbildungen bei den Stadtwerken Halle (Saale) hin.
