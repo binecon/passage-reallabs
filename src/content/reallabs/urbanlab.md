@@ -15,8 +15,9 @@ fields:
 comps: 
   - Programmieren mit Blockly
   - Daten sammeln, vergleichen, auswerten
-  - Präsentieren
+  - Teamarbeit
   - Lösungen kreativ entwickeln
+  - Präsentieren
 image: "/images/urbanlab-team.webp"  
 alt: "UrbanLab youth are working on sth"
 color: "#95E5B2"
@@ -45,7 +46,7 @@ In Teams entwickelten die Teilnehmenden ein Mini-Sensorentestfeld, programmierte
 
 _Was ist entstanden?_
 
-Entstanden sind Messungen, Präsentationen und mediale Dokumentationen aus Sicht der Jugendlichen. Die Messungen zeigten deutlich, wie stark Umweltbedingungen variieren können und welche Auswirkungen dies auf Menschen hat: In mehreren Innenräumen wurden sehr hohe CO₂-Werte festgestellt (teils über 4000 ppm), was auf unzureichende Belüftung hinweist und die Aufenthaltsqualität erheblich beeinträchtigen kann.
+Entstanden sind Messungen, Präsentationen und mediale Dokumentationen aus Sicht der Jugendlichen. Die Messungen zeigten deutlich, wie stark Umweltbedingungen variieren können und welche Auswirkungen dies auf Menschen hat: In mehreren Innenräumen wurden sehr hohe CO₂-Werte festgestellt (teils über 1400 ppm), was auf unzureichende Belüftung hinweist und die Aufenthaltsqualität erheblich beeinträchtigen kann.
 
 Die Ergebnisse präsentierten die Schülerinnen und Schüler abschließend in kurzen Pitches vor der Auftraggeberin, wobei sie insbesondere die Interpretation von Daten im Kontext datenbasierter Stadtentwicklung erprobten.
 
@@ -53,4 +54,4 @@ Auf Basis dieser Daten entwickelten die Teams konkrete, praxisnahe Lösungsansä
 
 ## Wirkung
 
-Die Jugendlichen nehmen praktische Erfahrungen mit Sensorik und klimaadaptiver Stadtentwicklung mit. Für die Stadtwerke sind neue Perspektiven auf die eigene Fragestellung entstanden, sowie ein direkter Austausch mit potenziellen Nachwuchskräften. 
+Die Jugendlichen nehmen praktische Erfahrungen mit Sensorik und klimaadaptiver Stadtentwicklung mit. Für die Stadtwerke sind neue Perspektiven auf die eigene Fragestellung entstanden, sowie ein direkter Austausch mit potenziellen Nachwuchskräften: Im Anschluss an ihr Feedback zu den Ergebnispräsetationen der Teams wies die Leiterin des HTZ, Frau Uhlenhaut, die Jugendlichen auf die konkreten Möglichkeiten von Praktika und Ausbildungen bei den Stadtwerken Halle (Saale) hin.

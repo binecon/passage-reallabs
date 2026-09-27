@@ -410,12 +410,11 @@ p {
 ========================= */
 
 .cta {
-  /* padding: 1rem 0 1.8rem; */
+  margin: 4rem 0 8rem;
   text-align: center;
 }
 
 .cta h2 {
-  /* margin: 1.5rem 0 2.3rem; */
   font-weight: 600;
 }
 
@@ -428,7 +427,6 @@ p {
 .cta-action {
   display: flex;
   justify-content: center;
-  /* margin: 2.6rem 0; */
 }
 
 .button--cta:hover {
@@ -437,6 +435,7 @@ p {
 
 @media (max-width: 800px) {
   .cta {
+    margin:0;
     padding: 0;
     text-align: left;
   }
