@@ -2,12 +2,12 @@
 title: "UrbanLab"
 subtitle: "Mini-Sensorentestfeld & Daten-Dashboard"
 partner: "Historisches Technikzentrum, Stadtwerke Halle (Saale)"
-date: "2. September 2026"
+date: "5. Mai 2026"
 location: "HTZ Halle (Saale), Lauchstädter Str. 6"
 participants: 
-- 20 Schüler:innen
+- 18 Schüler:innen
 - Klasse 10
-- Gymnasium Landsberg (Saalekreis)
+- Heinrich-Heine Gesamtschule Halle (Saale)
 fields:
   - Nachhaltigkeit
   - Klimaadaptive Stadtplanung
