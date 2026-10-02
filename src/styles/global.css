@@ -435,7 +435,7 @@ p {
 
 @media (max-width: 800px) {
   .cta {
-    margin:0;
+    margin:3rem 0 4rem;
     padding: 0;
     text-align: left;
   }
