@@ -94,7 +94,7 @@
 ========================= */
 
 .footer-group--partners .footer-logos img[src*="smart-city-2"] {
-  height: 85px;
+  height: 90px;
   width: auto;
 }
 
@@ -154,7 +154,7 @@
   /* Scale logos down slightly */
  
       .footer-group--partners .footer-logos img[src*="smart-city-2"] {
-      height: 75px;
+      height: 80px;
       width: auto;
     }
 
@@ -209,7 +209,7 @@
   /* Scale logos down again */
  
     .footer-group--partners .footer-logos img[src*="smart-city-2"] {
-      height: 65px;
+      height: 70px;
       width: auto;
     }
 
