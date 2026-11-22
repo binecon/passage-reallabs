@@ -2,7 +2,7 @@
 title: "SmartSpaces"
 subtitle: "Sensorentestfeld für Logistikprozesse"
 partner: "tba"
-date: "In Vorbereitung · Umsetzung geplant Oktober 2026"
+date: "In Vorbereitung · Umsetzung Dezember 2026"
 location: "Halle (Saale)"
 participants: 
 - 16-20 Schüler:innen
