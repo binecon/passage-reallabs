@@ -2,10 +2,10 @@
 title: "MedicalLab"
 subtitle: "Sensorentestfeld für Medizintechnik"
 partner: "tba"
-date: "November 2026"
+date: "tba"
 location: "Halle (Saale)"
 participants: 
-- 18 Schüler:innen
+- 12-20 Schüler:innen
 - Klasse 8
 - Gemeinschaftsschule Kastanienallee Halle (Saale)
 fields:

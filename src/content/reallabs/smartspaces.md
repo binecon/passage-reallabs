@@ -5,9 +5,9 @@ partner: "tba"
 date: "In Vorbereitung · Umsetzung geplant Oktober 2026"
 location: "Halle (Saale)"
 participants: 
-- 18 Schüler:innen
+- 16-20 Schüler:innen
 - Klasse 8
-- BVJ BBS3 Halle (Saale)
+- Gemeinschaftsschule Kastanienallee
 fields:
   - Logistik
   - Sensorik
