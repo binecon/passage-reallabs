@@ -1,5 +1,5 @@
 ---
-title: "SmartSpaces"
+title: "LogisticsLab"
 subtitle: "Sensorentestfeld für Logistikprozesse"
 partner: "tba"
 date: "In Vorbereitung · Umsetzung Dezember 2026"

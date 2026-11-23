@@ -1,27 +1,28 @@
 ---
 title: "MechanicLab"
-subtitle: "Schaltkreise für den ÖPNV"
-partner: "tba"
-date: "In Vorbereitung - Umsetzung Dezember 2026"
+subtitle: "Technik erleben und Mobilität mitgestalten"
+partner: "Stadtwerke Halle (Saale)"
+date: "Dezember 2026"
 location: "Halle (Saale)"
 participants: 
-- 12-20 Schüler:innen
+- 16-20 Schüler:innen
 - Klasse 8
-- tba
+- Gemeinschaftsschule Kastanienallee Halle (Saale)
 fields:
-  - Elektronik & Mechatronik 
-  - Abläufe im ÖPNV-Fahrbetrieb
-  - Industrielle Metallverarbeitung
+ - Elektrotechnik und Schaltungstechnik
+ - Mechanik und Mechatronik
+ - Steuerungs- und Automatisierungstechnik
+ - Wartung, Instandhaltung und Fehlerdiagnose
 comps: 
-  - Programmieren mit Blockly
-  - Daten sammeln, vergleichen, auswerten
-  - Präsentieren
-  - Lösungen kreativ entwickeln
+ - Schaltkreise aufbauen und verdrahten
+ - Messen, prüfen und Fehler finden
+ - Mechanische Baugruppen montieren
+ - Technische Lösungen entwickeln und testen
 
 titleColor: "black" 
-color: "#dfa54e"
-symbol: "test.svg"
-order: 4
+color: "#F78E0E"
+symbol: "mechanic.svg"
+order: 3
 status: "planned"
 ---
 
