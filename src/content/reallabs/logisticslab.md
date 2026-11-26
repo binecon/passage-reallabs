@@ -7,7 +7,7 @@ location: "Halle (Saale)"
 participants: 
 - 16-20 Schüler:innen
 - Klasse 8
-- Gemeinschaftsschule Kastanienallee
+- Heinrich-Heine Gemeinschaftsschule Halle (Saale)
 fields:
   - Logistik
   - Sensorik
